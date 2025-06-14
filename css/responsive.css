@@ -1,0 +1,949 @@
+@media (min-width: 1400px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/*Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			accordion responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.accordion-group .card-header .btn {
+		padding: 13px 52px 13px 15px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			accordion responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Input form responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.form-select {
+		font-size: 10px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Input form responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Team responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.ts-team-wrapper .ts-team-content {
+		top: 72%;
+	}
+
+	.ts-team-wrapper:hover .ts-team-content {
+		top: 0;
+		padding-top: 20px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Team responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Accordion responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.accordion-group .card-header .btn {
+		font-size: 14px;
+		padding: 13px 45px 13px 15px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Accordion responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.main-menu {
+		display: none;
+	}
+
+	.header-main {
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		z-index: 10;
+	}
+
+	.sidebar.show {
+		left: 70%;
+		width: 297px !important;
+	}
+
+	.btn-side.click {
+		left: 63%;
+	}
+
+	.btn-side {
+		display: block;
+	}
+
+	.sidebar {
+		display: block;
+	}
+
+	.btn-side {
+		left: 92%;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Banner Carousel responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.banner-carousel .banner-carousel-item {
+		height: 550px;
+	}
+
+	.slide-title {
+		font-size: 22px;
+	}
+
+	.slide-sub-title {
+		font-size: 46px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Banner Carousel responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call To Action responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.call-to-action-box {
+		margin-top: 10px;
+	}
+
+	.block {
+		margin-top: 0;
+	}
+
+	.block:hover {
+		margin-top: 0;
+	}
+
+	.block_content a {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+	}
+
+	.block {
+		z-index: 0;
+		margin-bottom: 54px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call To Action responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			   Team responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.ts-team-wrapper .team-social-icons a i {
+		margin-right: 5px;
+	}
+
+	.ts-team-wrapper .ts-team-content {
+		top: 73%;
+	}
+
+	.ts-team-wrapper:hover .ts-team-content {
+		padding-top: 22px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			   Team responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			    Global styles  start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/*Button
+================================================== */
+	.btn-primary,
+	.btn-dark {
+		font-size: 13px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			    Global styles  end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Top Bar responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.top-bar {
+		display: none;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Top Bar responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.header-main {
+		padding: 4px 0;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	.header-main {
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		z-index: 7;
+	}
+
+	.sidebar.show {
+		left: 60%;
+	}
+
+	.btn-side.click {
+		left: 50%;
+	}
+
+	.btn-side {
+		display: block;
+	}
+
+	.sidebar {
+		display: block;
+		width: 316px;
+	}
+
+	.sidebar ul li a {
+		font-size: 14px;
+		padding-left: 17px;
+	}
+
+	.btn-side {
+		left: 90%;
+		top: 7px;
+		height: 40px;
+		width: 40px;
+	}
+
+	.btn-side span {
+		margin: 7.3px;
+		font-size: 25px;
+	}
+
+	.sidebar ul ul li a {
+		font-size: 14px;
+		padding-left: 20px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Banner Carousel responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#banner {
+		margin-top: 57px;
+	}
+
+	.banner-carousel .banner-carousel-item {
+		height: 450px;
+	}
+
+	.slide-title {
+		font-size: 16px;
+	}
+
+	.slide-sub-title {
+		font-size: 35px;
+		line-height: 35px;
+		margin: 0px 0;
+	}
+
+	.slider.btn {
+		font-size: 10px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Banner Carousel responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			back to top responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#back-to-top {
+		right: 15px;
+	}
+
+	#back-to-top .btn.btn-primary {
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		font-size: 14px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			back to top responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+				Accordion responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.accordion-group .card-header .btn {
+		font-size: 15px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+				Accordion responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call to action responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.call-to-action-box {
+		margin-top: 10px;
+	}
+
+	.call_to_header p {
+		font-size: 12px;
+	}
+
+	.block_content a {
+		padding: 9px;
+	}
+
+	.block {
+		margin-top: 0;
+	}
+
+	.block:hover {
+		margin-top: 0;
+	}
+
+	.block_content a {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+	}
+
+	.block {
+		z-index: 0;
+		margin-bottom: 54px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call to action responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Blog responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.blog-row {
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	}
+
+	.blog-row .card-inner .box .blog-date span {
+		left: 4px;
+		font-size: 12px;
+	}
+
+	.blog-row .card-inner .box .blog-admin span {
+		right: 9px;
+		font-size: 12px;
+	}
+
+	.blog-row .card .content p {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.blog-row .card .content h3 {
+		font-size: 17px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Blog responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			departments responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.breadcrumb-text {
+		top: 57%;
+		transform: translateY(-40%);
+	}
+
+	.department-item-title {
+		font-size: 20px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			departments responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			breadcrumb responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.breadcrumb-title {
+		font-size: 35px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			breadcrumb responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Profile responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.Profile_item {
+		margin-top: -133px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Profile responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			footer responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.copyright {
+		font-size: 10px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			footer responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			title responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.into-sub-title {
+		font-size: 25px;
+	}
+
+	.section-sub-title {
+		font-size: 28px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			title responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			top-bar responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.top-bar {
+		display: none;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			top-bar responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.header-main {
+		padding: 4px 0;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	.header-main {
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		z-index: 7;
+	}
+
+	.sidebar.show {
+		left: 60%;
+	}
+
+	.btn-side.click {
+		left: 50%;
+	}
+
+	.btn-side {
+		display: block;
+	}
+
+	.sidebar {
+		display: block;
+	}
+
+	.sidebar ul li a {
+		font-size: 14px;
+		padding-left: 17px;
+	}
+
+	.btn-side {
+		left: 90%;
+		top: 7px;
+		height: 40px;
+		width: 40px;
+	}
+
+	.btn-side span {
+		margin: 7.3px;
+		font-size: 25px;
+	}
+
+	.sidebar ul ul li a {
+		font-size: 14px;
+		padding-left: 20px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	    Banner Carousel responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#banner {
+		margin-top: 57px;
+	}
+
+	.banner-carousel .banner-carousel-item {
+		height: 450px;
+	}
+
+	.slide-title {
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 12px;
+	}
+
+	.slide-sub-title {
+		font-size: 19px;
+		line-height: 19px;
+		margin: 0px 0;
+	}
+
+	.slider.btn {
+		font-size: 10px;
+	}
+
+	/* Carousel control */
+	.banner-carousel .carousel-control {
+		display: none !important;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	    Banner Carousel responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Blog responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#blog .pagination {
+		margin-bottom: 50px;
+	}
+
+	.blog-row .card-inner .box .blog-date span {
+		left: 7px;
+		font-size: 12px;
+	}
+
+	.blog-row .card-inner .box .blog-admin span {
+		right: 5px;
+		font-size: 12px;
+	}
+
+	.blog-row .card .content p {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.blog-row .card .content h3 {
+		font-size: 17px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Blog responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Commentbox responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.commentbox-top h3 {
+		font-size: 14px;
+	}
+
+	#commentbox .title {
+		text-align: center;
+	}
+
+	.comment_area .comment-content .comment-meta p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.comment_area .comment-content .comment-meta a.like,
+	.comment_area .comment-content .comment-meta a.reply {
+		padding: 1px 6px 1px;
+		font-size: 11px;
+	}
+
+	.comment_area .comment-content .comment-meta h5 {
+		margin-bottom: 3px;
+		font-size: 15px;
+	}
+
+	.comment_area .comment-content .comment-meta .post-date {
+		font-size: 10px;
+		margin-bottom: 0px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Commentbox responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			breadcrumb responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.breadcrumb-text {
+		top: 58%;
+		transform: translateY(-45%);
+	}
+
+	.breadcrumb a {
+		margin-bottom: 2px;
+	}
+
+	.breadcrumb-title {
+		font-size: 32px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			breadcrumb responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Accordion responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.accordion-group .card-header .btn {
+		font-size: 13px;
+		padding: 13px 41px 13px 16px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Accordion responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call to action responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.call-to-action-box {
+		margin-top: 10px;
+	}
+
+	.call-to-action-box .block {
+		margin-top: 0 !important;
+	}
+
+	.block:hover {
+		margin-top: 0 !important;
+	}
+
+	.call-to-action-box .block_content a {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+	}
+
+	.call-to-action-box .block {
+		margin-bottom: 54px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Call to action responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Content responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.quote-item .quote-text {
+		padding: 0 40px 30px 50px;
+	}
+
+	.quote-item-footer {
+		margin-left: 0;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Content responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Services responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.service_counter {
+		width: 29.89%;
+		margin: 5px;
+	}
+
+	.service_txt {
+		font-size: 10px;
+	}
+
+	.single-service-slider .carousel-control.right {
+		right: 0px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Services responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			subscribe responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.subscribe-call-to-acton {
+		text-align: center;
+		padding: 30px 0;
+		min-height: auto;
+	}
+
+	.newsletter {
+		padding: 30px 5px 15px 5px;
+		min-height: auto;
+		text-align: center;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			subscribe responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			 Profile css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#profile .section-sub-title {
+		margin: 0;
+	}
+
+	.Profile_item {
+		margin-top: -121px;
+	}
+
+	.medals ul {
+		justify-content: center;
+	}
+
+	.profile a {
+		padding: 11px;
+		font-size: 14px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			 Profile css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			error 404 responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.error-page .error-code h2 {
+		font-size: 138px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			error 404 responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			team responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.ts-team-wrapper .ts-team-content {
+		text-align: center;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			team responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			footer responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.footer-about {
+		text-align: center;
+	}
+
+	.footer-menu {
+		display: none;
+	}
+
+	.copyright {
+		padding: 9px 0;
+		font-size: 10px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			footer responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			back to top responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	#back-to-top {
+		right: 7px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			back to top responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}
+
+/* Custom more small devices */
+@media (min-width: 320px) and (max-width: 478.98px) {
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.header-main {
+		padding: 4px 0;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	.header-main {
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		z-index: 7;
+	}
+
+	.sidebar.show {
+		left: 49%;
+	}
+
+	.btn-side.click {
+		left: 35%;
+	}
+
+	.btn-side {
+		display: block;
+	}
+
+	.sidebar {
+		display: block;
+	}
+
+	.sidebar ul li a {
+		font-size: 13px;
+		padding-left: 10px;
+	}
+
+	.btn-side {
+		left: 84%;
+		top: 7px;
+		height: 40px;
+		width: 40px;
+	}
+
+	.btn-side span {
+		margin: 7.3px;
+		font-size: 25px;
+	}
+
+	.sidebar ul ul li a {
+		font-size: 12px;
+		padding-left: 13px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			Header responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			banner responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.breadcrumb a::before {
+		left: 24px;
+	}
+
+	.breadcrumb a:first-child::before {
+		left: 6px;
+	}
+
+	.breadcrumb a {
+		font-size: 8px;
+		padding: 0 10px 0 46px;
+	}
+
+	.breadcrumb-area {
+		top: 62%;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			banner responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			About us responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.about-slider.small-bg .box-slide-title {
+		font-size: 20px;
+	}
+
+	.box-slider-content {
+		width: 181px;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			About us responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		    Feature responsive css start
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.features-box .features-icon img {
+		width: 60px;
+	}
+
+	.features-box .features-box-content h3 {
+		font-size: 12px;
+		line-height: 12px;
+		text-align: center;
+	}
+
+	/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		    Feature responsive css end
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}
+
+/* Custom more small devices */
+@media (max-width: 400px) {}

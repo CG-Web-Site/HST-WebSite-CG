@@ -1,0 +1,311 @@
+:root {
+  
+  --gray-dark-color: #343a40;
+  --medium-contrast-color: #4d515e;
+  --heading-color: #050c2a;
+  --main-bg-color: #f2f5f7;
+  --header-bg-color: #fff;
+  --content-box-bg: #fff;
+  --shadow-button: 0px 18px 20px rgb(153 172 243 / 8%),
+    0px 10px 14px rgb(178 187 207 / 6%), 0px 8px 9px rgb(213 213 213 / 4%);
+  --image-hover-bg-2: rgb(255 255 255 / 60%);
+  --border-color: #dee2e6;
+  --br-xl: 0.6rem;
+  --max-width: 1380px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gray-dark-color: #e5e5e5;
+    --main-bg-color: #0d111c;
+    --header-bg-color: #000;
+    --content-box-bg: #1e283c;
+    --shadow-button: none;
+    --image-hover-bg-2: rgb(22 32 70 / 37%);
+    --heading-color: #fff;
+    --medium-contrast-color: #8e94a9;
+  }
+}
+
+*:not(dialog) {
+  box-sizing: border-box;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+p {
+  margin: 0 0 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--heading-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+  line-height: 1.4em;
+  font-weight: 400;
+  text-wrap: balance;
+}
+.btn-Fx {
+  overflow: hidden;
+  color: var(--heading-color);
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  padding: 10px 16px;
+  background-color: var(--content-box-bg);
+  border-radius: 5px;
+  box-shadow: var(--shadow-button);
+}
+.btn-Fx span {
+  display: block;
+  position: relative;
+  z-index: 10;
+  font-weight: 700;
+}
+
+.btn-Fx:hover {
+  color: #fff;
+}
+
+.btn-Fx:before {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 120%;
+  height: 0;
+  padding-bottom: 120%;
+  top: -110%;
+  left: -10%;
+  border-radius: 50%;
+  transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+}
+
+.btn-Fx:hover:before {
+  transform: translateZ(0) scaleZ(1);
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.btn-Fx:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: translate3d(0, -101%, 0);
+  transition: transform 0.4s;
+}
+
+.btn-Fx:hover:after {
+  transform: translateZ(0);
+  transition-duration: 0.05s;
+  transition-delay: 0.4s;
+  transition-timing-function: linear;
+}
+.content-container {
+  width: 100%;
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+.front-blog {
+  width: 100%;
+}
+.front-blog-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.front-blog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.front-blog-top .dec-title {
+  color: var(--medium-contrast-color);
+}
+
+.front-blog-top .btn-Fx {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+
+.article-blog {
+  color: var(--medium-contrast-color);
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border-radius: var(--br-xl);
+}
+
+.article__thumbnail {
+  position: relative;
+  height: calc(100% - 140px);
+  width: 100%;
+  background-size: cover;
+  background-position-x: center;
+  /* background-color: #2151b1; */
+  background-blend-mode: lighten;
+  /* opacity: 1; */
+  transition: all 0.6s ease-out;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.article-blog:hover .article__thumbnail {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.article__body {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 148px;
+  padding: 20px;
+  background-color: var(--content-box-bg);
+  transition: all 0.4s;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.article-blog:hover .article__body {
+  background-color: var(--image-hover-bg-2);
+  backdrop-filter: blur(50px);
+  height: 250px;
+}
+
+.article__category {
+  display: block;
+  width: 100%;
+  transition: color 0.4s;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+
+.article__title {
+  padding-bottom: 20px;
+  max-height: 65px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.article__excerpt {
+  opacity: 0;
+  transition: opacity 0.4s;
+  line-height: 1.6;
+  font-size: 14px;
+  color: var(--heading-color);
+}
+
+.article__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px 20px 20px;
+  line-height: inherit;
+  height: 42px;
+  width: 100%;
+}
+
+.article__footer .footer__readmore {
+  position: relative;
+  display: block;
+  height: 22px;
+  float: right;
+  overflow: hidden;
+}
+
+.article__footer .footer__readmore-text {
+  display: inline-block;
+  padding-right: 5px;
+  transform: translateY(30px);
+  color: inherit;
+  vertical-align: middle;
+  transition: all 0.4s;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.article__footer .footer__readmore-arrow {
+  display: inline-block;
+  height: 100%;
+}
+
+.article__footer .footer__readmore-arrow svg {
+  transition: fill 0.4s;
+}
+
+.article-blog:hover {
+  color: var(--medium-contrast-color);
+}
+
+.article-blog:hover .footer__readmore-text {
+  transform: translateY(-2px);
+}
+
+.article-blog:hover .article__excerpt {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .front-blog-list > a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 5rem 0;
+  }
+  .front-blog-list {
+    flex-direction: column;
+  }
+
+  .article__thumbnail {
+    height: 220px;
+    background-position: bottom;
+  }
+
+  .article__body {
+    position: absolute;
+    background-color: var(--image-hover-bg-2);
+    backdrop-filter: blur(50px);
+  }
+
+  .article__excerpt {
+    max-height: auto;
+    overflow: visible;
+  }
+}

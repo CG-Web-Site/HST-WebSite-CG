@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HST | Otomotiv İmalat San. ve Tic. LTD. ŞTİ.</title>
+  <!-- Favicon
+================================================== -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.html">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="body-inner">
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    preloader part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div id="preloader"></div>
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    preloader part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    Header part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+     <header id="header" class="header-main">
+      <div class="site-navigation">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="logo">
+                  <a class="d-block" href="index.html">
+                    <img loading="lazy" src="images/logo/HST_logo_beyaz_tr.png"  alt="logo">
+                  </a>
+                </div>
+                <!-- logo end -->
+                <div id="navbarSupportedContent" class="main-menu collapse navbar-collapse justify-content-end">
+                  <ul class="nav navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="tarihcemiz.html">Tarihçe</a></li>
+                        <li><a href="vizyonumuz.html">Vizyon</a></li>
+                        <li><a href="misyonumuz.html">MİSYON</a></li>
+                         <li><a href="ar-ge.html">AR-GE</a></li>
+                        <li><a href="referans.html">Müşterilerimiz</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="otomotiv.html">Otomotiv</a></li>
+                        <li><a href="demiryolu.html">Demiryolu</a></li>
+                        <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
+                        <li><a href="kvkk.html">Gizlilik Politikası</a></li>
+                        <li><a href="belgelerimiz.html">Belgeler</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="fuar.html">Fuarlar</a></li>
+                        <li><a href="blog.html">Haberler</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
+                    <li class="header-get-a-quote">
+                     <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- sidebar start -->
+                <div class="btn-side">
+                  <span class="fa-solid fa-bars"></span>
+                </div>
+                <nav class="sidebar overflow-auto">
+                  <ul>
+                    <li class="active"><a href="index.html">Anasayfa</a></li>
+                    <li>
+                      <a href="#!" class="first-drop-btn">Hakkımızda
+                        <span class="fa-solid fa-caret-down first"></span>
+                      </a>
+                      <ul class="first-drop-show">
+                        <li><a href="hakkimizda.html">- Tarihçe </a></li>
+                          </ul>
+                      <ul class="first-drop-show">
+                        <li><a href="vizyonumuz.html">- Vizyon </a></li>
+                          </ul>
+                      <ul class="first-drop-show">
+                        <li><a href="misyonumuz.html">- Misyon </a></li>
+                          </ul>
+                      <ul class="first-drop-show">
+                        <li><a href="ar-ge.html">- AR-GE </a></li>
+                      </ul>
+                      <a href="#!" class="second-drop-btn">Hizmetlerimiz
+                        <span class="fa-solid fa-caret-down second"></span>
+                      </a>
+                      <ul class="second-drop-show">
+                        <li><a href="otomotiv.html">- Otomotiv</a></li>
+                        <li><a href="demiryolu.html">- Demiryolu</a></li>
+                        <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#!" class="third-drop-btn">Bilgi Güvenliği
+                        <span class="fa-solid fa-caret-down third"></span>
+                      </a>
+                      <ul class="third-drop-show">
+                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
+                        
+                         <li><a href="belgelerimiz.html">- Belgeler</a></li>
+                        <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#!" class="four-drop-btn">Medya
+                        <span class="fa-solid fa-caret-down four"></span>
+                      </a>
+                      <ul class="four-drop-show">
+                        <li><a href="fuar.html">- Fuarlar</a></li>
+                        <li><a href="blog.html">- Haberler</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                  </ul>
+                </nav>
+                <!-- sidebar end -->
+              </nav>
+            </div>
+            <!--/ Col end -->
+          </div>
+          <!--/ Row end -->
+        </div>
+        <!--/ Container end -->
+      </div>
+      <!--/ Navigation end -->
+    </header>
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    Header part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    breadcrumb part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div id="breadcrumb-area" class="breadcrumb-area" style="background-image:url(images/company/scene00219.jpg)">
+      <div class="breadcrumb-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="breadcrumb-heading">
+                <h1 class="breadcrumb-title">HİZMETLERİMİZ</h1>
+                <div class="breadcrumb">
+                  <a href="index-2.html" class="active"><i class="fa-solid fa-house-chimney"></i></a>
+                  <a href="departments.html">DEMİRYOLU</a>
+                </div>
+              </div>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Banner text end -->
+    </div><!-- Banner area end -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    breadcrumb part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    Single Department part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <section id="main-container" class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <h3 class="section-sub-title">DEMİRYOLU</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div id="department-slider" class="department-slider small-bg">
+              <div class="item" style="background-image:url(images/Vagon_Resimleri/Vagon_7.jpg)"></div>
+              <div class="item" style="background-image:url(images/Vagon_Resimleri/Vagon_11.png)"></div>
+              <div class="item" style="background-image:url(images/Vagon_Resimleri/Vagon_5.jpg)"></div>
+            </div><!-- Page slider end-->
+          </div><!-- Slider col end -->
+          <div class="col-lg-4 mt-5 mt-lg-0">
+            <ul class="project-info list-unstyled">
+              <li>
+                <p class="project-info-label"><p>Demiryolu endüstrisinin gereksinimlerini karşılamak için özel olarak tasarlanmış dişli dövme parçaları üretmekteyiz. Bu parçalar, yüksek kaliteli malzemeler ve ileri üretim teknolojileri kullanılarak, her türlü demiryolu sisteminde sorunsuz bir şekilde çalışacak şekilde üretilmektedir. Her bir parça, demiryolu ağlarında güvenilir performans sağlamak ve uzun yıllar boyunca kesintisiz hizmet sunmak amacıyla titizlikle tasarlanır. <br><br>
+                  Yüksek standartlarda kalite kontrolü ve yenilikçi üretim yöntemlerimizle, yalnızca parçaların dayanıklılığını değil, aynı zamanda güvenliğini ve verimliliğini de en üst seviyeye çıkarmayı hedefliyoruz. Demiryolu taşımacılığının hızla gelişen ihtiyaçlarına uygun çözümler üreterek, sürdürülebilir ve güvenli bir ulaşım altyapısının inşasına katkı sağlıyoruz. Bu süreçte, çevresel etkileri minimize etmek ve endüstrinin geleceğini şekillendirmek için sürekli olarak yenilikçi yaklaşımlar geliştirmekteyiz.</p>
+              </li>
+            </ul>
+          </div><!-- Content col end -->
+        </div><!-- Row end -->
+      </div><!-- Conatiner end -->
+    </section><!-- Main container end -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    Single Department part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    content part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- PRODUCT -->
+<section id="departments" class="departments-area">
+  <div class="container">
+    <div class="row text-center">
+    </div>
+    <!--/ Title row end -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row shuffle-wrapper">
+          <div class="col-1 shuffle-sizer"></div>
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/1053.05.1583-SUSTA-BILEZIKLI-CER-PAKETI-TIP-570.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">SUSTA BILEZIKLI CER PAKETI TIP 570 </a>
+                  </h3>
+                  <p class="department-category ">1053.05.1583</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/10874930-BRACKET---MOUNTING---TRACK-TENSION-ADJUSTER.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">BRACKET MOUNTING TRACK TENSION ADJUSTER </a>
+                  </h3>
+                  <p class="department-category ">10874930</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/10918159-HOUSING-SUPPORT---ROAD-WHEEL.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">HOUSING SUPPORT ROAD WHEEL </a>
+                  </h3>
+                  <p class="department-category ">10918159</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/11646782--TRACK-SHOW.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">TRACK SHOW </a>
+                  </h3>
+                  <p class="department-category ">11646782</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/11678174--YOKE-UNIVERSAL-JOINT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">YOKE UNIVERSAL JOINT</a>
+                  </h3>
+                  <p class="department-category ">11678174</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/23017998--CIKIS-FLANSI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CIKIS FLANSI</a>
+                  </h3>
+                  <p class="department-category ">23017998</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/23018278--CARRIER-OUTPUT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CARRIER OUTPUT</a>
+                  </h3>
+                  <p class="department-category ">23018278</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/29565193--RING-DRIVE-CARRIER-P2.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">RING DRIVE CARRIER P2</a>
+                  </h3>
+                  <p class="department-category ">29565193</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+          <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/29565201--CARRIER-OUTPUT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CARRIER OUTPUT</a>
+                  </h3>
+                  <p class="department-category ">29565201</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/29565202-CARRIER-OUTPUT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CARRIER OUTPUT</a>
+                  </h3>
+                  <p class="department-category ">29565202</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/4013079-567-RING-COOLING---INNER-COMBUSTION-CHAMBER.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">567 RING COOLING INNER COMBUSTION CHAMBER</a>
+                  </h3>
+                  <p class="department-category ">4013079</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/53-111306-ACTUATOR-FITTING---OUTBD-ATTACH---LE-CLOSURE-C.S.W.-FORGING.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">ACTUATOR FITTING OUTBD ATTACH LE CLOSURE C.S.W. FORGING</a>
+                  </h3>
+                  <p class="department-category ">53-111306</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/563485-CER-DISLISI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CER DISLISI</a>
+                  </h3>
+                  <p class="department-category ">563485</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/84226363-KAPLIN-DOVME-TASLAGI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">KAPLIN DOVME TASLAGI</a>
+                  </h3>
+                  <p class="department-category ">84226363</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/98000076--ARM---ASSEMBLY---SUPPORT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">ARM ASSEMBLY SUPPORT</a>
+                  </h3>
+                  <p class="department-category ">98000076</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/AYP01-KONVERTOR-DISLISI-&-(1339218C2)-GEAR.PROTEC-0-MATIC-160T.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">AYP01 KONVERTOR DISLISI & GEAR.PROTEC 0 MATIC 160T</a>
+                  </h3>
+                  <p class="department-category ">1339218C2</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/B.04.04.05.12-1-SABIT-NOKTA-GOVDESI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">SABIT NOKTA GOVDESI</a>
+                  </h3>
+                  <p class="department-category ">B.04.04.05.12-1</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/B.06.07.04.00--MANIVELA-KOPRUSU.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">MANIVELA KOPRUSU</a>
+                  </h3>
+                  <p class="department-category ">B.06.07.04.00</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/CER-KANCALARI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CER KANCALARI</a>
+                  </h3>
+                  <p class="department-category ">CER KANCALARI</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/F4E-32-517313--BRACE-FORGING.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">BRACE FORGING</a>
+                  </h3>
+                  <p class="department-category ">F4E-32-517313</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/HD-A-00--1-MN---1.5-MN-Drawgear-Assembly-Type-540..webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">1.5 MN Drawgear Assembly Type 540</a>
+                  </h3>
+                  <p class="department-category ">HD-A-00-1-MN</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/HD-E-001--600kN-105mm-stroke-Elastomeric-Buffer,-Category-A,-450mm-head..webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">600kN 105mm stroke Elastomeric Buffer Category-A 450mm head</a>
+                  </h3>
+                  <p class="department-category ">HD-E-001</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/HD-E-003-ELASTOMER-KOMPLE--MINER-CATOGORY-A-BUFFER-SPRING-322MM-IH-35-KJ.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">ELASTOMER KOMPLE MINER CATOGORY A BUFFER SPRING 322MM IH 35 KJ</a>
+                  </h3>
+                  <p class="department-category ">HD-E-003</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/HST__D_33.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">HST D 33</a>
+                  </h3>
+                  <p class="department-category ">D 33</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/LM-05220--850-kN-YARI-OTOMATIK-VIDALI-KOSUM-TAKIMI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">LM-05220</a>
+                  </h3>
+                  <p class="department-category ">850 kN YARI OTOMATIK VIDALI KOSUM TAKIMI</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/R74701110-ROKETSAN-ARKA-KAPAK.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">ROKETSAN ARKA KAPAK</a>
+                  </h3>
+                  <p class="department-category ">R74701110</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/T-37-SILINDIR-YARI-MAMUL.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">SILINDIR YARI MAMUL</a>
+                  </h3>
+                  <p class="department-category ">T-37</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.02.248-MENOT.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">MENOT</a>
+                  </h3>
+                  <p class="department-category ">V.0.02.248 MENOT</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.03.34-DAYANMA-PARCASI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">DAYANMA PARCASI</a>
+                  </h3>
+                  <p class="department-category ">V.0.03.34 DAYANMA PARCASI</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.05.36A-T2.000.744-SUSTA-BILEZIKLI-CER-PAKETI-TIP-540.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">SUSTA-BILEZIKLI CER PAKETI TIP-540</a>
+                  </h3>
+                  <p class="department-category ">V.0.05.36A T2.000.744</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.06.16-2-1F-TAMPON-ALT-PLAKASI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">TAMPON ALT PLAKASI</a>
+                  </h3>
+                  <p class="department-category ">V.0.06.16-2-1F</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.06.19.01.01-TAMPON-ALIN-PLAKASI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">TAMPON ALIN PLAKASI</a>
+                  </h3>
+                  <p class="department-category ">V.0.06.19.01.01</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.06.21-2-YOLCU-VAGONU-SUSTA-BILEZIK-DEMETI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">YOLCU VAGONU SUSTA BILEZIK DEMETI</a>
+                  </h3>
+                  <p class="department-category ">V.0.06.21-2</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.0.09.229-CEKME-CUBUGU-MAFSALI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">CEKME CUBUGU MAFSALI</a>
+                  </h3>
+                  <p class="department-category ">V.0.09.229</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.01.05.01-850-kN-TOPUZLU-CER-KANCASI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">850 kN TOPUZLU CER KANCASI</a>
+                  </h3>
+                  <p class="department-category ">V.01.05.01</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+ <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+            <div class="department-img-container">
+              <!-- <a class="gallery-popup" href="images/departments/department1.jpg" data-lightbox="gallery"> -->
+                <img class="img-fluid" src="images/products/HST-D-Demiryolu/V.06.49.03-SUPER-TAMPON-SUSTA-BILEZIK-DEMETI.webp" alt="service-img">
+                <span class="gallery-icon"></span>
+              </a>
+              <div class="service-item-info">
+                <div class="department-item-info-content">
+                  <h3 class="department-item-title">
+                    <a href="#">SUPER TAMPON SUSTA BILEZIK DEMETI</a>
+                  </h3>
+                  <p class="department-category ">V.06.49.03</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- shuffle item 1 end -->
+
+
+        </div>
+      </div>
+      <div class="col-12">
+      </div>
+  <!--/ Container end -->
+</section>
+<!-- END PRODUCT  -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    content part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    footer part start
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <footer id="footer" class="footer ">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-4 footer-widget footer-about text-center">
+              <img loading="lazy" class="footer-logo" src="images/logo/HST_logo_beyaz_tr.png" style="width: 150px;" alt="logo">
+              <p>HST Otomotiv, dişli dövme ve şanzıman üretiminde uzmanlaşmış, otomotiv sektörüne yüksek kalite çözümler sunan köklü bir firmadır. Yenilikçi üretim teknolojileri ve mühendislik altyapısıyla, yerli ve global pazarda güçlü bir konuma sahiptir.</p>
+              <div class="footer-social">
+                   <!-- <ul>
+                  <li><a href="#" class="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li><a href="#" class="twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="#" class="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li><a href="#" class="linkedin" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul> -->
+              </div><!-- Footer social end -->
+            </div><!-- Col end -->
+            <div class="col-lg-2 col-sm-6 col-md-4 footer-widget mt-5 mt-md-0">
+              <!-- <h3 class="widget-title">Faydalı Bağlantılar</h3> -->
+              <ul class="list-arrow">
+                <li><a href="tarihcemiz.html">Tarihçemiz</a></li>
+                <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
+                <li><a href="misyonumuz.html">Misyonumuz</a></li>
+                 <li><a href="ar-ge.html">AR-GE</a></li>
+                        <li><a href="referans.html">Müşterilerimiz</a></li>
+              </ul>
+            </div><!-- Col end -->
+            <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">
+              <!-- <h3 class="widget-title">Faydalı Bağlantılar</h3> -->
+              <ul class="list-arrow">
+                <li><a href="otomotiv.html">Otomotiv</a></li>
+                <li><a href="demiryolu.html">Demir Yolu</a></li>
+                <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
+                <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">Mekasist</a></li>
+                <li><a href="kvkk.html">Gizlilik Politikası</a></li>
+              </ul>
+            </div><!-- Col end -->
+            <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">
+              <!-- <h3 class="widget-title">Faydalı Bağlantılar</h3> -->
+              <ul class="list-arrow">
+                <li><a href="belgelerimiz.html">Belgelerimiz</a></li>
+                <li><a href="fuar.html">Fuarlar</a></li>
+                <li><a href="blog.html">Haberler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+              </ul>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+      <div class="copyright">
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-2 col-sm-6 order-2 order-lg-1">
+              <div class="copyright-info">
+                <span>Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear())
+                   </script> <a
+                    href="https://www.codegarage.com.tr">codegarage</a>
+                </span>
+              </div>
+            </div>
+          </div><!-- Row end -->
+          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+            <button class="btn btn-primary" title="Back to Top">
+              <i class="fa fa-angle-double-up"></i>
+            </button>
+          </div>
+        </div><!-- Container end -->
+      </div><!-- Copyright end -->
+    </footer>
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    footer part end
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- Javascript Files
+  ================================================== -->
+    <!-- initialize jQuery Library -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
+    <!-- fontawesome -->
+    <script src="plugins/fontawesome/FontAwesome.js"></script>
+    <!-- shuffle -->
+    <script src="plugins/shuffle/shuffle.min.js" defer></script>
+    <!-- Template custom -->
+    <script src="js/script.js"></script>
+  </div><!-- Body inner end -->
+</body>
+<!-- Mirrored from eagleforce.soulknightweb.com/department-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Mar 2025 14:40:15 GMT -->
+</html>
