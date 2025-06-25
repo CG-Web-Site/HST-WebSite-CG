@@ -20,13 +20,7 @@
  margin-right:0px;
  min-width:282px;
 }
-/* Iframe */
-#contact .ps-lg-0 iframe{
- position:relative;
- top:214px;
-}
-</style>
-<style>
+
   #imgSize {
     width: 100%;
     height: 100%;
@@ -50,18 +44,14 @@
 }
 .background-btn-color{
   background-color: #fcfaf9 !important;
-  
 }
 .background-btn-color:hover{
   background-color: #EC640E !important;
-  
 }
-
 #searchBtn{
  position:relative;
  top:-2px;
 }
-
 </style>
 <body>
     <div class="contact-form">
