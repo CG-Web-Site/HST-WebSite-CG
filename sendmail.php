@@ -15,62 +15,7 @@
         .success { color: green; }
     </style>
 </head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<style>
-#hizza {
- margin-right:0px;
- min-width:282px;
-}
-/* Iframe */
-#contact .ps-lg-0 iframe{
- position:relative;
- top:214px;
-}
-</style>
-<style>
-  #imgSize {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .photo-gallery {
-    padding: 50px 0;
-  }
-  .photo-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  .photo-gallery img:hover {
-    transform: scale(1.05);
-  }
-  /* Iframe */
-#contact .ps-lg-0 iframe{
- top:170px;
-}
-.background-btn-color{
-  background-color: #fcfaf9 !important;
-  
-}
-.background-btn-color:hover{
-  background-color: #EC640E !important;
-  
-}
 
-#searchBtn{
- position:relative;
- top:-2px;
-}
-
-</style>
-=======
-
->>>>>>> parent of 6d7abde (Revert "0.04")
-=======
-
->>>>>>> parent of 6d7abde (Revert "0.04")
 <body>
     <div class="contact-form">
         <h2>Bizimle İletişime Geçin</h2>
