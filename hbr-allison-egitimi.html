@@ -21,6 +21,49 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
+  
+  <style>
+#hizza {
+ margin-right:0px;
+ min-width:282px;
+}
+/* Iframe */
+#contact .ps-lg-0 iframe{
+ position:relative;
+ top:214px;
+}
+  #imgSize {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .photo-gallery {
+    padding: 50px 0;
+  }
+  .photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  /* Iframe */
+#contact .ps-lg-0 iframe{
+ top:170px;
+}
+.background-btn-color{
+  background-color: #fcfaf9 !important;
+}
+.background-btn-color:hover{
+  background-color: #EC640E !important;
+}
+#searchBtn{
+ position:relative;
+ top:-2px;
+}
+</style>
   <body>
     <div class="body-inner">
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -33,9 +76,7 @@
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     top-bar part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                    top-bar part end
-    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Header part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -44,57 +85,62 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <div class="logo">
                   <a class="d-block" href="index.html">
-                    <img loading="lazy" src="images/logo/HST_logo_beyaz_tr.png"  alt="logo">
+                  <img loading="lazy" src="images/logo/hst-eng-logo.png" alt="logo">
                   </a>
                 </div>
                 <!-- logo end -->
                 <div id="navbarSupportedContent" class="main-menu collapse navbar-collapse justify-content-end">
                   <ul class="nav navbar-nav ml-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="tarihcemiz.html">Tarihçe</a></li>
-                        <li><a href="vizyonumuz.html">Vizyon</a></li>
-                        <li><a href="misyonumuz.html">MİSYON</a></li>
-                         <li><a href="ar-ge.html">AR-GE</a></li>
-                        <li><a href="referans.html">Müşterilerimiz</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="otomotiv.html">Otomotiv</a></li>
-                        <li><a href="demiryolu.html">Demiryolu</a></li>
-                        <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
-                        <li><a href="kvkk.html">Gizlilik Politikası</a></li>
-                        <li><a href="belgelerimiz.html">Belgeler</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="fuar.html">Fuarlar</a></li>
-                        <li><a href="blog.html">Haberler</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
-                    <li class="header-get-a-quote">
-                     <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
-                    </li>
+                  <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="tarihcemiz.html">Tarihçe</a></li>
+                    <li><a href="vizyonumuz.html">Vizyon</a></li>
+                    <li><a href="misyonumuz.html">MİSYON</a></li>
+                     <li><a href="ar-ge.html">AR-GE</a></li>
+                    <li><a href="referans.html">Müşterilerimiz</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="otomotiv.html">Otomotiv</a></li>
+                    <li><a href="demiryolu.html">Demiryolu</a></li>
+                    <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
+                    <li><a href="belgelerimiz.html">Belgeler</a></li>
+                    <li><a href="kvkk.html">Gizlilik Politikası</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="fuar.html">Fuarlar</a></li>
+                    <li><a href="blog.html">Haberler</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
+                  <li class="header-get-a-quote">
+                   <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
+                  </li>
+                  <li class="nav-item">
+                    <button id="searchBtn" class="btn btn-outline-secondary background-btn-color" style="margin-left:10px;" title="Ara">
+                    <i class="fa fa-search"></i>
+                    </button>
+                  </li>
                   </ul>
                 </div>
                 <!-- sidebar start -->
@@ -103,55 +149,91 @@
                 </div>
                 <nav class="sidebar overflow-auto">
                   <ul>
-                    <li class="active"><a href="index.html">Anasayfa</a></li>
-                    <li>
-                      <a href="#!" class="first-drop-btn">Hakkımızda
-                        <span class="fa-solid fa-caret-down first"></span>
-                      </a>
-                      <ul class="first-drop-show">
-                        <li><a href="hakkimizda.html">- Tarihçe </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="vizyonumuz.html">- Vizyon </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="misyonumuz.html">- Misyon </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="ar-ge.html">- AR-GE </a></li>
+                  <li class="active"><a href="index.html">Anasayfa</a></li>
+                  <li>
+                    <a href="#!" class="first-drop-btn">Hakkımızda
+                    <span class="fa-solid fa-caret-down first"></span>
+                    </a>
+                    <ul class="first-drop-show">
+                    <li><a href="tarihcemiz.html">- Tarihçe </a></li>
                       </ul>
-                      <a href="#!" class="second-drop-btn">Hizmetlerimiz
-                        <span class="fa-solid fa-caret-down second"></span>
-                      </a>
-                      <ul class="second-drop-show">
-                        <li><a href="otomotiv.html">- Otomotiv</a></li>
-                        <li><a href="demiryolu.html">- Demiryolu</a></li>
-                        <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="vizyonumuz.html">- Vizyon </a></li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#!" class="third-drop-btn">Bilgi Güvenliği
-                        <span class="fa-solid fa-caret-down third"></span>
-                      </a>
-                      <ul class="third-drop-show">
-                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
-                        
-                         <li><a href="belgelerimiz.html">- Belgeler</a></li>
-                        <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="misyonumuz.html">- Misyon </a></li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#!" class="four-drop-btn">Medya
-                        <span class="fa-solid fa-caret-down four"></span>
-                      </a>
-                      <ul class="four-drop-show">
-                        <li><a href="fuar.html">- Fuarlar</a></li>
-                        <li><a href="blog.html">- Haberler</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="iletisim.html">İletişim</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="ar-ge.html">- AR-GE </a></li>
+                    </ul>
+                    <a href="#!" class="second-drop-btn">Hizmetlerimiz
+                    <span class="fa-solid fa-caret-down second"></span>
+                    </a>
+                    <ul class="second-drop-show">
+                    <li><a href="otomotiv.html">- Otomotiv</a></li>
+                    <li><a href="demiryolu.html">- Demiryolu</a></li>
+                    <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!" class="third-drop-btn">Bilgi Güvenliği
+                    <span class="fa-solid fa-caret-down third"></span>
+                    </a>
+                    <ul class="third-drop-show">
+                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
+                     <li><a href="belgelerimiz.html">- Belgeler</a></li>
+                    <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!" class="four-drop-btn">Medya
+                    <span class="fa-solid fa-caret-down four"></span>
+                    </a>
+                    <ul class="four-drop-show">
+                    <li><a href="fuar.html">- Fuarlar</a></li>
+                    <li><a href="blog.html">- Haberler</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="iletisim.html">İletişim</a></li>
                   </ul>
                 </nav>
+                <!-- Fullscreen Search Overlay -->
+                <div id="searchOverlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;">
+                  <button id="closeSearch" style="position:absolute;top:30px;right:40px;font-size:2.5rem;background:none;border:none;color:#fff;z-index:10001;" aria-label="Kapat">&times;</button>
+                  <form id="searchForm" style="width:100%;max-width:600px;margin:auto;display:flex;flex-direction:column;align-items:center;">
+                  <input type="text" id="searchInput" placeholder="Aramak istediğiniz kelimeyi yazın..." style="width:100%;padding:20px 30px;font-size:1rem;border:none;border-radius:8px;outline:none;margin-bottom:30px;">
+                    <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:12px 20px;">A r a</button>
+                  </form>
+                </div>
+                <script>
+                  // Search overlay logic
+                  document.addEventListener('DOMContentLoaded', function() {
+                  var searchBtn = document.getElementById('searchBtn');
+                  var searchOverlay = document.getElementById('searchOverlay');
+                  var closeSearch = document.getElementById('closeSearch');
+                  var searchInput = document.getElementById('searchInput');
+                  if(searchBtn && searchOverlay && closeSearch && searchInput) {
+                    searchBtn.onclick = function() {
+                    searchOverlay.style.display = 'flex';
+                    setTimeout(function(){ searchInput.focus(); }, 100);
+                    };
+                    closeSearch.onclick = function() {
+                    searchOverlay.style.display = 'none';
+                    };
+                    // ESC key closes overlay
+                    document.addEventListener('keydown', function(e){
+                    if(e.key === "Escape") searchOverlay.style.display = 'none';
+                    });
+                    // Prevent form submit default (implement your search logic here)
+                    document.getElementById('searchForm').onsubmit = function(e){
+                    e.preventDefault();
+                    // You can implement your search logic here
+                    alert('Arama: ' + searchInput.value);
+                    searchOverlay.style.display = 'none';
+                    };
+                  }
+                  });
+                </script>
                 <!-- sidebar end -->
               </nav>
             </div>
@@ -287,13 +369,9 @@ HST Otomotiv olarak, teknik ekibimizin sürekli gelişimini destekleyerek, sekt�
                     >
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="#">- Haber 1</a></li>
-                          <li><a href="#">- Haber 2</a></li>
-                          <li><a href="#">- Haber 3 </a></li>
-                          <li><a href="#">- Haber 4 </a></li>
-                          <li><a href="#">- Haber 5</a></li>
-                          <li><a href="#">- Haber 6 </a></li>
-                          <li><a href="#">- Haber 7 </a></li>
+                          <li><a href="hbr-allison-egitimi.html">- Allison Eğitimi</a></li>
+                          <li><a href="hbr-bmc-tesislerinde-firtina-obusu-personoline-egitici-egitimi.html">- BMC Tesislerinde Fırtına Obüsü Personeline Eğitim</a></li>
+                          <li><a href="hbr-kayseri-test-makinasi.html">- Kayseri Test Makinesi </a></li>
                         </ul>
                       </div>
                     </div>
@@ -304,98 +382,98 @@ HST Otomotiv olarak, teknik ekibimizin sürekli gelişimini destekleyerek, sekt�
                 <div
                   class="blog-side-title d-flex flex-wrap justify-content-between"
                 >
-                  <h3>Son Haberler</h3>
-                  <p><a href="#">tümünü gör</a></p>
+                  <h3>Fuarlar</h3>
+                  <!-- <p><a href="#">tümünü gör</a></p> -->
                 </div>
                 <ul class="recent_article_row">
-                  <li class="recent_article_col">
-                    <div class="recent_article_img">
-                      <a href="blog-detail.html">
+                  <li class="recent_article_col" style="display: flex; align-items: center;">
+                    <div class="recent_article_img" style="flex-shrink: 0;">
+                      <a href="fuar-GearExpo2013-Fuari.html">
                         <img
                           class="w-100 img-fluid"
-                          src="images/tank1.jpg"
+                          src="images/fuar/12.jpg"
                           alt=""
                         />
                       </a>
                     </div>
-                    <div class="recent_article_text">
-                      <a href="blog-detail.html">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
+                    <div class="recent_article_text" style="text-align: left; margin-left: 10px; display: flex; align-items: center;">
+                      <a href="fuar-GearExpo2013-Fuari.html">
+                        <h5 style="margin: 0;">GearExpo2013 Fuarı.</h5>
                       </a>
-                      <p>Lorem ipsum dolor sit amet.</p>
+                      <!-- <p>Lorem ipsum dolor sit amet.</p> -->
+                    </div>
+                  </li>
+                  <li class="recent_article_col" style="display: flex; align-items: center;">
+                    <div class="recent_article_img" style="flex-shrink: 0;">
+                      <a href="fuar-Hannover-Messe-2012-Fuari.html">
+                        <img
+                          class="w-100 img-fluid"
+                          src="images/fuar/5.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="recent_article_text" style="text-align: left; margin-left: 10px; display: flex; align-items: center;">
+                      <a href="fuar-Hannover-Messe-2012-Fuari.html">
+                        <h5 style="margin: 0;">Hannover Messe 2012 Fuarı</h5>
+                      </a>
+                      <!-- <p>Lorem ipsum dolor sit amet..</p> -->
+                    </div>
+                  </li>
+                  <li class="recent_article_col" style="display: flex; align-items: center;">
+                    <div class="recent_article_img" style="flex-shrink: 0;">
+                      <a href="fuar-IDEF-2021-Uluslararasi-Savunma-Sanayi-Fuari.html">
+                        <img
+                          class="w-100 img-fluid"
+                          src="images/fuar/21.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="recent_article_text" style="text-align: left; margin-left: 10px; display: flex; align-items: center;">
+                      <a href="fuar-IDEF-2021-Uluslararasi-Savunma-Sanayi-Fuari.html">
+                        <h5 style="margin: 0;">IDEF 2021 Uluslararası Savunma Sanayi Fuarı</h5>
+                      </a>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur elit.</p> -->
+                    </div>
+                  </li>
+                  <li class="recent_article_col" style="display: flex; align-items: center;">
+                    <div class="recent_article_img" style="flex-shrink: 0;">
+                      <a href="fuar-IDEF-2023-Uluslararasi-Savunma-Sanayi-Fuari.html">
+                        <img
+                          class="w-100 img-fluid"
+                          src="images/fuar/32.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="recent_article_text" style="text-align: left; margin-left: 10px; display: flex; align-items: center;">
+                      <a href="fuar-IDEF-2023-Uluslararasi-Savunma-Sanayi-Fuari.html">
+                        <h5 style="margin: 0;">IDEF 2023 Uluslararası Savunma Sanayi Fuarı</h5>
+                      </a>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur elit.</p> -->
                     </div>
                   </li>
                   <li class="recent_article_col">
                     <div class="recent_article_img">
-                      <a href="blog-detail.html">
+                      <a href="fuar-InnoTrans-Uluslararasi-Ticaret-ve-Tasima-Teknolojileri-ve-Yenilikci-Parca-Arac-Sistemleri-Fuari.html">
                         <img
                           class="w-100 img-fluid"
-                          src="images/tank1.jpg"
+                          src="images/fuar/6.jpg"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="recent_article_text">
-                      <a href="blog-detail.html">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
+                      <a href="fuar-InnoTrans-Uluslararasi-Ticaret-ve-Tasima-Teknolojileri-ve-Yenilikci-Parca-Arac-Sistemleri-Fuari.html">
+                        <h5>InnoTrans Uluslararası Ticaret ve Taşıma Teknolojileri ve Yenilikçi Parça-Araç-Sistemleri Fuarı</h5>
                       </a>
-                      <p>Lorem ipsum dolor sit amet..</p>
-                    </div>
-                  </li>
-                  <li class="recent_article_col">
-                    <div class="recent_article_img">
-                      <a href="blog-detail.html">
-                        <img
-                          class="w-100 img-fluid"
-                          src="images/tank1.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="recent_article_text">
-                      <a href="blog-detail.html">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
-                      </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                    </div>
-                  </li>
-                  <li class="recent_article_col">
-                    <div class="recent_article_img">
-                      <a href="blog-detail.html">
-                        <img
-                          class="w-100 img-fluid"
-                          src="images/tank1.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="recent_article_text">
-                      <a href="blog-detail.html">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
-                      </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                    </div>
-                  </li>
-                  <li class="recent_article_col">
-                    <div class="recent_article_img">
-                      <a href="blog-detail.html">
-                        <img
-                          class="w-100 img-fluid"
-                          src="images/tank1.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="recent_article_text">
-                      <a href="blog-detail.html">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
-                      </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur elit.</p> -->
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="blog_tag">
+              <!-- <div class="blog_tag">
                 <div class="blog-side-title">
                   <h3>Etiketler</h3>
                 </div>
@@ -405,7 +483,7 @@ HST Otomotiv olarak, teknik ekibimizin sürekli gelişimini destekleyerek, sekt�
                   <li><a href="#">Otomotiv</a></li>
                   <li><a href="#">Savunma Sanayi</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -434,7 +512,7 @@ HST Otomotiv olarak, teknik ekibimizin sürekli gelişimini destekleyerek, sekt�
                 <img
                   loading="lazy"
                   class="footer-logo"
-                  src="images/logo/HST_logo_beyaz_tr.png"
+                  src="images/logo/hst-eng-logo.png"
                   style="width: 150px"
                   alt="logo"
                 />

@@ -43,6 +43,7 @@ body {
   font-size: 1.25rem;
   z-index: 10;
   filter: invert(1) grayscale(100);
+  color: white;
 }
 
 .lightbox-modal .modal-body {

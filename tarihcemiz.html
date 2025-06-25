@@ -19,6 +19,54 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+<style>
+#hizza {
+ margin-right:0px;
+ min-width:282px;
+}
+/* Iframe */
+#contact .ps-lg-0 iframe{
+ position:relative;
+ top:214px;
+}
+</style>
+<style>
+  #imgSize {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .photo-gallery {
+    padding: 50px 0;
+  }
+  .photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  /* Iframe */
+#contact .ps-lg-0 iframe{
+ top:170px;
+}
+.background-btn-color{
+  background-color: #fcfaf9 !important;
+  
+}
+.background-btn-color:hover{
+  background-color: #EC640E !important;
+  
+}
+
+#searchBtn{
+ position:relative;
+ top:-2px;
+}
+
+</style>
 <body>
   <div class="body-inner">
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -31,62 +79,67 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Header part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-     <header id="header" class="header-main">
+       <header id="header" class="header-main">
       <div class="site-navigation">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <div class="logo">
                   <a class="d-block" href="index.html">
-                    <img loading="lazy" src="images/logo/HST_logo_beyaz_tr.png"  alt="logo">
+                  <img loading="lazy" src="images/logo/hst-eng-logo.png" alt="logo">
                   </a>
                 </div>
                 <!-- logo end -->
                 <div id="navbarSupportedContent" class="main-menu collapse navbar-collapse justify-content-end">
                   <ul class="nav navbar-nav ml-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="tarihcemiz.html">Tarihçe</a></li>
-                        <li><a href="vizyonumuz.html">Vizyon</a></li>
-                        <li><a href="misyonumuz.html">MİSYON</a></li>
-                         <li><a href="ar-ge.html">AR-GE</a></li>
-                        <li><a href="referans.html">Müşterilerimiz</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="otomotiv.html">Otomotiv</a></li>
-                        <li><a href="demiryolu.html">Demiryolu</a></li>
-                        <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
-                        <li><a href="kvkk.html">Gizlilik Politikası</a></li>
-                        <li><a href="belgelerimiz.html">Belgeler</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
-                          class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="fuar.html">Fuarlar</a></li>
-                        <li><a href="blog.html">Haberler</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
-                    <li class="header-get-a-quote">
-                     <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
-                    </li>
+                  <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="tarihcemiz.html">Tarihçe</a></li>
+                    <li><a href="vizyonumuz.html">Vizyon</a></li>
+                    <li><a href="misyonumuz.html">MİSYON</a></li>
+                     <li><a href="ar-ge.html">AR-GE</a></li>
+                    <li><a href="referans.html">Müşterilerimiz</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="otomotiv.html">Otomotiv</a></li>
+                    <li><a href="demiryolu.html">Demiryolu</a></li>
+                    <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
+                    <li><a href="belgelerimiz.html">Belgeler</a></li>
+                    <li><a href="kvkk.html">Gizlilik Politikası</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
+                      class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="fuar.html">Fuarlar</a></li>
+                    <li><a href="blog.html">Haberler</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
+                  <li class="header-get-a-quote">
+                   <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
+                  </li>
+                  <li class="nav-item">
+                    <button id="searchBtn" class="btn btn-outline-secondary background-btn-color" style="margin-left:10px;" title="Ara">
+                    <i class="fa fa-search"></i>
+                    </button>
+                  </li>
                   </ul>
                 </div>
                 <!-- sidebar start -->
@@ -95,55 +148,91 @@
                 </div>
                 <nav class="sidebar overflow-auto">
                   <ul>
-                    <li class="active"><a href="index.html">Anasayfa</a></li>
-                    <li>
-                      <a href="#!" class="first-drop-btn">Hakkımızda
-                        <span class="fa-solid fa-caret-down first"></span>
-                      </a>
-                      <ul class="first-drop-show">
-                        <li><a href="hakkimizda.html">- Tarihçe </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="vizyonumuz.html">- Vizyon </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="misyonumuz.html">- Misyon </a></li>
-                          </ul>
-                      <ul class="first-drop-show">
-                        <li><a href="ar-ge.html">- AR-GE </a></li>
+                  <li class="active"><a href="index.html">Anasayfa</a></li>
+                  <li>
+                    <a href="#!" class="first-drop-btn">Hakkımızda
+                    <span class="fa-solid fa-caret-down first"></span>
+                    </a>
+                    <ul class="first-drop-show">
+                    <li><a href="tarihcemiz.html">- Tarihçe </a></li>
                       </ul>
-                      <a href="#!" class="second-drop-btn">Hizmetlerimiz
-                        <span class="fa-solid fa-caret-down second"></span>
-                      </a>
-                      <ul class="second-drop-show">
-                        <li><a href="otomotiv.html">- Otomotiv</a></li>
-                        <li><a href="demiryolu.html">- Demiryolu</a></li>
-                        <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="vizyonumuz.html">- Vizyon </a></li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#!" class="third-drop-btn">Bilgi Güvenliği
-                        <span class="fa-solid fa-caret-down third"></span>
-                      </a>
-                      <ul class="third-drop-show">
-                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
-                        
-                         <li><a href="belgelerimiz.html">- Belgeler</a></li>
-                        <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="misyonumuz.html">- Misyon </a></li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#!" class="four-drop-btn">Medya
-                        <span class="fa-solid fa-caret-down four"></span>
-                      </a>
-                      <ul class="four-drop-show">
-                        <li><a href="fuar.html">- Fuarlar</a></li>
-                        <li><a href="blog.html">- Haberler</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="iletisim.html">İletişim</a></li>
+                    <ul class="first-drop-show">
+                    <li><a href="ar-ge.html">- AR-GE </a></li>
+                    </ul>
+                    <a href="#!" class="second-drop-btn">Hizmetlerimiz
+                    <span class="fa-solid fa-caret-down second"></span>
+                    </a>
+                    <ul class="second-drop-show">
+                    <li><a href="otomotiv.html">- Otomotiv</a></li>
+                    <li><a href="demiryolu.html">- Demiryolu</a></li>
+                    <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!" class="third-drop-btn">Bilgi Güvenliği
+                    <span class="fa-solid fa-caret-down third"></span>
+                    </a>
+                    <ul class="third-drop-show">
+                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
+                     <li><a href="belgelerimiz.html">- Belgeler</a></li>
+                    <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!" class="four-drop-btn">Medya
+                    <span class="fa-solid fa-caret-down four"></span>
+                    </a>
+                    <ul class="four-drop-show">
+                    <li><a href="fuar.html">- Fuarlar</a></li>
+                    <li><a href="blog.html">- Haberler</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="iletisim.html">İletişim</a></li>
                   </ul>
                 </nav>
+                <!-- Fullscreen Search Overlay -->
+                <div id="searchOverlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;">
+                  <button id="closeSearch" style="position:absolute;top:30px;right:40px;font-size:2.5rem;background:none;border:none;color:#fff;z-index:10001;" aria-label="Kapat">&times;</button>
+                  <form id="searchForm" style="width:100%;max-width:600px;margin:auto;display:flex;flex-direction:column;align-items:center;">
+                  <input type="text" id="searchInput" placeholder="Aramak istediğiniz kelimeyi yazın..." style="width:100%;padding:20px 30px;font-size:1rem;border:none;border-radius:8px;outline:none;margin-bottom:30px;">
+                    <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:12px 20px;">A r a</button>
+                  </form>
+                </div>
+                <script>
+                  // Search overlay logic
+                  document.addEventListener('DOMContentLoaded', function() {
+                  var searchBtn = document.getElementById('searchBtn');
+                  var searchOverlay = document.getElementById('searchOverlay');
+                  var closeSearch = document.getElementById('closeSearch');
+                  var searchInput = document.getElementById('searchInput');
+                  if(searchBtn && searchOverlay && closeSearch && searchInput) {
+                    searchBtn.onclick = function() {
+                    searchOverlay.style.display = 'flex';
+                    setTimeout(function(){ searchInput.focus(); }, 100);
+                    };
+                    closeSearch.onclick = function() {
+                    searchOverlay.style.display = 'none';
+                    };
+                    // ESC key closes overlay
+                    document.addEventListener('keydown', function(e){
+                    if(e.key === "Escape") searchOverlay.style.display = 'none';
+                    });
+                    // Prevent form submit default (implement your search logic here)
+                    document.getElementById('searchForm').onsubmit = function(e){
+                    e.preventDefault();
+                    // You can implement your search logic here
+                    alert('Arama: ' + searchInput.value);
+                    searchOverlay.style.display = 'none';
+                    };
+                  }
+                  });
+                </script>
                 <!-- sidebar end -->
               </nav>
             </div>
@@ -161,7 +250,7 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     breadcrumb part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <div id="breadcrumb-area" class="breadcrumb-area" style="background-image:url(images/company/scene00219.jpg)">
+    <div id="breadcrumb-area" class="breadcrumb-area" style="background-image:url(images/company/top-image.jpg)">
       <div class="breadcrumb-text">
         <div class="container">
           <div class="row">
@@ -188,47 +277,98 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <!-- <h2 class="into-title">TARİHÇEMİZ</h2> -->
-            <h3 class="into-sub-title">TARİHÇEMİZ <br></h3>
-            <p>HST, 2005 yılında kurulduğundan bu yana yüksek kaliteli dövme, halka haddeleme ve özel üretim yöntemleriyle hizmet veren bir lider üretici olarak sektördeki yerini sağlamlaştırmıştır. Modern tesislerimizde, her biri kendi alanında uzmanlaşmış ekiplerimizle, demiryolu, otomotiv, savunma sanayi gibi birçok endüstri koluna yönelik çözümler sunmaktayız.
-              <br>
-              8000 metrekarelik kapalı alanda ve 3 vardiya sistemiyle sürekli olarak üretim yapmaktayız. Yıllık 10.000 ton çelik dövme kapasitemizle, müşterilerimizin taleplerine özel yüksek kaliteli parçalar üretiyoruz. İleri teknolojiye sahip dövme hatlarımız, indüksiyon ısıtma sistemleri ve doğalgazlı fırınlar ile her türlü malzeme, yüksek hassasiyetle işlenerek en iyi sonuçlara ulaşmaktadır.
-              <br>
-              Çeşitli dövme çekiçleri ve pres makineleri ile 0,5 kg’dan 50 kg’a kadar farklı ağırlıklarda ve ölçülerde dövme üretim kapasitesine sahibiz. Otomotiv sektörü için dişli taslakları, şaftlar ve planet dişli taşıyıcıları; savunma sanayi için palet parçaları; demiryolu uygulamaları için ise vagon, tampon ve çekme parçaları gibi yüksek performans gerektiren ürünler üretiyoruz.
-              <br>
-              Hedefimiz, her zaman müşteri odaklı bir yaklaşım benimseyerek, teknolojiyi ve insan odaklı çözümleri birleştirerek sektördeki liderliğimizi sürdürmektir. Sürdürülebilir üretim süreçleri ve yenilikçi AR-GE çalışmalarımızla, çevresel etkiyi minimize ederken, dünya çapında tanınan bir marka olmayı hedefliyoruz.
-              <br>
-              Bizim için her üretim süreci, sadece bir üretim süreci değil, aynı zamanda topluma değer katma sorumluluğudur. Gelecek nesiller için sürdürülebilir bir dünya yaratmayı ve her zaman yüksek standartlarla ilerlemeyi ilke ediniyoruz.
-              Vizyonumuz: Geleceği şekillendiren bir liderlik ve inovasyon merkezi olmak, sürdürülebilir çözümlerle dünyada tanınan bir marka haline gelmek.</p>
-            <figure>
-            </figure>
+         <div class="section">
+        
+        <p>1974 yılında temelleri atılan firmamız, yarım asrı aşan geçmişiyle savunma sanayi, otomotiv, demiryolu ve özel endüstriyel uygulamalar için yüksek hassasiyetli üretim ve mühendislik çözümleri sunmaktadır.</p>
+
+        <p>Kurulduğu günden bu yana sürekli gelişim göstererek, tüm birikimlerini daha sürdürülebilir ve sistematik bir yapıya dönüştürmüş; kaliteyi, güvenilirliği ve teknolojiyi odağına alan modern bir sanayi kuruluşuna evrilmiştir. Bugüne kadar hem yurt içinde hem de uluslararası düzeyde güçlü projelere imza atmakta, müşterilerine değer katan çözümler üretmektedir.</p>
+    </div>
+<br>
+    <div class="section">
+        <h3>Faaliyet Alanlarımız</h3>
+        <ul>
+            <li>Savunma sanayiine yönelik şanzıman ve güç aktarım çözümleri</li>
+            <li>Ticari araçlara özel dişli, transmisyon ve tahrik sistemi bileşenleri</li>
+            <li>Demiryolu uygulamaları için bağlantı parçaları ve taşıyıcı sistemler</li>
+            <li>Dövme parça üretimi, halka haddeleme ve ısıl işlem çözümleri</li>
+            <li>Otomatik şanzıman montajı, ağır bakım ve test hizmetleri</li>
+        </ul>
+    </div>
+<br>
+    <div class="section">
+        <h3>Üretim Altyapımız</h3>
+        <p>Toplam <span class="highlight">70.000 m²</span> kapalı alanda, yüksek teknolojiyle donatılmış entegre tesislerimizde:</p>
+        <ul>
+            <li>55.000 m² dişli üretim tesisi</li>
+            <li>15.000 m² dövme üretim tesisi</li>
+            <li>400'den fazla CNC ve özel üretim tezgâhı</li>
+            <li>Dişli üretiminde robotik hatlar ve konik/helisel/ince diş işleme kabiliyeti</li>
+            <li>Çelik dövme için robot destekli hatlar, 0,5 - 70 kg arası parça üretimi</li>
+            <li>Isıl işlem, shot peening ve yüzey kaplama dahil komple üretim süreçleri</li>
+            <li>Entegre şanzıman montaj hatları ve bilgisayar kontrollü test/dengeleme sistemleri</li>
+        </ul>
+    </div>
+<br>
+    <div class="section">
+        <h3>Stratejik Yetkinlik</h3>
+        <p>Otomatik transmisyon sistemleri konusunda dünya lideri olan <span class="highlight">Allison Transmission</span> ile yapılan lisans anlaşması kapsamında, Türkiye'deki tek yetkili üretim ve bakım-onarım ortağı konumundayız.</p>
+        
+        <p>Bu kapsamda aşağıdaki tüm süreçler lisanslı, güvenli ve entegre biçimde yürütülmektedir:</p>
+        <ul>
+            <li>Parça üretimi</li>
+            <li>Ürün tedariki</li>
+            <li>Şanzıman montajı</li>
+            <li>Ağır bakım ve servis işlemleri</li>
+            <li>Montaj sonrası kalite kontrol ve fonksiyon testleri</li>
+        </ul>
+    </div>
+<br>
+    <div class="section">
+        <h2>Kalite ve Güvenlik Belgelerimiz</h2>
+        <p><em>Kalite, sadece bir sonuç değil; her bir ürünümüzün temelinde yer alan bir felsefedir.</em></p>
+        <p>Sahip olduğumuz belgeler:</p>
+        <ul>
+            <li>ISO 9001:2015 Kalite Yönetim Sistemi</li>
+            <li>IATF 16949:2016 Otomotiv Kalite Sistemi</li>
+            <li>ISO 14001:2015 Çevre Yönetimi</li>
+            <li>ISO 45001:2018 İş Sağlığı ve Güvenliği</li>
+            <li>ISO/IEC 27001:2013 Bilgi Güvenliği</li>
+            <li>MSB Üretim İzin Belgesi</li>
+            <li>MSB Onaylı Tedarikçi Belgesi</li>
+            <li>Milli ve NATO Tesis Güvenlik Belgeleri</li>
+        </ul>
+    </div>
+<br>
+    <div class="section">
+        <h3>Geçmişten Geleceğe</h3>
+        <p>Yüksek mühendislik birikimimiz, güçlü teknik altyapımız ve uluslararası iş birliklerimiz ile savunma sanayisinden otomotive kadar birçok stratejik alanda güvenilir bir üretim partneri olmanın sorumluluğuyla hareket ediyoruz.</p>
+    </div>
+    <br>
+    <p>Yarım Asırlık Birikimle Geleceği Şekillendiriyoruz, Mühendislikte Fark Yaratıyoruz</p>
+<br>
+    
+    
           </div><!-- Col end -->
           <div class="col-lg-6 mt-5 mt-lg-0">
             <div id="about-slider" class="about-slider small-bg">
-              <div class="item" style="background-image:url(images/company/scene00219.jpg)">
+              <div class="item" style="background-image:url(images/company/175.jpg)">
                 <div class="container">
                   <div class="box-slider-content">
-                    <div class="box-slider-text">
-                      <!-- <h2 class="box-slide-title">Lorem, ipsum 1.</h2> -->
-                    </div>
+                  
                   </div>
                 </div>
               </div><!-- Item 1 end -->
-              <div class="item" style="background-image:url(images/company/scene02084.jpg)">
+              <div class="item" style="background-image:url(images/company/185.jpg)">
                 <div class="container">
                   <div class="box-slider-content">
-                    <div class="box-slider-text">
-                      <!-- <h2 class="box-slide-title">Lorem, ipsum 2.</h2> -->
-                    </div>
+                 
                   </div>
                 </div>
               </div><!-- Item 1 end -->
-              <div class="item" style="background-image:url(images/company/scene02171.jpg)">
+              <div class="item" style="background-image:url(images/company/176.jpg)">
                 <div class="container">
                   <div class="box-slider-content">
-                    <div class="box-slider-text">
-                      <!-- <h2 class="box-slide-title">Lorem, ipsum 3.</h2> -->
-                    </div>
+                   
                   </div>
                 </div>
               </div><!-- Item 1 end -->
@@ -237,10 +377,10 @@
         </div><!-- Content row end -->
       </div><!-- Container end -->
     </section><!-- Main container end -->
+
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     About us part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
 <!-- 
     <section id="video-player" class="video-player-area">
       <div class="container">
@@ -256,9 +396,7 @@
         </div>
       </div>
     </section> -->
-
-
-    <section id="company-videos" class="py-5">
+    <!-- <section id="company-videos" class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 mb-4 mb-md-0 text-center">
@@ -277,10 +415,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-
-
+    </section> -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Facts part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -331,21 +466,11 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Facts part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-  
-
-
-
-
-
-
-
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     team part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <section id="ts-team" class="ts-team">
       <div class="container">
-    
         <!--/ Title row end -->
         <div class="row">
           <div class="col-lg-12">
