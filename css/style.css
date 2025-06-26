@@ -2969,7 +2969,10 @@ section .blog-row .card-inner .box .imgBox img {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			        Error 404 css end
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-#main-container .row:nth-child(14) .item:nth-child(1){
+#main-container .row:nth-child(15) .item:nth-child(1){
  min-height:850px;
- /* width:60% !important; */
+}
+
+#main-container .row:nth-child(15) .item:nth-child(2){
+ min-height:850px;
 }
