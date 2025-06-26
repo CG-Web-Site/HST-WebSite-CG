@@ -1783,48 +1783,6 @@ ul.list-check li:before {
   min-height: 420px;
   background-size: cover;
 }
-/* -------------------------- */
-/* .department-slider-big .item-big {
-  min-height: 330px;
-  background-size: cover;
-}
-.department-slider-big .carousel-control-big {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-  transform: translateY(-50%);
-  background-color: transparent;
-  text-shadow: none;
-  transition: all 0.25s ease;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-.department-slider-big .carousel-control.left-big {
-  left: 0;
-}
-.department-slider-big .carousel-control.right-big {
-  right: 0;
-}
-.department-slider-big .carousel-control-big i {
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  line-height: 70px;
-  width: 40px;
-  height: 70px;
-  font-size: 22px;
-  border-radius: 0;
-  transition: all 500ms ease;
-}
-.department-slider-big .carousel-control-big i:hover {
-  background: var(--brand2);
-  color: #000000;
-}
-.department-slider-big .big-bg .item-big {
-  min-height: 420px;
-  background-size: cover;
-} */
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			          Department css end
@@ -2969,10 +2927,3 @@ section .blog-row .card-inner .box .imgBox img {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			        Error 404 css end
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-#main-container .row:nth-child(15) .item:nth-child(1){
- min-height:850px;
-}
-
-#main-container .row:nth-child(15) .item:nth-child(2){
- min-height:850px;
-}
