@@ -17,3 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+  document.querySelectorAll('.force-capitalize').forEach(el => {
+    const text = el.textContent.toLowerCase();
+    const formatted = text.replace(/\b\w/g, char => char.toUpperCase());
+    el.textContent = formatted;
+  });
