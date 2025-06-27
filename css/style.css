@@ -2927,3 +2927,7 @@ section .blog-row .card-inner .box .imgBox img {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			        Error 404 css end
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.department-img-container img {
+  width: 100%;        /* container genişliğine uy */
+  object-fit: contain;  /* görüntüyü kırparak kapsar, orantıyı bozmadan */
+}
