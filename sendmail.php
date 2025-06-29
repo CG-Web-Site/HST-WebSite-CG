@@ -14,6 +14,7 @@
         .error { color: red; }
         .success { color: green; }
     </style>
+<link rel="stylesheet" href="css/searchresult.css">
 </head>
 
 <body>

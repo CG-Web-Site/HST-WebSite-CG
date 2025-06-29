@@ -18,6 +18,7 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/searchresult.css">
 </head>
 
 <body>
@@ -84,15 +85,15 @@
                   </li>
                  
                   <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
-                  <li class="nav-item " ><a class="nav-link" href="#!"><img  src="images/ingiliz-bayragi.png" alt=""></a></li>
-                    <!-- <li class="nav-item dropdown">
+                  <!-- <li class="nav-item " ><a class="nav-link" href="iletisim.html"><img  src="images/turk-bayragi.jpg" alt=""></a></li> -->
+                    <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown"><img  src="images/turk-bayragi.jpg" alt=""><i
                       class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu" role="menu">
                     <li><a href="#!">English</a></li>
                     
                     </ul>
-                  </li> -->
+                  </li>
                   <li class="header-get-a-quote">
                    <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
                   </li>
@@ -167,36 +168,97 @@
                   <form id="searchForm" style="width:100%;max-width:600px;margin:auto;display:flex;flex-direction:column;align-items:center;">
                   <input type="text" id="searchInput" placeholder="Aramak istediğiniz kelimeyi yazın..." style="width:100%;padding:20px 30px;font-size:1rem;border:none;border-radius:8px;outline:none;margin-bottom:30px;">
                     <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:12px 20px;">A r a</button>
+                    <div id="searchResults" style="margin-top: 20px; color: white;"></div>
                   </form>
                 </div>
                 <script>
                   // Search overlay logic
-                  document.addEventListener('DOMContentLoaded', function() {
-                  var searchBtn = document.getElementById('searchBtn');
-                  var searchOverlay = document.getElementById('searchOverlay');
-                  var closeSearch = document.getElementById('closeSearch');
-                  var searchInput = document.getElementById('searchInput');
-                  if(searchBtn && searchOverlay && closeSearch && searchInput) {
-                    searchBtn.onclick = function() {
-                    searchOverlay.style.display = 'flex';
-                    setTimeout(function(){ searchInput.focus(); }, 100);
-                    };
-                    closeSearch.onclick = function() {
-                    searchOverlay.style.display = 'none';
-                    };
-                    // ESC key closes overlay
-                    document.addEventListener('keydown', function(e){
-                    if(e.key === "Escape") searchOverlay.style.display = 'none';
-                    });
-                    // Prevent form submit default (implement your search logic here)
-                    document.getElementById('searchForm').onsubmit = function(e){
-                    e.preventDefault();
-                    // You can implement your search logic here
-                    alert('Arama: ' + searchInput.value);
-                    searchOverlay.style.display = 'none';
-                    };
-                  }
+                  document.addEventListener('DOMContentLoaded', function () {
+                    var searchBtn = document.getElementById('searchBtn');
+                    var searchOverlay = document.getElementById('searchOverlay');
+                    var closeSearch = document.getElementById('closeSearch');
+                    var searchInput = document.getElementById('searchInput');
+                    var searchForm = document.getElementById('searchForm');
+                    var resultContainer = document.getElementById('searchResults');
+                    resultContainer.style.display = 'none';
+                    resultContainer.innerHTML = ''; // eski sonuçları da temizle 
+
+                    if (searchBtn && searchOverlay && closeSearch && searchInput && searchForm && resultContainer) {
+                      searchBtn.onclick = function () {
+                        searchOverlay.style.display = 'flex';
+                        setTimeout(function () { searchInput.focus(); }, 100);
+                      };
+
+                      closeSearch.onclick = function () {
+                        searchOverlay.style.display = 'none';
+                      };
+
+                      document.addEventListener('keydown', function (e) {
+                        if (e.key === "Escape") searchOverlay.style.display = 'none';
+                      });
+
+                      searchForm.onsubmit = function (e) {
+                        e.preventDefault();
+
+                        const query = searchInput.value.trim().toLowerCase();
+                        if (!query) return;
+
+                        resultContainer.innerHTML = '<p>🔍 Aranıyor...</p>';
+                        searchOverlay.style.display = 'flex';
+
+                        fetch('list-html-files.php')
+                          .then(res => res.json())
+                          .then(sitePages => {
+                            searchInPages(sitePages, query, resultContainer);
+                          });
+                      };
+                    }
                   });
+
+                  function searchInPages(sitePages, query, resultContainer) {
+                    let foundResults = [];
+                    let completed = 0;
+
+                    sitePages.forEach(page => {
+                      fetch(page)
+                        .then(res => {
+                          if (!res.ok) throw new Error(`Sayfa yüklenemedi: ${page}`);
+                          return res.text();
+                        })
+                        .then(html => {
+                          const plainText = html.replace(/<[^>]*>?/gm, '').toLowerCase();
+                          if (plainText.includes(query)) {
+                            // Sayfa başlığını bul veya dosya adını uzantısız göster
+                            const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+                            let displayTitle = '';
+
+                            if (titleMatch && titleMatch[1]) {
+                              displayTitle = titleMatch[1];
+                            } else {
+                              const fileName = page.split('/').pop().replace('.html', '');
+                              displayTitle = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+                            }
+
+                            foundResults.push(`<li><a href="${page}" target="_blank">${displayTitle}</a></li>`);
+                          }
+                        })
+                        .catch(err => {
+                          console.warn(err.message);
+                        })
+                        .finally(() => {
+                          completed++;
+                          if (completed === sitePages.length) {
+                            if (foundResults.length > 0) {
+                              resultContainer.style.display = 'block'; // ✅ göster
+                              resultContainer.innerHTML = `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`;
+                            } else {
+                              resultContainer.style.display = 'block'; // ✅ yine göster ama boş değil
+                              resultContainer.innerHTML = `<p>🚫 Hiçbir sonuç bulunamadı.</p>`;
+                            }
+                          }
+                        });
+                    });
+                  }
                 </script>
                 <!-- sidebar end -->
               </nav>
@@ -252,17 +314,17 @@
                 <!-- <h3 class="section-sub-title">Lorem. <span>Lorem, ipsum.</span></h3> -->
               </div>
               <p class="mb-4 pb-2">Her türlü soru, öneri veya geri bildiriminiz için bizimle iletişime geçebilirsiniz. Ayrıca, kariyer fırsatlarımıza başvurularınızı iletmek isterseniz, ilgili başvuru formu aracılığıyla başvurularınızı değerlendireceğiz. İletişim ve başvurularınıza en kısa sürede geri dönüş yapılacaktır.</p>
-              <form id="quote_form" class="icon_add">
+              <form id="quote_form" class="icon_add" method="POST" action="send.php" enctype="multipart/form-data">
                 <div class="row g-3">
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingName" type="text" class="form-control " placeholder="Your Name">
+                      <input id="floatingName" name="fullname" type="text" class="form-control " placeholder="Your Name">
                       <label for="floatingName">Adınız - Soyadınız</label>
                       </div>
                     </div>
                     <div class="col-12 col-sm-6">
                       <div class="form-floating">
-                        <input id="floatingemail" type="email" data-validation="email"
+                        <input id="floatingemail" name="email" type="email" data-validation="email"
                           data-content="Email has a invalid format" class="form-control "
                           placeholder="Your Email">
                         <label for="floatingemail">E-Posta Adresiniz</label>
@@ -270,7 +332,7 @@
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingnumber" type="text" class="form-control" placeholder="Your Phone Number">
+                      <input id="floatingnumber" name="phone" type="text" class="form-control" placeholder="Your Phone Number">
                       <label for="floatingnumber">Telefon Numaranız</label>
                     </div>
                   </div>
@@ -288,7 +350,7 @@
                   </div>
                   <div class="col-12 text">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a comment here"
+                      <textarea class="form-control" name="message" placeholder="Leave a comment here"
                         id="floatingTextarea" style="border: 1px solid white"></textarea>
                       <label for="floatingTextarea">Mesajınızı buraya yazın</label>
                     </div>
@@ -400,6 +462,42 @@
     <script src="plugins/shuffle/shuffle.min.js" defer></script>
     <!-- Template custom -->
     <script src="js/script.js"></script>
+
+    <script>
+      document.getElementById('quote_form').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Sayfanın yenilenmesini engelle
+
+        const form = document.getElementById('quote_form');
+        const formData = new FormData(form);
+
+        // Yanıtı göstereceğimiz alan (istersen daha şık bir div koyabilirsin)
+        const resultDiv = document.createElement('div');
+        resultDiv.style.marginTop = '20px';
+        resultDiv.style.fontWeight = 'bold';
+        form.appendChild(resultDiv);
+
+        try {
+          const response = await fetch('send.php', {
+            method: 'POST',
+            body: formData
+          });
+
+          const text = await response.text();
+
+          if (response.ok && text.includes("Mesaj gönderildi")) {
+            resultDiv.innerText = "✅ Mesaj başarıyla gönderildi!";
+            resultDiv.style.color = 'green';
+          } else {
+            resultDiv.innerText = "❌ Gönderme sırasında bir hata oluştu.";
+            resultDiv.style.color = 'red';
+          }
+        } catch (error) {
+          resultDiv.innerText = "❌ Bağlantı hatası: " + error.message;
+          resultDiv.style.color = 'red';
+        }
+      });
+    </script>
+
   </div><!-- Body inner end -->
 </body>
 <!-- Mirrored from eagleforce.soulknightweb.com/iletisim.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Mar 2025 14:40:22 GMT -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +24,10 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/clients.css">
   <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/searchresult.css">
 
 </head>
+
 <body>
   <div class="body-inner">
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -42,74 +45,76 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light p-0">
+              <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <div class="logo">
                   <a class="d-block" href="index.html">
-                  <img loading="lazy" src="images/logo/HST_logo_tr.png"  alt="logo">
+                    <img loading="lazy" src="images/logo/HST_logo_tr.png" alt="logo">
                   </a>
                 </div>
                 <!-- logo end -->
                 <div id="navbarSupportedContent" class="main-menu collapse navbar-collapse justify-content-end">
                   <ul class="nav navbar-nav ml-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
-                  
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
-                      class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="tarihcemiz.html">Tarihçe</a></li>
-                    <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
-                    <li><a href="misyonumuz.html">Misyonumuz</a></li>
-                     <li><a href="ar-ge.html">AR-GE</a></li>
-                    <li><a href="referans.html">Referanslarımız</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
-                      class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
-                    <li><a href="otomotiv.html">Otomotiv</a></li>
-                    <li><a href="demiryolu.html">Demiryolu</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
-                      class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
-                    <li><a href="belgelerimiz.html">Belgeler</a></li>
-                    <li><a href="kvkk.html">Politikalarımız</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
-                      class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="fuar.html">Fuarlar</a></li>
-                    <li><a href="haberler.html">Haberler</a></li>
-                    </ul>
-                  </li>
-                 
-                  <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
-                  <!-- <li class="nav-item " ><a class="nav-link" href="iletisim.html"><img  src="images/turk-bayragi.jpg" alt=""></a></li> -->
-                  <li class="nav-item " ><a class="nav-link" href="#!"><img  src="images/ingiliz-bayragi.png" alt=""></a></li>
-                    <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown"><img  src="images/turk-bayragi.jpg" alt=""><i
-                      class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="#!">English</a></li>
-                    
-                    </ul>
-                  </li> -->
-                  <li class="header-get-a-quote">
-                   <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
-                  </li>
-                  <li class="nav-item">
-                    <button id="searchBtn" class="btn btn-outline-secondary background-btn-color" style="margin-left:10px;" title="Ara">
-                    <i class="fa fa-search"></i>
-                    </button>
-                  </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="tarihcemiz.html">Tarihçe</a></li>
+                        <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
+                        <li><a href="misyonumuz.html">Misyonumuz</a></li>
+                        <li><a href="ar-ge.html">AR-GE</a></li>
+                        <li><a href="referans.html">Referanslarımız</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown">HİZMETLERİMİZ <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="savunma-sanayi.html">Savunma Sanayi</a></li>
+                        <li><a href="otomotiv.html">Otomotiv</a></li>
+                        <li><a href="demiryolu.html">Demiryolu</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown">BİLGİ GÜVENLİĞİ <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024"
+                            target="_blank">MEKASİST</a></li>
+                        <li><a href="belgelerimiz.html">Belgeler</a></li>
+                        <li><a href="kvkk.html">Politikalarımız</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown">Medya <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="fuar.html">Fuarlar</a></li>
+                        <li><a href="haberler.html">Haberler</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
+                    <!-- <li class="nav-item " ><a class="nav-link" href="iletisim.html"><img  src="images/turk-bayragi.jpg" alt=""></a></li> -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown"><img src="images/turk-bayragi.jpg"
+                          alt=""><i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#!">English</a></li>
+
+                      </ul>
+                    </li>
+                    <li class="header-get-a-quote">
+                      <a class="btn btn-primary" href="pdf/hst-katalog.pdf"
+                        style=" background-color: #EC640E !important;">Katalog İndir</a>
+                    </li>
+                    <li class="nav-item">
+                      <button id="searchBtn" class="btn btn-outline-secondary background-btn-color"
+                        style="margin-left:10px;" title="Ara">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <!-- sidebar start -->
@@ -118,94 +123,165 @@
                 </div>
                 <nav class="sidebar overflow-auto">
                   <ul>
-                  <li class="active"><a href="index.html">Anasayfa</a></li>
-                  <li>
-                    <a href="#!" class="first-drop-btn">Hakkımızda
-                    <span class="fa-solid fa-caret-down first"></span>
-                    </a>
-                    <ul class="first-drop-show">
-                    <li><a href="tarihcemiz.html">- Tarihçe </a></li>
-                    <li><a href="vizyonumuz.html">- Vizyonumuz </a></li>
-                    <li><a href="misyonumuz.html">- Misyonumuz </a></li>
-                    <li><a href="ar-ge.html">- AR-GE </a></li>
-                    </ul>
+                    <li class="active"><a href="index.html">Anasayfa</a></li>
+                    <li>
+                      <a href="#!" class="first-drop-btn">Hakkımızda
+                        <span class="fa-solid fa-caret-down first"></span>
+                      </a>
+                      <ul class="first-drop-show">
+                        <li><a href="tarihcemiz.html">- Tarihçe </a></li>
+                        <li><a href="vizyonumuz.html">- Vizyonumuz </a></li>
+                        <li><a href="misyonumuz.html">- Misyonumuz </a></li>
+                        <li><a href="ar-ge.html">- AR-GE </a></li>
+                      </ul>
                     </li>
-                  <li>
-                    <a href="#!" class="second-drop-btn">Hizmetlerimiz
-                    <span class="fa-solid fa-caret-down second"></span>
-                    </a>
-                    <ul class="second-drop-show">
-                    <li><a href="otomotiv.html">- Otomotiv</a></li>
-                    <li><a href="demiryolu.html">- Demiryolu</a></li>
-                    <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#!" class="third-drop-btn">Bilgi Güvenliği
-                    <span class="fa-solid fa-caret-down third"></span>
-                    </a>
-                    <ul class="third-drop-show">
-                    <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">- Mekasist</a></li>
-                     <li><a href="belgelerimiz.html">- Belgeler</a></li>
-                    <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#!" class="four-drop-btn">Medya
-                    <span class="fa-solid fa-caret-down four"></span>
-                    </a>
-                    <ul class="four-drop-show">
-                    <li><a href="fuar.html">- Fuarlar</a></li>
-                    <li><a href="haberler.html">- Haberler</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
-                  <li class="header-get-a-quote">
-                   <a class="btn btn-primary" href="pdf/hst-katalog.pdf" style=" background-color: #EC640E !important;">Katalog İndir</a>
-                  </li>
-                  <li class="nav-item">
-                    <button id="searchBtn" class="btn btn-outline-secondary background-btn-color" style="margin-left:10px;" title="Ara">
-                    <i class="fa fa-search"></i>
-                    </button>
-                  </li>
+                    <li>
+                      <a href="#!" class="second-drop-btn">Hizmetlerimiz
+                        <span class="fa-solid fa-caret-down second"></span>
+                      </a>
+                      <ul class="second-drop-show">
+                        <li><a href="otomotiv.html">- Otomotiv</a></li>
+                        <li><a href="demiryolu.html">- Demiryolu</a></li>
+                        <li><a href="savunma-sanayi.html">- Savunma Sanayi</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#!" class="third-drop-btn">Bilgi Güvenliği
+                        <span class="fa-solid fa-caret-down third"></span>
+                      </a>
+                      <ul class="third-drop-show">
+                        <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">-
+                            Mekasist</a></li>
+                        <li><a href="belgelerimiz.html">- Belgeler</a></li>
+                        <li><a href="kvkk.html">- Gizlilik Politikası</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#!" class="four-drop-btn">Medya
+                        <span class="fa-solid fa-caret-down four"></span>
+                      </a>
+                      <ul class="four-drop-show">
+                        <li><a href="fuar.html">- Fuarlar</a></li>
+                        <li><a href="haberler.html">- Haberler</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İLETİŞİM</a></li>
+                    <li class="header-get-a-quote">
+                      <a class="btn btn-primary" href="pdf/hst-katalog.pdf"
+                        style=" background-color: #EC640E !important;">Katalog İndir</a>
+                    </li>
+                    <li class="nav-item">
+                      <button id="searchBtn" class="btn btn-outline-secondary background-btn-color"
+                        style="margin-left:10px;" title="Ara">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </li>
                   </ul>
                 </nav>
                 <!-- Fullscreen Search Overlay -->
-                <div id="searchOverlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;">
-                  <button id="closeSearch" style="position:absolute;top:30px;right:40px;font-size:2.5rem;background:none;border:none;color:#fff;z-index:10001;" aria-label="Kapat">&times;</button>
-                  <form id="searchForm" style="width:100%;max-width:600px;margin:auto;display:flex;flex-direction:column;align-items:center;">
-                  <input type="text" id="searchInput" placeholder="Aramak istediğiniz kelimeyi yazın..." style="width:100%;padding:20px 30px;font-size:1rem;border:none;border-radius:8px;outline:none;margin-bottom:30px;">
+                <div id="searchOverlay"
+                  style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;">
+                  <button id="closeSearch"
+                    style="position:absolute;top:30px;right:40px;font-size:2.5rem;background:none;border:none;color:#fff;z-index:10001;"
+                    aria-label="Kapat">&times;</button>
+                  <form id="searchForm"
+                    style="width:100%;max-width:600px;margin:auto;display:flex;flex-direction:column;align-items:center;">
+                    <input type="text" id="searchInput" placeholder="Aramak istediğiniz kelimeyi yazın..."
+                      style="width:100%;padding:20px 30px;font-size:1rem;border:none;border-radius:8px;outline:none;margin-bottom:30px;">
                     <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:12px 20px;">A r a</button>
+                    <div id="searchResults" style="margin-top: 20px; color: white;"></div>
                   </form>
+
                 </div>
                 <script>
                   // Search overlay logic
-                  document.addEventListener('DOMContentLoaded', function() {
-                  var searchBtn = document.getElementById('searchBtn');
-                  var searchOverlay = document.getElementById('searchOverlay');
-                  var closeSearch = document.getElementById('closeSearch');
-                  var searchInput = document.getElementById('searchInput');
-                  if(searchBtn && searchOverlay && closeSearch && searchInput) {
-                    searchBtn.onclick = function() {
-                    searchOverlay.style.display = 'flex';
-                    setTimeout(function(){ searchInput.focus(); }, 100);
-                    };
-                    closeSearch.onclick = function() {
-                    searchOverlay.style.display = 'none';
-                    };
-                    // ESC key closes overlay
-                    document.addEventListener('keydown', function(e){
-                    if(e.key === "Escape") searchOverlay.style.display = 'none';
-                    });
-                    // Prevent form submit default (implement your search logic here)
-                    document.getElementById('searchForm').onsubmit = function(e){
-                    e.preventDefault();
-                    // You can implement your search logic here
-                    alert('Arama: ' + searchInput.value);
-                    searchOverlay.style.display = 'none';
-                    };
-                  }
+                  document.addEventListener('DOMContentLoaded', function () {
+                    var searchBtn = document.getElementById('searchBtn');
+                    var searchOverlay = document.getElementById('searchOverlay');
+                    var closeSearch = document.getElementById('closeSearch');
+                    var searchInput = document.getElementById('searchInput');
+                    var searchForm = document.getElementById('searchForm');
+                    var resultContainer = document.getElementById('searchResults');
+                    resultContainer.style.display = 'none';
+                    resultContainer.innerHTML = ''; // eski sonuçları da temizle     
+
+                    if (searchBtn && searchOverlay && closeSearch && searchInput && searchForm && resultContainer) {
+                      searchBtn.onclick = function () {
+                        searchOverlay.style.display = 'flex';
+                        setTimeout(function () { searchInput.focus(); }, 100);
+                      };
+
+                      closeSearch.onclick = function () {
+                        searchOverlay.style.display = 'none';
+                      };
+
+                      document.addEventListener('keydown', function (e) {
+                        if (e.key === "Escape") searchOverlay.style.display = 'none';
+                      });
+
+                      searchForm.onsubmit = function (e) {
+                        e.preventDefault();
+
+                        const query = searchInput.value.trim().toLowerCase();
+                        if (!query) return;
+
+                        resultContainer.innerHTML = '<p>🔍 Aranıyor...</p>';
+                        searchOverlay.style.display = 'flex';
+
+                        fetch('list-html-files.php')
+                          .then(res => res.json())
+                          .then(sitePages => {
+                            searchInPages(sitePages, query, resultContainer);
+                          });
+                      };
+                    }
                   });
+
+                  function searchInPages(sitePages, query, resultContainer) {
+                    let foundResults = [];
+                    let completed = 0;
+
+                    sitePages.forEach(page => {
+                      fetch(page)
+                        .then(res => {
+                          if (!res.ok) throw new Error(`Sayfa yüklenemedi: ${page}`);
+                          return res.text();
+                        })
+                        .then(html => {
+                          const plainText = html.replace(/<[^>]*>?/gm, '').toLowerCase();
+                          if (plainText.includes(query)) {
+                            // Sayfa başlığını bul veya dosya adını uzantısız göster
+                            const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+                            let displayTitle = '';
+
+                            if (titleMatch && titleMatch[1]) {
+                              displayTitle = titleMatch[1];
+                            } else {
+                              const fileName = page.split('/').pop().replace('.html', '');
+                              displayTitle = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+                            }
+
+                            foundResults.push(`<li><a href="${page}" target="_blank">${displayTitle}</a></li>`);
+                          }
+                        })
+                        .catch(err => {
+                          console.warn(err.message);
+                        })
+                        .finally(() => {
+                          completed++;
+                          if (completed === sitePages.length) {
+                            if (foundResults.length > 0) {
+                              resultContainer.style.display = 'block'; // ✅ göster
+                              resultContainer.innerHTML = `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`;
+                            } else {
+                              resultContainer.style.display = 'block'; // ✅ yine göster ama boş değil
+                              resultContainer.innerHTML = `<p>🚫 Hiçbir sonuç bulunamadı.</p>`;
+                            }
+                          }
+                        });
+                    });
+                  }
+
                 </script>
                 <!-- sidebar end -->
               </nav>
@@ -298,7 +374,7 @@
                 </div>
                 <h3>DEMİRYOLU</h3>
                 <p>Özel olarak tasarlanmış demiryolu parçaları üretmekteyiz.</p>
-                <div class="block_content"><a href="demiryolu.html" ><b>Devamını Oku</b>  </a></div>
+                <div class="block_content"><a href="demiryolu.html"><b>Devamını Oku</b> </a></div>
               </div>
             </div>
           </div>
@@ -367,21 +443,27 @@
               <div class="col-md-6 col-6">
                 <div class="features-box">
                   <span class="features-icon">
-                    <a href="otomotiv.html"><img loading="lazy" src="images/icon-image/icon2.png" width="85px" alt="facts-img"></a>
+                    <a href="otomotiv.html"><img loading="lazy" src="images/icon-image/icon2.png" width="85px"
+                        alt="facts-img"></a>
                   </span>
                   <div class="features-box-content"><br>
-                    <a href="otomotiv.html"><h3 class="features-box-title" style="color: white;">&nbsp;&nbsp; OTOMOTİV</h3></a>
+                    <a href="otomotiv.html">
+                      <h3 class="features-box-title" style="color: white;">&nbsp;&nbsp; OTOMOTİV</h3>
+                    </a>
                   </div>
                 </div><!-- Service 1 end -->
               </div><!-- col end -->
               <div class="col-md-6 col-6">
                 <div class="features-box">
                   <span class="features-icon">
-                    <a href="demiryolu.html"><img loading="lazy" src="images/icon-image/icon1.png" width="85px" alt="facts-img"></a>
+                    <a href="demiryolu.html"><img loading="lazy" src="images/icon-image/icon1.png" width="85px"
+                        alt="facts-img"></a>
                   </span>
                   <div class="features-box-content">
                     <br>
-                    <a href="demiryolu.html"><h3 class="features-box-title" style="color: white;">&nbsp;&nbsp;DEMİRYOLU</h3></a>
+                    <a href="demiryolu.html">
+                      <h3 class="features-box-title" style="color: white;">&nbsp;&nbsp;DEMİRYOLU</h3>
+                    </a>
                   </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
@@ -390,21 +472,27 @@
               <div class="col-md-6 col-6">
                 <div class="features-box">
                   <span class="features-icon">
-                    <a href="savunma-sanayi.html"> <img loading="lazy" src="images/icon-image/icon4.png" width="85px" alt="facts-img"></a>
+                    <a href="savunma-sanayi.html"> <img loading="lazy" src="images/icon-image/icon4.png" width="85px"
+                        alt="facts-img"></a>
                   </span>
                   <div class="features-box-content">
                     <br>
-                    <a href="savunma-sanayi.html"><h3 class="features-box-title" style="color:white">&nbsp;&nbsp;SAVUNMA SANAYİ</h3></a>
+                    <a href="savunma-sanayi.html">
+                      <h3 class="features-box-title" style="color:white">&nbsp;&nbsp;SAVUNMA SANAYİ</h3>
+                    </a>
                   </div>
                 </div><!-- Service 1 end -->
               </div><!-- col end -->
               <div class="col-md-6 col-6">
                 <div class="features-box">
                   <span class="features-icon">
-                    <a href="pdf/hst-katalog.pdf" target="_blank"><img loading="lazy" src="images/icon-image/catalog.png" width="85px" alt="facts-img"></a>
+                    <a href="pdf/hst-katalog.pdf" target="_blank"><img loading="lazy"
+                        src="images/icon-image/catalog.png" width="85px" alt="facts-img"></a>
                   </span>
                   <div class="features-box-content">
-                    <a href="pdf/hst-katalog.pdf" target="_blank"><h3 class="features-box-title" style="color: wh;">&nbsp;&nbsp;ÜRÜN <br>&nbsp;&nbsp;KATALOGU</h3></a>
+                    <a href="pdf/hst-katalog.pdf" target="_blank">
+                      <h3 class="features-box-title" style="color: wh;">&nbsp;&nbsp;ÜRÜN <br>&nbsp;&nbsp;KATALOGU</h3>
+                    </a>
                   </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
@@ -506,7 +594,7 @@
             </div>
             <div class="col-6 col-md-3 col-sm-6 ts-facts mt-5 mt-lg-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/map-1.png" width="85px"  alt="facts-img">
+                <img loading="lazy" src="images/icon-image/map-1.png" width="85px" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="70000">0</span>+</h2>
@@ -524,14 +612,14 @@
             </div>
             <div class="col-6 col-md-3 col-sm-6 ts-facts mt-5 mt-lg-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/new-product.png" width="85px"  alt="facts-img">
+                <img loading="lazy" src="images/icon-image/new-product.png" width="85px" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="1000">0</span>+</h2>
                 <h3 class="ts-facts-title">ADET ÜRÜN</h3>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </section>
@@ -605,81 +693,91 @@
                     departments part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <section class="front-blog">
-  <div class="content-container">
-    <div class="front-blog-top">
-      <h2>Haberler</h2>
-    </div>
-    <div class="front-blog-list">
-      <a class="front-blog-item article-blog" href="http://127.0.0.1:5500/hbr-kayseri-test-makinasi.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/news/kayseri-test-makinasi/test-mak-2.jpg')">
+      <div class="content-container">
+        <div class="front-blog-top">
+          <h2>Haberler</h2>
         </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">Yeni Nesil Fırtına Obüsleri İçin Kritik Test Altyapısı Devreye Alındı</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>Kayseri – Türk Silahlı Kuvvetleri’nin (TSK) modernize edilen Fırtına Obüsleri’nde kullanılacak X1100-5A4 çapraz tahrikli transmisyon sistemlerinin test süreçleri için geliştirilen AIDCO MODEL 850ME-1200 ...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 23, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+        <div class="front-blog-list">
+          <a class="front-blog-item article-blog" href="http://127.0.0.1:5500/hbr-kayseri-test-makinasi.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/news/kayseri-test-makinasi/test-mak-2.jpg')">
             </div>
-          </footer>
-        </div>
-      </a>
-      <a class="front-blog-item article-blog" href="hbr-bmc-tesislerinde-firtina-obusu-personoline-egitici-egitimi.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/news/sakarya-firtina-obus/Resim3.jpg')">
-        </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">BMC Tesislerinde Fırtına Obüsü Personeline Eğitici Eğitimi</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>Sakarya – Türk savunma sanayisinin önemli merkezlerinden biri olan Sakarya’nın Arifiye ilçesindeki BMC tesislerinde, 2-26 Nisan 2024 tarihleri arasında “X1100-5A4 Kullanıcı ve Birlik Seviyesi Eğitici Eğitimi...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 22, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">Yeni Nesil Fırtına Obüsleri İçin Kritik Test Altyapısı Devreye Alındı</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>Kayseri – Türk Silahlı Kuvvetleri’nin (TSK) modernize edilen Fırtına Obüsleri’nde kullanılacak
+                  X1100-5A4 çapraz tahrikli transmisyon sistemlerinin test süreçleri için geliştirilen AIDCO MODEL
+                  850ME-1200 ...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 23, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
             </div>
-          </footer>
-        </div>
-      </a>
-      <a class="front-blog-item article-blog" href="hbr-allison-egitimi.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/news/allison-egitimi/Resim2.jpg')">
-        </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">HST Otomotiv, X1100-5A4 Montaj ve Bakım Eğitimi ile Teknik Yetkinliklerini Güçlendiriyor</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>HST Otomotiv İmalat Sanayi ve Ticaret A.Ş., kaliteli üretim ve teknik mükemmeliyet anlayışı doğrultusunda, montaj personelinin yetkinliğini artırmak amacıyla önemli bir eğitim...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 18, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+          </a>
+          <a class="front-blog-item article-blog"
+            href="hbr-bmc-tesislerinde-firtina-obusu-personoline-egitici-egitimi.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/news/sakarya-firtina-obus/Resim3.jpg')">
             </div>
-          </footer>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">BMC Tesislerinde Fırtına Obüsü Personeline Eğitici Eğitimi</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>Sakarya – Türk savunma sanayisinin önemli merkezlerinden biri olan Sakarya’nın Arifiye ilçesindeki
+                  BMC tesislerinde, 2-26 Nisan 2024 tarihleri arasında “X1100-5A4 Kullanıcı ve Birlik Seviyesi Eğitici
+                  Eğitimi...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 22, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
+            </div>
+          </a>
+          <a class="front-blog-item article-blog" href="hbr-allison-egitimi.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/news/allison-egitimi/Resim2.jpg')">
+            </div>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">HST Otomotiv, X1100-5A4 Montaj ve Bakım Eğitimi ile Teknik Yetkinliklerini
+                  Güçlendiriyor</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>HST Otomotiv İmalat Sanayi ve Ticaret A.Ş., kaliteli üretim ve teknik mükemmeliyet anlayışı
+                  doğrultusunda, montaj personelinin yetkinliğini artırmak amacıyla önemli bir eğitim...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 18, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     departments part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     subscribe part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <!-- start slider client -->
@@ -689,161 +787,168 @@
     <br>
     <section id="facts" style="background: #ffffff" class="facts-area">
       <div class="container">
-          <section class="customer-logos slider">
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/allison.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/asfat.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html"> 
-                      <img src="images/ref_logo/bmc.png">
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html"> 
-                      <img src="images/ref_logo/fnss.png">
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/ford.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/msb_1.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html"> 
-                      <img src="images/ref_logo/jcb.png">
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/klingelnberg.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/marposs.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/ssb_1.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/otokar.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/turasas.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/regal-beloit.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/turk-traktor.png" >
-                  </a>
-              </div>
-              <div class="slide">
-                  <a href="referanslarimiz.html">
-                      <img src="images/ref_logo/uzel.png" >
-                  </a>
-              </div>
-              </div>
-    </section> 
+        <section class="customer-logos slider">
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/allison.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/asfat.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/bmc.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/fnss.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/ford.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/msb_1.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/jcb.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/klingelnberg.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/marposs.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/ssb_1.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/otokar.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/turasas.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/regal-beloit.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/turk-traktor.png">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="referanslarimiz.html">
+              <img src="images/ref_logo/uzel.png">
+            </a>
+          </div>
+      </div>
+    </section>
     <script src="js/clients.js"></script>
     <!-- end slider client -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     subscribe part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-   <section class="front-blog">
-  <div class="content-container">
-    <div class="front-blog-top">
-      <h2 class="front-blog-title dec-title"><span><i class="bi bi-journal-text"></i></span>Fuarlar</h2>
-    </div>
-    <div class="front-blog-list">
-      <a class="front-blog-item article-blog" href="fuar-IDEF-2023-Uluslararasi-Savunma-Sanayi-Fuari.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/fuar/32.jpg')">
+    <section class="front-blog">
+      <div class="content-container">
+        <div class="front-blog-top">
+          <h2 class="front-blog-title dec-title"><span><i class="bi bi-journal-text"></i></span>Fuarlar</h2>
         </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">IDEF 2023 Uluslararası Savunma Sanayi Fuarı</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>9 Mayıs - 12 Mayıs 2023 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen IDEF 2023 16'ncı Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 23, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+        <div class="front-blog-list">
+          <a class="front-blog-item article-blog" href="fuar-IDEF-2023-Uluslararasi-Savunma-Sanayi-Fuari.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/fuar/32.jpg')">
             </div>
-          </footer>
-        </div>
-      </a>
-      <a class="front-blog-item article-blog" href="fuar-IDEF-2021-Uluslararasi-Savunma-Sanayi-Fuari.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/fuar/21.jpg')">
-        </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">IDEF 2021 Uluslararası Savunma Sanayi Fuarı</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>17 Ağustos -20 Ağustus 2021 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen EDEF 2021 15'inci Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 22, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">IDEF 2023 Uluslararası Savunma Sanayi Fuarı</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>9 Mayıs - 12 Mayıs 2023 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen IDEF 2023 16'ncı
+                  Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 23, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
             </div>
-          </footer>
-        </div>
-      </a>
-      <a class="front-blog-item article-blog" href="fuar-IDEF-2019-Uluslararasi-Savunma-Sanayi-Fuari.html">
-        <div class="front-blog-item-thumbnail article__thumbnail" style="background-image: url('images/fuar/1.jpg')">
-        </div>
-        <div class="front-blog-item-content article__body">
-          <div>
-            <h3 class="article__title">IDEF 2019 14’ncü Uluslararası Savunma Sanayi Fuarı</h3>
-          </div>
-          <div class="article__excerpt">
-            <p>30 Nisan-03 Mayıs 2019 tarihleri arasında İstanbul, Büyükçekmece Tüyap Fuar ve Kongre Merkezinde düzenlenen IDEF 2019 14’ncü Uluslararası Savunma Sanayi Fuarına; Allison lisansı altında askeri ürünler ürettiğimiz Allison...</p>
-          </div>
-          <footer class="article__footer">
-            <span class="article__date">Mart 18, 2025</span>
-            <div class="footer__readmore">
-              <span class="footer__readmore-text">Haberi Oku</span>
-              <span class="footer__readmore-arrow">
-                <i class="bi bi-arrow-right"></i>
-              </span>
+          </a>
+          <a class="front-blog-item article-blog" href="fuar-IDEF-2021-Uluslararasi-Savunma-Sanayi-Fuari.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/fuar/21.jpg')">
             </div>
-          </footer>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">IDEF 2021 Uluslararası Savunma Sanayi Fuarı</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>17 Ağustos -20 Ağustus 2021 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen EDEF 2021
+                  15'inci Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 22, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
+            </div>
+          </a>
+          <a class="front-blog-item article-blog" href="fuar-IDEF-2019-Uluslararasi-Savunma-Sanayi-Fuari.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/fuar/1.jpg')">
+            </div>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">IDEF 2019 14’ncü Uluslararası Savunma Sanayi Fuarı</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>30 Nisan-03 Mayıs 2019 tarihleri arasında İstanbul, Büyükçekmece Tüyap Fuar ve Kongre Merkezinde
+                  düzenlenen IDEF 2019 14’ncü Uluslararası Savunma Sanayi Fuarına; Allison lisansı altında askeri
+                  ürünler ürettiğimiz Allison...</p>
+              </div>
+              <footer class="article__footer">
+                <span class="article__date">Mart 18, 2025</span>
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     contact part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -852,7 +957,10 @@
         <div class="row g-0 mx-lg-0">
           <div class="col-lg-6 ps-lg-0">
             <!-- <img class="img-fluid w-100 " src="images/services/quote.jpg" style="object-fit: cover;" alt=""> -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1534.5350775932698!2d32.30550053896268!3d39.71560605611503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1716127064230!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1534.5350775932698!2d32.30550053896268!3d39.71560605611503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1716127064230!5m2!1str!2str"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="col-lg-6 quote-text py-5">
             <div class="p-lg-5 pe-lg-0">
@@ -860,44 +968,50 @@
                 <h2 class="section-title">Bize Ulaşın</h2>
                 <!-- <h3 class="section-sub-title">Lorem. <span>Lorem, ipsum.</span></h3> -->
               </div>
-              <p class="mb-4 pb-2">Her türlü soru, öneri veya geri bildiriminiz için bizimle iletişime geçebilirsiniz. Ayrıca, kariyer fırsatlarımıza başvurularınızı iletmek isterseniz, ilgili başvuru formu aracılığıyla başvurularınızı değerlendireceğiz. İletişim ve başvurularınıza en kısa sürede geri dönüş yapılacaktır.</p>
-              <form id="quote_form" class="icon_add">
+              <p class="mb-4 pb-2">Her türlü soru, öneri veya geri bildiriminiz için bizimle iletişime geçebilirsiniz.
+                Ayrıca, kariyer fırsatlarımıza başvurularınızı iletmek isterseniz, ilgili başvuru formu aracılığıyla
+                başvurularınızı değerlendireceğiz. İletişim ve başvurularınıza en kısa sürede geri dönüş yapılacaktır.
+              </p>
+              <form id="quote_form" class="icon_add" method="POST" action="send.php" enctype="multipart/form-data">
                 <div class="row g-3">
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingName" type="text" class="form-control " placeholder="Your Name">
+                      <input id="floatingName" name="fullname" type="text" class="form-control "
+                        placeholder="Your Name">
                       <label for="floatingName">Adınız - Soyadınız</label>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                      <div class="form-floating">
-                        <input id="floatingemail" type="email" data-validation="email"
-                          data-content="Email has a invalid format" class="form-control "
-                          placeholder="Your Email">
-                        <label for="floatingemail">E-Posta Adresiniz</label>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingnumber" type="text" class="form-control" placeholder="Your Phone Number">
+                      <input id="floatingemail" name="email" type="email" data-validation="email"
+                        data-content="Email has a invalid format" class="form-control " placeholder="Your Email">
+                      <label for="floatingemail">E-Posta Adresiniz</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating">
+                      <input id="floatingnumber" name="phone" type="text" class="form-control"
+                        placeholder="Your Phone Number">
                       <label for="floatingnumber">Telefon Numaranız</label>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
                     <!-- <label for="fileUpload" class="form-label">Belge Yükle (İsteğe Bağlı)</label> -->
-                    <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;">
+                    <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload"
+                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;">
                     <style>
                       .file-upload-hover:hover {
-                        
+
                         border-color: #EC640E;
-                        color:#EC640E;
+                        color: #EC640E;
                         transition: background 0.2s, border 0.2s;
                       }
                     </style>
                   </div>
                   <div class="col-12 text">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a comment here"
+                      <textarea class="form-control" name="message" placeholder="Leave a comment here"
                         id="floatingTextarea" style="border: 1px solid white"></textarea>
                       <label for="floatingTextarea">Mesajınızı buraya yazın</label>
                     </div>
@@ -923,10 +1037,13 @@
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-lg-4 col-md-4 footer-widget footer-about text-center">
-              <img loading="lazy" class="footer-logo" src="images/logo/HST_logo_tr.png" style="width: 150px;" alt="logo">
-              <p>HST Otomotiv, dişli dövme ve şanzıman üretiminde uzmanlaşmış, otomotiv sektörüne yüksek kalite çözümler sunan köklü bir firmadır. Yenilikçi üretim teknolojileri ve mühendislik altyapısıyla, yerli ve global pazarda güçlü bir konuma sahiptir.</p>
+              <img loading="lazy" class="footer-logo" src="images/logo/HST_logo_tr.png" style="width: 150px;"
+                alt="logo">
+              <p>HST Otomotiv, dişli dövme ve şanzıman üretiminde uzmanlaşmış, otomotiv sektörüne yüksek kalite çözümler
+                sunan köklü bir firmadır. Yenilikçi üretim teknolojileri ve mühendislik altyapısıyla, yerli ve global
+                pazarda güçlü bir konuma sahiptir.</p>
               <div class="footer-social">
-                   <!-- <ul>
+                <!-- <ul>
                   <li><a href="#" class="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                   </li>
                   <li><a href="#" class="twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -943,8 +1060,8 @@
                 <li><a href="tarihcemiz.html">Tarihçemiz</a></li>
                 <li><a href="vizyonumuz.html">Vizyonumuz</a></li>
                 <li><a href="misyonumuz.html">Misyonumuz</a></li>
-                 <li><a href="ar-ge.html">AR-GE</a></li>
-                        <li><a href="referans.html">Referanslarımız</a></li>
+                <li><a href="ar-ge.html">AR-GE</a></li>
+                <li><a href="referans.html">Referanslarımız</a></li>
               </ul>
             </div><!-- Col end -->
             <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">
@@ -977,8 +1094,7 @@
                 <span>Copyright &copy;
                   <script>
                     document.write(new Date().getFullYear())
-                   </script> <a
-                    href="https://www.codegarage.com.tr">codegarage</a>
+                  </script> <a href="https://www.codegarage.com.tr">codegarage</a>
                 </span>
               </div>
             </div>
@@ -992,38 +1108,79 @@
       </div><!-- Copyright end -->
     </footer>
     <!-- Button trigger modal -->
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered"><!-- modal-dialog-centered eklendi -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;"><strong> HST Otomotiv </strong>IDEF’25’te!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><!-- modal-dialog-centered eklendi -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;"><strong> HST Otomotiv
+              </strong>IDEF’25’te!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p style="color: black;">22–27 Temmuz 2025 tarihleri arasında İstanbul’da düzenlenecek olan <b>17. IDEF
+                Uluslararası Savunma Sanayi Fuarı'ndayız.</b>
+            </p>
+            <p style="color: black;"">ALLISON TRANSMISSION ile birlikte 4-A04A numaralı standımızda sizleri bekliyoruz!</p>
       </div>
-      <div class="modal-body">
-        <p style="color: black;">22–27 Temmuz 2025 tarihleri arasında İstanbul’da düzenlenecek olan <b>17. IDEF Uluslararası Savunma Sanayi Fuarı'ndayız.</b> 
-</p>
-        <p style="color: black;"">ALLISON TRANSMISSION ile birlikte 4-A04A numaralı standımızda sizleri bekliyoruz!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        <button type="button" class="btn btn-primary modal-map-btn" onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')" data-bs-dismiss="modal">Harita Gör</button>
-        <style>
-          .modal-map-btn:hover, .modal-map-btn:focus {
-            background-color: #0a56b9 !important;
-            color: #fff !important;
-          }
-        </style>
+      <div class=" modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-primary modal-map-btn"
+                onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')"
+                data-bs-dismiss="modal">Harita Gör</button>
+              <style>
+                .modal-map-btn:hover,
+                .modal-map-btn:focus {
+                  background-color: #0a56b9 !important;
+                  color: #fff !important;
+                }
+              </style>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
-    myModal.show();
-  });
-</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        myModal.show();
+      });
+    </script>
+
+    <script>
+      document.getElementById('quote_form').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Sayfanın yenilenmesini engelle
+
+        const form = document.getElementById('quote_form');
+        const formData = new FormData(form);
+
+        // Yanıtı göstereceğimiz alan (istersen daha şık bir div koyabilirsin)
+        const resultDiv = document.createElement('div');
+        resultDiv.style.marginTop = '20px';
+        resultDiv.style.fontWeight = 'bold';
+        form.appendChild(resultDiv);
+
+        try {
+          const response = await fetch('send.php', {
+            method: 'POST',
+            body: formData
+          });
+
+          const text = await response.text();
+
+          if (response.ok && text.includes("Mesaj gönderildi")) {
+            resultDiv.innerText = "✅ Mesaj başarıyla gönderildi!";
+            resultDiv.style.color = 'green';
+          } else {
+            resultDiv.innerText = "❌ Gönderme sırasında bir hata oluştu.";
+            resultDiv.style.color = 'red';
+          }
+        } catch (error) {
+          resultDiv.innerText = "❌ Bağlantı hatası: " + error.message;
+          resultDiv.style.color = 'red';
+        }
+      });
+    </script>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     footer part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -1047,4 +1204,5 @@
     <script src="js/blog.js"></script>
   </div><!-- Body inner end -->
 </body>
+
 </html>
