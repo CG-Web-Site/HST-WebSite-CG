@@ -77,7 +77,7 @@
                     <ul class="dropdown-menu" role="menu">
                     <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
                     <li><a href="belgelerimiz.html">Belgeler</a></li>
-                    <li><a href="kvkk.html">Politikalarımız</a></li>
+                    <li><a href="politikalarimiz.html">Politikalarımız</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -670,15 +670,17 @@ gibi tüm süreçler, yetkin kadromuz ve entegre üretim alanlarımızda yüksek
     const shuffleContainer = $('.shuffle-wrapper');
 
     function formatProductName(fileName) {
-      const nameWithoutExt = fileName.replace(/\.[^/.]+$/, "").replace(/--/g, "-");
-      const nameParts = nameWithoutExt.split('-');
-      const usefulParts = nameParts; // ilk parça ürün kodu
-      const raw = usefulParts.join(' ').replace(/-/g, ' ');
-      return raw
-        .toUpperCase()
+      const nameWithoutExt = fileName
+        .replace(/\.[^/.]+$/, '')         // uzantıyı sil
+        .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
+
+      const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
+      const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
+
+      return raw.toUpperCase();
     }
 
-    productImages.forEach((imagePath, index) => {
+    productImages.forEach((imagePath) => {
       const fullPath = basePath + imagePath;
       const productName = formatProductName(imagePath);
 
@@ -748,7 +750,7 @@ gibi tüm süreçler, yetkin kadromuz ve entegre üretim alanlarımızda yüksek
                 <li><a href="otomotiv.html">Otomotiv</a></li>
                 <li><a href="demiryolu.html">Demiryolu</a></li>
                 <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">Mekasist</a></li>
-                <li><a href="kvkk.html">Politikalarımız</a></li>
+                <li><a href="politikalarimiz.html">Politikalarımız</a></li>
               </ul>
             </div><!-- Col end -->
             <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">

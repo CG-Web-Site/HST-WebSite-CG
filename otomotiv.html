@@ -79,7 +79,7 @@
                     <ul class="dropdown-menu" role="menu">
                     <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
                     <li><a href="belgelerimiz.html">Belgeler</a></li>
-                    <li><a href="kvkk.html">Politikalarımız</a></li>
+                    <li><a href="politikalarimiz.html">Politikalarımız</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -405,125 +405,104 @@
   $(document).ready(function () {
     const basePath = './images/products/otomotiv/urunler/';
     const productImages = [
-      'HDF00.200-İSTAVROZ-KUTUSU-KOMPLESİ.webp',
-        'HDF00.200-İSTAVROZ-KUTUSU-KOMPLESİ_V2.webp',
-        'HDF00.300-İSTAVROZ-KUTUSU-KOMPLESİ.webp',
-        'AYNA--MAHRUTİ-TK_1.webp',
-        'AYNA--MAHRUTİ-TK_3.webp',
-        'AYNA--MAHRUTİ-TK_2.webp',
-        'AYNA.webp',
-        '1.VİTES-DİŞLİSİ.webp',
-        '2.-VE-3.-VİTES-DİŞLİSİ.webp',
-        '1.-VE-GERİ-VİTES-DİŞLİSİ.webp',
-        '2.VİTES-DİŞLİSİ.webp',
-        '2.VİTES-KARŞILIK-DİŞLİSİ.webp',
-        '2.VİTES-GRUP-MİLİ-DİŞLİSİ.webp',
-        '1.-VE-2.-VİTES-DÖNDÜREN-DİŞLİSİ.webp',
-        '3.VİTES-KARŞILIK-DİŞLİSİ.webp',
-        '4.VETES-ANAMİL-DİŞLİSİ.webp',
-        '2.-VİTES-ANA-MİL-DİŞLİSİ.webp',
-        '4WD-4-ÇEKER-ARA-DİŞLİSİ.webp',
-        'AKS-DİŞLİSİ.webp',
-        '906472M1.webp',
-        'AKS-DİŞLİSİ_V1.webp',
-        'AKS-DİŞLİSİ_V2.webp',
-        '4.VİTES-DİŞLİSİ.webp',
-        '4.VİTES-KARŞILIK-DİŞLİSİ.webp',
-        'DİFARENSİYEL-PİNYONU.webp',
-        'CER-DİŞLİSİ.webp',
-        'DENGELEME-KOMPLESİ.webp',
-        'DEBRİYAJ-MİLİ_V1.webp',
-        'COUPLING-SPLINED-CREEPER.webp',
-        'CER-DİŞLİSİ_V1.webp',
-        'COVER.webp',
-        'DEBRİYAJ-MİLİ.webp',
-        'DEBRİYAJ-MİLİ-KOMPLESİ.webp',
-        'DRIVEN-GEAR-CREEPER.webp',
-        'DRIVE-GEAR.webp',
-        'DRIVE-GEAR-PTO-CONTROL.webp',
-        'DÖNEN-DİŞLİSİ.webp',
-        'DİFFERANSİYEL-DİŞLİSİ.webp',
-        'DÖNEN-DİŞLİSİ_1.webp',
-        'DRIVE-GEAR-I-SPEED.webp',
-        'DİFFERANSİYEL-DİŞLİSR_V1.webp',
-        'DRIVING-GEAR.webp',
-        'GEAR-CONDOTTO-SUPERRIDUTTORE.webp',
-        'GEAR-PTO-DRIVEN-Z58_BAKILACAK.webp',
-        'GEAR--DRIVEN-PTO.webp',
-        'GEAR-DRIVEN-4TH_V2.webp',
-        'GEAR-DRIVEN-4TH_V1.webp',
-        'GEAR-PTO-DRIVEN.webp',
-        'GEAR-DRIVING-II-SPEED.webp',
-        'GEAR-DRIVEN-SLOW-AND-MEDIUM-RANGE.webp',
-        'GEAR-PTO-DRIVEN-Z58.webp',
-        'GEAR-DRIVEN-DROP-BOX.webp',
-        'GEAR-DRIVEN-4TH.webp',
-        'GEAR.webp',
-        'GEAR-PTO-DRIVEN-Z58_V1.webp',
-        'GEAR-PTO-IDLER.webp',
-        'GEAR-SHAFT_V1.webp',
-        'GEAR-SHAFT.webp',
-        'GEAR-RANGE-OUTPUT-DRIVE.webp',
-        'GEAR-SUN.webp',
-        'GEAR-TRANSMISSION-TO-PTO.webp',
-        'GEAR-SPIRAL-BEVEL.webp',
-        'GERİ-VİTES-ARA-DİŞLİSİ.webp',
-        'GERİ-VİTES-KARŞILIK-DİŞLİSİ.webp',
-        'GRUP-MİLİ.webp',
-        'GRUP-MİLİ-2.VİTES-DİŞLİSİ.webp',
-        'HALKA-DİŞLİ_V1.webp',        
-        'HIGH-LOW-RANGE-SLIDING-SLEEVE.webp',
-        'HUB-CLUTCH-A.webp',
-        'HUB--CLUTCH-B.webp',
-        'INPUT-SHAFT.webp',
-        'INTERMEDIATE-GEAR.webp',
-        'KUYRUK-MİLİ-KUMANDA-DİŞLİSİ.webp',
-        'KUYRUK-MİLİ-PRİZDİREK-MİLİ.webp',
-        'PINION-COUNTERSHAFT-HIGH-SPEED.webp',
-        'PINION--WITH-AXLE-SHAFT.webp',
-        'PISTON-CL.webp',
-        'PTO-DÖNDÜREN-DİŞLİ-MİLİ.webp',
-        'PTO-DRIVE-SHAFT.webp',
-        'PTO-DRIVE-SHAFT_V1.webp',
-        'RACE-STATOR-FREE-WHEEL-ROLLER.webp',
-        'RANGE-DRIVE-SHAFT.webp',
-        'RANGE-DRIVE-SHAFT_V1.webp',
-        'REDUKTOR-KAVRAMASI-KAYGAN-MANŞONU.webp',
-        'REVERSE-IDLER-GEAR.webp',
-        'RING-GEAR.webp',
-        'SHAFT-CLUTCH-INPUT.webp',
-        'SHAFT-CLUTCH-INPUT_V1.webp',
-        'SHAFT-CLUTCH-INPUT_V2.webp',
-        'SHAFT-CLUTCH-INPUT_V3.webp',
-        'SHAFT-MAIN.webp',
-        'SHAFT-PTO.webp',
-        'SHAFT-STATOR.webp',
-        'SHAFT.webp',
-        'SHAFT-DT-DRIVING.webp',
-        'SHAFT_V1.webp',
-        'SHAFT_V2.webp',
-        'SHAFT_V3.webp',
-        'SHAFT_V4.webp',
-        'SHAFT_V5.webp',
-        'SHAFT_V6.webp',
-        'SHAFT-DRIVEN-GEAR.webp',
-        'SHAFT-DRIVING-GEAR.webp',
-        'SLEEVE--PTO-SHAFT.webp',
-        'WD-DRIVING-SHAFT.webp'
+      'ISTAVROZ-KUTUSU-KOMPLESİ.webp',
+'ISTAVROZ-KUTUSU-KOMPLESİ-2.webp',
+'AYNA--MAHRUTI-SET.webp',
+'AYNA--MAHRUTİ.webp',
+'1.-VE-2.-VİTES-DÖNDÜREN-DİŞLİSİ.webp',
+'1.-VE-GERİ-VİTES-DİŞLİSİ.webp',       
+'1.VİTES-DİŞLİSİ.webp',
+'1.VİTES-DİŞLİSİ_v1.webp',
+'2.-VE-3.-VİTES-DİŞLİSİ.webp',
+'2.-VİTES-ANA-MİL-DİŞLİSİ.webp',       
+'2.VİTES-DİŞLİSİ.webp',
+'2.VİTES-GRUP-MİLİ-DİŞLİSİ.webp',      
+'2.VİTES-KARŞILIK-DİŞLİSİ.webp',       
+'3.VİTES-KARŞILIK-DİŞLİSİ.webp',       
+'4.VİTES-ANAMİL-DİŞLİSİ.webp',
+'4.VİTES-DİŞLİSİ.webp',
+'4.VİTES-KARŞILIK-DİŞLİSİ.webp',       
+'4.VİTES-TAHRİK-DİŞLİSİ.webp',
+'4X4-ÇEKER-ARA-DİŞLİSİ.webp',
+'540-DEVİRLİ-İL.webp',
+'AKS-DİŞLİSİ-(SAĞ).webp',
+'AKS-DİŞLİSİ-(SOL).webp',
+'AKS-DİŞLİSİ.webp',
+'ALT-KAVRAMA-GÖBEĞİ.webp',
+'ARA-DİŞLİ.webp',
+
+'CER-DİŞLİSİ.webp',
+'DEBRİYAJ-GÖBEĞİ.webp',
+'DEBRİYAJ-GİRİŞ-MİLİ.webp',
+'DEBRİYAJ-MİLİ-KOMPLESİ.webp',
+'DEBRİYAJ-MİLİ.webp',
+'DENGELEME-KOMPLESİ.webp',
+'DÖNDÜREN-DİŞLİLER-MİLİ.webp',
+'DÖNEN-DİŞLİSİ.webp',
+'DÖRT-TEKER-ÇEKİŞ-MİLİ.webp',
+'DÜŞÜK-HIZLI-YİVLİ-KABLİN.webp',
+'DÜŞÜK-KADEME-DİŞLİSİ.webp',
+'DİFERANSİYEL-PİNYONU.webp',
+'DİFFERANSİYEL-DİŞLİSİ.webp',
+'DİŞLİ-MİLİ.webp',
+'DİŞLİ.webp',
+'GERİ-VİTES-ARA-DİŞLİSİ.webp',
+'GERİ-VİTES-AVARA-DİŞLİSİ.webp',
+'GERİ-VİTES-HAREKET-DİŞLİSİ.webp',
+'GERİ-VİTES-KARŞILIK-DİŞLİSİ.webp',
+'GRUP-MİLİ-2.VİTES-DİŞLİSİ.webp',
+'GRUP-MİLİ.webp',
+'GRUP-MİLİ_1.webp',
+'GÖBEK.webp',
+'GİRİŞ-MİLİ.webp',
+'HALKA-DİŞLİ.webp',
+'HALKA-DİŞLİ_v1.webp',
+
+'HIZ-TAHRİK-MİLİ-KOMPLESİ.webp',
+'KAPAK.webp',
+'KUYRUK-MİLİ-DEBRİYAJ-MİLİ.webp',
+'KUYRUK-MİLİ-DİŞLİSİ-Z58.webp',
+'KUYRUK-MİLİ-KONTROL-DİŞLİSİ.webp',
+'KUYRUK-MİLİ-KUMANDA-DİŞLİSİ_v1.webp',
+'KUYRUK-MİLİ-KUMANDA-MİLİ-DİŞLİSİ.webp',
+'KUYRUK-MİLİ-PRİZDİREK-MİLİ.webp',
+'KUYRUK-MİLİ-TAHRİK-DİŞLİSİ.webp',
+'KUYRUK-MİLİ-ÇEVİREN-DİŞLİSİ.webp',
+'MENZİL-ÇIKIŞ-TAHRİK DİŞLİSİ.webp',
+'MİL-TAHRİK-DİŞLİSİ.webp',
+'MİL.webp',
+'ORTA-VE-DÜŞÜK-VİTES-TAHRİK-DİŞLİSİ.webp',
+'PTO-RÖLANTİ-DİŞLİSİ.webp',
+'PTO-TAHRİK-MİLİ.webp',
+'REDUKTOR-KAVRAMASI-KAYGAN-MANŞONU.webp',
+'SAĞ-AKS-MİLİ.webp',
+'SAĞ-DİREKSİYON-TAHRİK-DİŞLİSİ.webp',
+'SERBEST-MAKARALI-RULMAN-YATAĞI.webp',
+'SPİRAL-KONİK-DİŞLİ.webp',
+'SİLİNDİR-PISTONU.webp',
+'VİTES-ARALIĞI-TAHRİK-MİLİ.webp',
+'VİTES-KUTUSU-TAHRİK-DİŞLİSİ.webp',
+'YAVAŞ-VE-ORTA-HIZ-DİŞLİSİ.webp',
+'YÜKSEK-ALÇAK-KADEME-KOVANI.webp',
+'YÜKSEK-HIZ-ARA-MİLİ-PİNYON-DİŞLİSİ.webp',
+'İKİ-KADEMELİ-TAHRİK-DİŞLİSİ.webp',
+'ŞANZUMAN-PTO-DİŞLİSİ.webp'
     ];
 
     const shuffleContainer = $('.shuffle-wrapper');
 
     function formatProductName(fileName) {
-      const nameWithoutExt = fileName.replace(/\.[^/.]+$/, "").replace(/--/g, "-");
-      const nameParts = nameWithoutExt.split('-');
-      const usefulParts = nameParts; // ilk parça ürün kodu
-      const raw = usefulParts.join(' ').replace(/-/g, ' ');
-      return raw
-        .toUpperCase()
+      const nameWithoutExt = fileName
+        .replace(/\.[^/.]+$/, '')         // uzantıyı sil
+        .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
+
+      const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
+      const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
+
+      return raw.toUpperCase();
     }
 
-    productImages.forEach((imagePath, index) => {
+    productImages.forEach((imagePath) => {
       const fullPath = basePath + imagePath;
       const productName = formatProductName(imagePath);
 
@@ -593,7 +572,7 @@
                 <li><a href="otomotiv.html">Otomotiv</a></li>
                 <li><a href="demiryolu.html">Demiryolu</a></li>
                 <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">Mekasist</a></li>
-                <li><a href="kvkk.html">Politikalarımız</a></li>
+                <li><a href="politikalarimiz.html">Politikalarımız</a></li>
               </ul>
             </div><!-- Col end -->
             <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">

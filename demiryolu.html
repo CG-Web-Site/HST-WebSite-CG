@@ -76,7 +76,7 @@
                     <ul class="dropdown-menu" role="menu">
                     <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">MEKASİST</a></li>
                     <li><a href="belgelerimiz.html">Belgeler</a></li>
-                    <li><a href="kvkk.html">Politikalarımız</a></li>
+                    <li><a href="politikalarimiz.html">Politikalarımız</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -395,49 +395,49 @@ Hammadde beslemesi, titreşimli besleyiciler ile otomatik olarak sağlanmakta; m
   $(document).ready(function () {
     const basePath = './images/products/demiryolu/urunler/';
     const productImages = [
-'1-MN--1.5-MN-ELASTOMERLİ-CER-PAKETİ-TİP-540.webp',
-'100-TON-GÖZLÜ-CER-KANCASI.webp',
-'1350-kN-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',       
-'1500-kN-CER-MİLİ.webp',
-'850-kN-TOPUZLU-CER-KANCASI.webp',
-'850-kN-YARI-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',   
-'CER-DİŞLİSİ.webp',
-'DAYANMA-ARÇASI.webp',
-'DÖVME-DESTEK-PARÇASI.webp',
-'ELASTOMER-TAMPON.webp',
-'ELASTOMERLİ-620-mm-BOYLU-TAMPON.webp',
-'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
-'KÜRE-450-340mm-TAMPON-ALIN-TABAKASI.webp',        
-'MANİVELA-KÖPRÜSÜ.webp',
-'MENOT.webp',
-'SABİT-NOKTA-GÖVDESİ.webp',
-'STAVROZ-DÖVME-TASLAĞI.webp',
-'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-540.webp',
-'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-570.webp',
-'SÜPER-TAMPON-BİLEZİKLERİ .webp',
-'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ-2.webp',
-'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ.webp',
-'TAMPON-ALIN-PLAKASI.webp',
-'TAMPON-ALT-PLAKASI.webp',
-'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ-2.webp',
-'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ.webp',
-'YÜK-YOLCU-SUSTA-DEMETİ-BİLEZİKLERİ.webp',
-'ÇEKME-ÇUBUĞU-MAFSALI.webp'
-
+      '1-MN--1.5-MN-ELASTOMERLİ-CER-PAKETİ-TİP-540.webp',
+      '100-TON-GÖZLÜ-CER-KANCASI.webp',
+      '1350-kN-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',
+      '1500-kN-CER-MİLİ.webp',
+      '850-kN-TOPUZLU-CER-KANCASI.webp',
+      '850-kN-YARI-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',
+      'CER-DİŞLİSİ.webp',
+      'DAYANMA-ARÇASI.webp',
+      'DÖVME-DESTEK-PARÇASI.webp',
+      'ELASTOMER-TAMPON.webp',
+      'ELASTOMERLİ-620-mm-BOYLU-TAMPON.webp',
+      'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
+      'KÜRE-450-340mm-TAMPON-ALIN-TABAKASI.webp',
+      'MANİVELA-KÖPRÜSÜ.webp',
+      'MENOT.webp',
+      'SABİT-NOKTA-GÖVDESİ.webp',
+      'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-540.webp',
+      'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-570.webp',
+      'SÜPER-TAMPON-BİLEZİKLERİ .webp',
+      'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ-2.webp',
+      'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ.webp',
+      'TAMPON-ALIN-PLAKASI.webp',
+      'TAMPON-ALT-PLAKASI.webp',
+      'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ-2.webp',
+      'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ.webp',
+      'YÜK-YOLCU-SUSTA-DEMETİ-BİLEZİKLERİ.webp',
+      'ÇEKME-ÇUBUĞU-MAFSALI.webp'
     ];
 
     const shuffleContainer = $('.shuffle-wrapper');
 
     function formatProductName(fileName) {
-      const nameWithoutExt = fileName.replace(/\.[^/.]+$/, "").replace(/--/g, "-");
-      const nameParts = nameWithoutExt.split('-');
-      const usefulParts = nameParts; // ilk parça ürün kodu
-      const raw = usefulParts.join(' ').replace(/-/g, ' ');
-      return raw
-        .toUpperCase()
+      const nameWithoutExt = fileName
+        .replace(/\.[^/.]+$/, '')         // uzantıyı sil
+        .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
+
+      const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
+      const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
+
+      return raw.toUpperCase();
     }
 
-    productImages.forEach((imagePath, index) => {
+    productImages.forEach((imagePath) => {
       const fullPath = basePath + imagePath;
       const productName = formatProductName(imagePath);
 
@@ -459,6 +459,7 @@ Hammadde beslemesi, titreşimli besleyiciler ile otomatik olarak sağlanmakta; m
     });
   });
 </script>
+
             </div>
           </div>
           <div class="col-12">
@@ -508,7 +509,7 @@ Hammadde beslemesi, titreşimli besleyiciler ile otomatik olarak sağlanmakta; m
                 <li><a href="otomotiv.html">Otomotiv</a></li>
                 <li><a href="demiryolu.html">Demiryolu</a></li>
                 <li><a href="https://mths.mekasist.com/MTHS?mersis=0464057210300024" target="_blank">Mekasist</a></li>
-                <li><a href="kvkk.html">Politikalarımız</a></li>
+                <li><a href="politikalarimiz.html">Politikalarımız</a></li>
               </ul>
             </div><!-- Col end -->
             <div class="col-lg-2 col-sm-6 col-md-4 mt-5 mt-md-0 footer-widget">
