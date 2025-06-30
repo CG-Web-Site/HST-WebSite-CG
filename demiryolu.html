@@ -322,7 +322,7 @@
           <div class="col-lg-8">
             <div id="department-slider" class="department-slider small-bg">
               <div class="item" style="background-image:url(images/products/demiryolu/Vagon_1.webp); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
-              <div class="item" style="background-image:url(images/products/demiryolu/Vagon_2.webp); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
+              <div class="item" style="background-image:url(images/products/demiryolu/vagon_2-2.png); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
               <div class="item" style="background-image:url(images/products/demiryolu/Vagon_3.webp); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
               <div class="item" style="background-image:url(images/products/demiryolu/Vagon_9.webp); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
             </div><!-- Page slider end-->
@@ -393,50 +393,36 @@ Hammadde beslemesi, titreşimli besleyiciler ile otomatik olarak sağlanmakta; m
   
   <script>
   $(document).ready(function () {
-    const basePath = './images/demiryolu/urunler/';
+    const basePath = './images/products/demiryolu/urunler/';
     const productImages = [
 '1-MN--1.5-MN-ELASTOMERLİ-CER-PAKETİ-TİP-540.webp',
-'850-kN-YARI-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',
-'850-kN-TOPUZLU-CER-KANCASI.webp',
-'AKS-DİŞLİSİ-DÖVME-TASLAĞI.webp',
-'2-YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ.webp',
-'850-kN-TOPUZLU-CER-KANCASI-2.webp',
+'100-TON-GÖZLÜ-CER-KANCASI.webp',
+'1350-kN-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',       
 '1500-kN-CER-MİLİ.webp',
-'1350-kN-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',
-'ELASTOMERLİ-620mm-BOYLU-TAMPON.webp',
-'AKS-VE-PİNYON-DİŞLİ-DÖVME-TASLAKLARI.webp',
-'DÖVME-DESTEK-PARÇASI.webp',
-'ÇEKME-ÇUBUĞU-MAFSALI.webp',
-'AYNA-MAHRUTİ-DİŞLİSİ-DÖVME-TASLAĞI.webp',
+'850-kN-TOPUZLU-CER-KANCASI.webp',
+'850-kN-YARI-OTOMATİK-VİDALI-KOŞUM-TAKIMI.webp',   
 'CER-DİŞLİSİ.webp',
-'AYNA--MAHRUTİ-DİŞLİSİ-DÖVME-TASLAĞI_V2.webp',
 'DAYANMA-ARÇASI.webp',
-'AYNA-MAHRUTİ-DİŞLİSİ-DÖVME-TASLAĞI_V2.webp',
+'DÖVME-DESTEK-PARÇASI.webp',
 'ELASTOMER-TAMPON.webp',
-'KONVERTOR-DİŞLİSİ-60T.webp',
+'ELASTOMERLİ-620-mm-BOYLU-TAMPON.webp',
+'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
+'KÜRE-450-340mm-TAMPON-ALIN-TABAKASI.webp',        
+'MANİVELA-KÖPRÜSÜ.webp',
 'MENOT.webp',
 'SABİT-NOKTA-GÖVDESİ.webp',
-'KAPLİN-DÖVME-TASLAĞI.webp',
-'MANİVELA-KÖPRÜSÜ.webp',
-'PLANET-DİŞLİ-ÇIKIŞ-TAŞIYICISI-(KAFES).webp',
-'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
-'ROKETSAN-ARKA-KAPAK.webp',
-'PLANET-DİŞLİ-TAŞIYICISI-– 2.KADEME-(P2-KAFESİ).webp',
 'STAVROZ-DÖVME-TASLAĞI.webp',
+'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-540.webp',
 'SUSTA-BİLEZİKLİ-CER-PAKETİ-TİP-570.webp',
+'SÜPER-TAMPON-BİLEZİKLERİ .webp',
+'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ-2.webp',
+'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ.webp',
 'TAMPON-ALIN-PLAKASI.webp',
-'SÜPER-TAMPON-BİLEZİK-DEMETİ-SUSTALARI.webp',
-'SUSTA-BİLEZİKLİ CER-PAKETİ-TİP-540.webp',
-'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ.webp',
 'TAMPON-ALT-PLAKASI.webp',
-'SİLİNDİR-YARI-MAMUL.webp',
-'TAŞIYICI-ÇIKIŞ-SİSTEMİ.webp',
-'SÜPER-TAMPON-SUSTA-BİLEZİK-DEMETİ.webp',
-'TAŞIYICI-ÇIKIŞ-SİSTEMİ.webp',
-'YANMA-ODASI-HALKA-SOĞUTMASI.webp',
-'YÜK-YOLCU-SUSTA-DEMETİ-BİLEZİKLERİ.webp',
+'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ-2.webp',
 'YOLCU-VAGONU-SUSTA-BİLEZİK-DEMETİ.webp',
-'100-TON-GÖZLÜ-CER-KANCASI.webp'
+'YÜK-YOLCU-SUSTA-DEMETİ-BİLEZİKLERİ.webp',
+'ÇEKME-ÇUBUĞU-MAFSALI.webp'
 
     ];
 
