@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return markup;
   }
 
- function createSlides (img) {
+  
+  function createSlides (img) {
   let markup = "";
   const currentImgSrc = img.closest('.gallery-item').getAttribute("href");
 
