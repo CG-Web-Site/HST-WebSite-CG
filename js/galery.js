@@ -35,23 +35,27 @@ document.addEventListener('DOMContentLoaded', () => {
     return markup;
   }
 
-  function createSlides (img) {
-    let markup = "";
-    const currentImgSrc = img.closest('.gallery-item').getAttribute("href");
+ function createSlides (img) {
+  let markup = "";
+  const currentImgSrc = img.closest('.gallery-item').getAttribute("href");
 
-    for (const img of imgs) {
-      const imgSrc = img.closest('.gallery-item').getAttribute("href");
-      const imgAlt = img.getAttribute("alt");
+  for (const img of imgs) {
+    const imgSrc = img.closest('.gallery-item').getAttribute("href");
+    const imgAlt = img.getAttribute("alt");
 
-      markup += `
-        <div class="carousel-item${currentImgSrc === imgSrc ? " active" : ""}">
-          <img class="d-block img-fluid w-100" src=${imgSrc} alt="${imgAlt}">
-          ${imgAlt ? createCaption(imgAlt) : ""}
-        </div>`;
-    }
-
-    return markup;
+    markup += `
+      <div class="carousel-item${currentImgSrc === imgSrc ? " active" : ""}">
+        <img 
+          class="d-block mx-auto" 
+          style="max-width: 30vw; height: auto;" 
+          src="${imgSrc}" 
+          alt="${imgAlt}">
+        ${imgAlt ? createCaption(imgAlt) : ""}
+      </div>`;
   }
+
+  return markup;
+}
 
   function createCarousel (img) {
     const markup = `
