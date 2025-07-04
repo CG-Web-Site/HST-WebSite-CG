@@ -2943,3 +2943,20 @@ section .blog-row .card-inner .box .imgBox img {
  border-bottom-left-radius:0px;
  border-bottom-right-radius:0px;
 }
+
+#searchOverlay {
+  position: fixed !important;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999 !important; /* Çok yüksek z-index ver */
+}
+
+.sidebar {
+  position: fixed; /* Eğer değilse */
+  z-index: 10000;  /* searchOverlay'dan düşük */
+}
+

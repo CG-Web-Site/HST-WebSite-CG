@@ -330,3 +330,98 @@
 
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const btnSide = document.querySelector('.btn-side');
+  const sidebar = document.querySelector('.sidebar');
+  const searchButtons = document.querySelectorAll('#searchBtn');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const closeSearch = document.getElementById('closeSearch');
+  const searchInput = document.getElementById('searchInput');
+  const searchForm = document.getElementById('searchForm');
+  const resultContainer = document.getElementById('searchResults');
+
+  // Sidebar toggle
+  if (btnSide && sidebar) {
+    btnSide.addEventListener('click', function () {
+      sidebar.classList.toggle('active');
+      btnSide.classList.toggle('active');
+    });
+  }
+
+  // Arama butonları için tıklama
+  searchButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // Mobil menüyü gizle
+      if (sidebar) sidebar.classList.remove('active');
+      if (btnSide) btnSide.classList.remove('active');
+
+      // Search overlay'i göster
+      searchOverlay.style.display = 'flex';
+      setTimeout(() => searchInput.focus(), 100);
+    });
+  });
+
+  // Search kapama
+  if (closeSearch) {
+    closeSearch.addEventListener('click', function () {
+      searchOverlay.style.display = 'none';
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      searchOverlay.style.display = 'none';
+    }
+  });
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) return;
+
+      resultContainer.innerHTML = '<p>🔍 Aranıyor...</p>';
+      searchOverlay.style.display = 'flex';
+
+      fetch('list-html-files.php')
+        .then(res => res.json())
+        .then(sitePages => {
+          searchInPages(sitePages, query, resultContainer);
+        });
+    });
+  }
+});
+
+function searchInPages(sitePages, query, resultContainer) {
+  let foundResults = [];
+  let completed = 0;
+
+  sitePages.forEach(page => {
+    fetch(page)
+      .then(res => {
+        if (!res.ok) throw new Error(`Sayfa yüklenemedi: ${page}`);
+        return res.text();
+      })
+      .then(html => {
+        const plainText = html.replace(/<[^>]*>?/gm, '').toLowerCase();
+        if (plainText.includes(query)) {
+          const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+          let displayTitle = titleMatch?.[1] || page.split('/').pop().replace('.html', '');
+          foundResults.push(`<li><a href="${page}" target="_blank">${displayTitle}</a></li>`);
+        }
+      })
+      .catch(err => {
+        console.warn(err.message);
+      })
+      .finally(() => {
+        completed++;
+        if (completed === sitePages.length) {
+          resultContainer.style.display = 'block';
+          resultContainer.innerHTML = foundResults.length > 0
+            ? `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`
+            : `<p>🚫 Hiçbir sonuç bulunamadı.</p>`;
+        }
+      });
+  });
+}
