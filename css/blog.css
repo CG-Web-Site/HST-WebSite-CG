@@ -279,13 +279,13 @@ h6 {
   opacity: 1;
 }
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
   .front-blog-list > a:last-child {
     display: none;
   }
-}
+} */
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   body {
     margin: 5rem 0;
   }
@@ -307,5 +307,30 @@ h6 {
   .article__excerpt {
     max-height: auto;
     overflow: visible;
+  }
+} */
+ .front-blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.front-blog-item {
+  width: calc(33.33% - 20px); /* Varsayılan: 3'lü görünüm */
+}
+
+@media (max-width: 1349px) {
+  .front-blog-item {
+    width: calc(50% - 20px); /* 2'li görünüm */
+  }
+}
+
+@media (max-width: 850px) {
+  .front-blog-list {
+    flex-direction: column;
+  }
+
+  .front-blog-item {
+    width: 100%; /* 1'li görünüm */
   }
 }
