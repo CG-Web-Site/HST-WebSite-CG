@@ -252,9 +252,9 @@
     </div>
     <p>are produced in accordance with high quality standards.</p>
     <br>
-    <p>In our production facility with a total of 15,000 m² indoor area, uninterrupted production is carried out in a three-shift system. Materials are prepared for the forging process using modern infrastructure such as automatic raw material feeding, induction heating systems, and natural gas furnaces. Steel up to Ø1000 mm can be processed with saw cutting machines, and up to Ø145 mm with shearing presses.</p>
+    <p>In production facility with a total of 15,000 m² indoor area, uninterrupted production is carried out in a three-shift system. Materials are prepared for the forging process using modern infrastructure such as automatic raw material feeding, induction heating systems, and natural gas furnaces. Steel up to Ø1000 mm can be processed with saw cutting machines, and up to Ø145 mm with shearing presses.</p>
     <br>
-    <p><b>Our Production Lines</b><br></p>
+    <p><b>Production Lines</b><br></p>
     <div style="margin-left: 2em;">
       <ul style="list-style-type: disc; padding-left: 20px;">
         <li>Forging hammers between 2.6 – 10 tons</li>
@@ -279,29 +279,53 @@
                     content part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <!-- PRODUCT -->
-    <section id="departments" class="departments-area">
-      <div class="container">
-        <div class="row text-center">
-        </div>
-        <h3 style="text-align: center;">RAILWAY</h3>
-        <br>
-        <div class="row">
-          <div class="col-12">
-            <div class="row shuffle-wrapper">
-              <div class="col-1 shuffle-sizer"></div>
-              <!-- jQuery ve Bootstrap JS -->
-              <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <div style="text-align: center; margin-top: 40px;">
+  <a href="#demiryolu" class="scroll-link" style="margin-right: 20px; font-weight: bold;">RAILWAY PRODUCTS</a>
+  <a href="#taslaklar" class="scroll-link" style="font-weight: bold;">FORGING BLANKS</a>
+</div>
 
-              <script>
-                $(document).ready(function () {
-                  const basePath = './images/products/celik-dovme/urunler/en/demiryolu/';
-                  const productImages = ['1.5-MN-TYPE-540-DRAW-GEAR-ASSEMBLY-WITH-ELASTOMER-SPRINGS.webp',
+<div id="demiryolu"></div>
+<br><br><br><br>
+<section id="departments" class="departments-area">
+  <div class="container">
+    <h3 style="text-align: center;">RAILWAY PRODUCTS</h3>
+    <br>
+    <div class="row shuffle-wrapper-demiryolu"></div>
+  </div>
+</section>
+
+<div id="taslaklar"></div>
+<br><br><br><br>
+<section id="departments" class="departments-area">
+  <div class="container">
+    <h3 style="text-align: center;">FORGING BLANKS</h3>
+    <br>
+    <div class="row shuffle-wrapper-taslaklar"></div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Ortak isim düzenleme fonksiyonu
+    function formatProductName(fileName) {
+      const nameWithoutExt = fileName
+        .replace(/\.[^/.]+$/, '') // uzantıyı sil
+        .replace(/--/g, '###'); // çift tire geçici değişsin
+
+      const nameParts = nameWithoutExt.split('-');
+      const raw = nameParts.join(' ').replace(/###/g, '-');
+      return raw.toUpperCase();
+    }
+
+    // DEMİRYOLU GÖRSELLERİ
+    const demiryoluImages = [
+      '1.5-MN-TYPE-540-DRAW-GEAR-ASSEMBLY-WITH-ELASTOMER-SPRINGS.webp',
 '1500-kN-DRAW-SPINDLE-M60x6-ROUND-THREAD .webp',
 'AUTOMATIC-SCREW-COUPLING(1350-kN).webp',
 'AXLE-BOX-GUIDE(MENOT).webp',
 'BALL-END-DRAW-HOOK-(850-kN).webp',
-'BOGIE-GEAR.webp',
+'SPROCKET.webp',
 'BRAKE-LEVER-BRIDGE.webp',
 'BUFFER-(620-mm-LENGTH)-WITH ELASTOMER-SPRINGS.webp',
 'DRAW-GEAR-ASSEMBLY-WITH-FRICTION-SPRINGS-TYPE-540.webp',        
@@ -323,140 +347,65 @@
 'SUPPORT-PLATE-(BOTTOM).webp',
 'SUPPORT-PLATE-(FRONT).webp',
 'SUPPORT-PLATE-STOP-PLATE.webp'
-                  ];
+    ];
+    const basePathDemiryolu = './images/products/celik-dovme/urunler/en/demiryolu/';
+    const containerDemiryolu = $('.shuffle-wrapper-demiryolu');
 
-                  const shuffleContainer = $('.shuffle-wrapper');
-
-                  function formatProductName(fileName) {
-                    const nameWithoutExt = fileName
-                      .replace(/\.[^/.]+$/, '')         // uzantıyı sil
-                      .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
-
-                    const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
-                    const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
-
-                    return raw.toUpperCase();
-                  }
-
-                  productImages.forEach((imagePath) => {
-                    const fullPath = basePath + imagePath;
-                    const productName = formatProductName(imagePath);
-
-                    const itemHtml = `
+    demiryoluImages.forEach((img) => {
+      const name = formatProductName(img);
+      const fullPath = basePathDemiryolu + img;
+      const html = `
         <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
           <div class="department-img-container">
-            <img class="img-fluid" src="${fullPath}" alt="${productName}">
+            <img class="img-fluid" src="${fullPath}" alt="${name}">
             <span class="gallery-icon"></span>
             <div class="service-item-info">
               <div class="department-item-info-content">
-                <h3 class="department-item-title">
-                  <a href="#!">${productName}</a>
-                </h3>
+                <h3 class="department-item-title"><a href="#!">${name}</a></h3>
               </div>
             </div>
           </div>
         </div>`;
-                    shuffleContainer.append(itemHtml);
-                  });
-                });
-              </script>
+      containerDemiryolu.append(html);
+    });
 
-            </div>
-          </div>
-          <div class="col-12">
-          </div>
-          <!--/ Container end -->
-    </section>
+    // TASLAKLAR GÖRSELLERİ
+    const taslakImages = [
+'TRACK-SHOE-VEHICULAR.webp',
+      'AXLE-AND-PINION-GEAR-FORGING-BLANKS.webp',
+'BEVEL-RING-GEAR-FORGING-BLANK.webp',
+'CARRIER-OUTPUT-SYSTEM.webp',
+'COMBUSTION-CHAMBER-RING-COOLING.webp',
+'CONVERTER-GEAR-60T.webp',
+'COUPLING-FORGING-BLANK.webp',
+'CYLINDER-SEMI-FINISHED-PRODUCT.webp',
+'PLANETARY-GEAR-CARRIER-2ND-STAGE-(P2-CAGE).webp',    
+'PLANETARY-GEAR-OUTPUT-CARRIER-(CAGE).webp',
+'ROKETSAN-REAR-COVER.webp',
+'TAŞIYICI-ÇIKIŞ-SİSTEMİ.webp'
+    ];
+    const basePathTaslak = './images/products/celik-dovme/urunler/en/taslaklar/';
+    const containerTaslaklar = $('.shuffle-wrapper-taslaklar');
 
-
-    <section id="departments" class="departments-area">
-      <div class="container">
-        <div class="row text-center">
-        </div>
-        <h3 style="text-align: center;">FORGING BLANK</h3>
-        <br>
-        <div class="row">
-          <div class="col-12">
-            <div class="row shuffle-wrapper">
-              <div class="col-1 shuffle-sizer"></div>
-              <!-- jQuery ve Bootstrap JS -->
-              <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-              <script>
-                $(document).ready(function () {
-                  const basePath = './images/products/celik-dovme/urunler/en/demiryolu/';
-                  const productImages = [  '1.5-MN-TYPE-540-DRAW-GEAR-ASSEMBLY-WITH-ELASTOMER-SPRINGS.webp',
-'1500-kN-DRAW-SPINDLE-M60x6-ROUND-THREAD .webp',
-'AUTOMATIC-SCREW-COUPLING(1350-kN).webp',
-'AXLE-BOX-GUIDE(MENOT).webp',
-'BALL-END-DRAW-HOOK-(850-kN).webp',
-'BOGIE-GEAR.webp',
-'BRAKE-LEVER-BRIDGE.webp',
-'BUFFER-(620-mm-LENGTH)-WITH ELASTOMER-SPRINGS.webp',
-'DRAW-GEAR-ASSEMBLY-WITH-FRICTION-SPRINGS-TYPE-540.webp',        
-'DRAW-GEAR-ASSEMBLY-WITH-FRICTION-SPRINGS-TYPE-570.webp',        
-'DRAW-ROD-JOINT.webp',
-'ELASTOMER-TAMPON.webp',
-'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
-'EYED-DRAW-HOOK-(1350-kN).webp',
-'FIXED-POINT-HOUSING.webp',
-'FORGING-SUPPORT-PART.webp',
-'FRICTION-SPRING-RING-SPRING.webp',
-'FRICTION-SPRING-STACK-FOR-PASSENGER-VAGON-BUFFER.webp',
-'FRICTION-SPRING-STACK-FOR-SUPER-BUFFER.webp',
-'RAILWAY-BUFFER-SPRING.webp',
-'SEMI-AUTOMATIC-SCREW-COUPLING(850-kN).webp',
-'SPHERICAL-BUFFER FRONT-SUPPORT-PLATE-450--340mm.webp',
-'SUPER-BUFFER-SPRING.webp',
-'SUPER-BUFFER-SPRINGS.webp',
-'SUPPORT-PLATE-(BOTTOM).webp',
-'SUPPORT-PLATE-(FRONT).webp',
-'SUPPORT-PLATE-STOP-PLATE.webp'
-                  ];
-
-                  const shuffleContainer = $('.shuffle-wrapper');
-
-                  function formatProductName(fileName) {
-                    const nameWithoutExt = fileName
-                      .replace(/\.[^/.]+$/, '')         // uzantıyı sil
-                      .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
-
-                    const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
-                    const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
-
-                    return raw.toUpperCase();
-                  }
-
-                  productImages.forEach((imagePath) => {
-                    const fullPath = basePath + imagePath;
-                    const productName = formatProductName(imagePath);
-
-                    const itemHtml = `
+    taslakImages.forEach((img) => {
+      const name = formatProductName(img);
+      const fullPath = basePathTaslak + img;
+      const html = `
         <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
           <div class="department-img-container">
-            <img class="img-fluid" src="${fullPath}" alt="${productName}">
+            <img class="img-fluid" src="${fullPath}" alt="${name}">
             <span class="gallery-icon"></span>
             <div class="service-item-info">
               <div class="department-item-info-content">
-                <h3 class="department-item-title">
-                  <a href="#!">${productName}</a>
-                </h3>
+                <h3 class="department-item-title"><a href="#!">${name}</a></h3>
               </div>
             </div>
           </div>
         </div>`;
-                    shuffleContainer.append(itemHtml);
-                  });
-                });
-              </script>
-
-            </div>
-          </div>
-          <div class="col-12">
-          </div>
-          <!--/ Container end -->
-    </section>
+      containerTaslaklar.append(html);
+    });
+  });
+</script>
     <!-- END PRODUCT  -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     content part end

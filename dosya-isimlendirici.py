@@ -4,7 +4,7 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # Klasör yolu
-folder_path = r'C:\Users\Yildiz\Documents\Web Site\HST-WebSite-CG\images\products\otomotiv\urunler\en'
+folder_path = r'C:\Users\Yildiz\Documents\Web Site\HST-WebSite-CG\images\products\celik-dovme\urunler\en\taslaklar'
                 
 resimler = []
 if os.path.isdir(folder_path):
