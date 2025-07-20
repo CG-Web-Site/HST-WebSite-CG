@@ -6,6 +6,16 @@ require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 
+if (
+    empty($_POST['fullname']) ||
+    empty($_POST['email']) ||
+    empty($_POST['phone']) ||
+    empty($_POST['message'])
+) {
+    echo 'Lütfen tüm zorunlu alanları doldurunuz.';
+    exit;
+}
+
 $mail = new PHPMailer(true);
 
 try {
