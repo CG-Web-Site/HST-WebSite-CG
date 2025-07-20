@@ -328,102 +328,22 @@
         <p></p>
       </div><!-- Conatiner end -->
     </section><!-- Main container end -->
+    <section id="departments" class="departments-area">
+  <div class="container" style="text-align: center;">
+  <a href="otomotiv-urunler.html" class="scroll-link"
+     style="margin-right: 20px; font-weight: bold; background-color: #EC640E; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; display: inline-block;">
+     OTOMOTİV ÜRÜNLERİMİZ
+  </a>  
+  <br><br>
+</div>
+</section>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Single Department part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     content part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <section id="departments" class="departments-area">
-      <div class="container">
-        <div class="row text-center">
-        </div>
-        <!--/ Title row end -->
-        <div class="row">
-          <div class="col-12">
-            <div class="row shuffle-wrapper">
-              <div class="col-1 shuffle-sizer"></div>
-              <!-- jQuery ve Bootstrap JS -->
-              <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-              <script>
-                $(document).ready(function () {
-                  const basePath = './images/products/otomotiv/urunler/tr/';
-                  const productImages = [
-'AYNA--MAHRUTI SET.webp',
-'AYNA--MAHRUTİ.webp',
-'ISTAVROZ-KUTUSU-KOMPLESİ.webp',
-'DENGELEME-KOMPLESİ.webp',
-'KAPAK.webp',
-                    '1.-VE-2.-VİTES-DÖNDÜREN-DİŞLİSİ.webp',
-'2.-VE-3.-VİTES-DİŞLİSİ.webp',
-'2.VİTES-GRUP-MİLİ-DİŞLİSİ.webp',      
-'3.VİTES-KARŞILIK-DİŞLİSİ.webp',       
-'4.VİTES-KARŞILIK-DİŞLİSİ.webp',       
-'AKS-DİŞLİSİ.webp',
-'ALT-KAVRAMA-GÖBEĞİ.webp',
-'DÜŞÜK-HIZLI-YİVLİ-KABLİN.webp',
-'DİFERANSİYEL-PİNYONU.webp',
-'DİŞLİ-MİLİ.webp',
-'GERİ-VİTES-HAREKET-DİŞLİSİ.webp',
-'GERİ-VİTES-KARŞILIK-DİŞLİSİ.webp',
-'GRUP-MİLİ.webp',
-'GÖBEK.webp',
-'HALKA-DİŞLİ.webp',
-'HIZ-TAHRİK-MİLİ-KOMPLESİ.webp',
-'KUYRUK-MİLİ-PRİZDİREK-MİLİ.webp',
-'MİL-TAHRİK-DİŞLİSİ.webp',
-'MİL.webp',
-'REDÜKTOR-KAVRAMASI-KAYGAN-MANŞONU.webp',
-'SPİRAL-KONİK-DİŞLİ.webp',
-'VİTES-KUTUSU-TAHRİK-DİŞLİSİ.webp',
-'YAVAŞ-VE-ORTA-HIZ-DİŞLİSİ.webp',
-'YÜKSEK-HIZ-ARA-MİLİ-PİNYON-DİŞLİSİ.webp',
-'ŞANZUMAN-PTO-DİŞLİSİ.webp'
-                  ];
-
-                  const shuffleContainer = $('.shuffle-wrapper');
-
-                  function formatProductName(fileName) {
-                    const nameWithoutExt = fileName
-                      .replace(/\.[^/.]+$/, '')         // uzantıyı sil
-                      .replace(/--/g, '###');           // çift tireleri geçici işaretle değiştir
-
-                    const nameParts = nameWithoutExt.split('-'); // tek tireye göre ayır
-                    const raw = nameParts.join(' ').replace(/###/g, '-'); // geçici işaretleri boşlukla değiştir
-
-                    return raw.toUpperCase();
-                  }
-
-                  productImages.forEach((imagePath) => {
-                    const fullPath = basePath + imagePath;
-                    const productName = formatProductName(imagePath);
-
-                    const itemHtml = `
-        <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
-          <div class="department-img-container">
-            <img class="img-fluid" src="${fullPath}" alt="${productName}">
-            <span class="gallery-icon"></span>
-            <div class="service-item-info">
-              <div class="department-item-info-content">
-                <h3 class="department-item-title">
-                  <a href="#!">${productName}</a>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>`;
-                    shuffleContainer.append(itemHtml);
-                  });
-                });
-              </script>
-            </div>
-          </div>
-          <div class="col-12">
-          </div>
-          <!--/ Container end -->
-    </section>
+   
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     content part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
