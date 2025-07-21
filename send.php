@@ -21,7 +21,7 @@ $mail = new PHPMailer(true);
 try {
     // Sunucu ayarları
     $mail->isSMTP();
-    $mail->Host = 'mail.hstototiv.com.tr';
+    $mail->Host = 'mail.hstotomotiv.com.tr';
     $mail->SMTPAuth = true;
     $mail->Username = 'bilgi@hstotomotiv.com.tr';
     $mail->Password = 'KcOsFucI'; // Güvenli saklayın!
@@ -38,7 +38,8 @@ try {
 
     // Gönderen ve alıcı
     $mail->setFrom('bilgi@hstotomotiv.com.tr', 'İletişim Formu');
-    $mail->addAddress("{$_POST['yildiz.abdulhalim88@gmail.com']}", 'HST Otomotiv'); // Alıcı adresi
+    // $mail->addAddress("{$_POST['email']}", 'HST Otomotiv'); // Alıcı adresi
+    $mail->addAddress("bilgi@hstotomotiv.com.tr", 'HST Otomotiv');
 
     // Dosya ekle
     if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] == 0) {

@@ -61,5 +61,5 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
   }
 
   // If all validations pass, redirect to success page
-  window.location.href = 'index-en.html';
+  // window.location.href = 'index-en.html';
 });

@@ -61,5 +61,5 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
   }
 
   // Başarılıysa yönlendirme
-  window.location.href = 'index.html';
+  // window.location.href = 'index.html';
 });

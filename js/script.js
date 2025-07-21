@@ -376,26 +376,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   if (searchForm) {
-  searchForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const query = searchInput.value.trim().toLowerCase();
-    if (!query) return;
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) return;
 
-    const lang = document.documentElement.lang || 'tr'; // varsayılan dil
-    const searchingText = lang === 'en' 
-      ? '🔍 Searching...' 
-      : '🔍 Aranıyor...';
+      resultContainer.innerHTML = '<p>🔍 Aranıyor...</p>';
+      searchOverlay.style.display = 'flex';
 
-    resultContainer.innerHTML = `<p>${searchingText}</p>`;
-    searchOverlay.style.display = 'flex';
-
-    fetch('list-html-files.php')
-      .then(res => res.json())
-      .then(sitePages => {
-        searchInPages(sitePages, query, resultContainer);
-      });
-  });
-}
+      fetch('list-html-files.php')
+        .then(res => res.json())
+        .then(sitePages => {
+          searchInPages(sitePages, query, resultContainer);
+        });
+    });
+  }
 });
 
 function searchInPages(sitePages, query, resultContainer) {
@@ -420,19 +415,13 @@ function searchInPages(sitePages, query, resultContainer) {
         console.warn(err.message);
       })
       .finally(() => {
-  completed++;
-  if (completed === sitePages.length) {
-    resultContainer.style.display = 'block';
-
-    const lang = document.documentElement.lang || 'tr'; // varsayılan: tr
-    const noResultText = lang === 'en' 
-      ? '🚫 No results found.' 
-      : '🚫 Hiçbir sonuç bulunamadı.';
-
-    resultContainer.innerHTML = foundResults.length > 0
-      ? `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`
-      : `<p>${noResultText}</p>`;
-  }
-});
+        completed++;
+        if (completed === sitePages.length) {
+          resultContainer.style.display = 'block';
+          resultContainer.innerHTML = foundResults.length > 0
+            ? `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`
+            : `<p>🚫 Hiçbir sonuç bulunamadı.</p>`;
+        }
+      });
   });
 }
