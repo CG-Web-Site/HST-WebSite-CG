@@ -41,7 +41,7 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
   }
 
   if (!phone || !phoneRegex.test(phone)) {
-    alert('Telefon numaranız 11 haneli olmalı ve başında 0 bulunmalıdır.');
+    alert('Telefon numaranız 11 haneli olmalıdır.');
     return;
   }
 

@@ -49,7 +49,7 @@ try {
     $mail->send();
 
     // Başarılı ise teşekkür sayfasına yönlendir
-    header("Location: thank-you.html");
+    // header("Location: thank-you.html");
     exit();
 } catch (Exception $e) {
     echo "Mesaj gönderilemedi. Hata: {$mail->ErrorInfo}";
