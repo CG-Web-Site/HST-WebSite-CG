@@ -83,11 +83,11 @@ if (!empty($errors)) {
     exit;
 }
 // E-posta ayarları
-$to = 'info@siteniz.com'; // Buraya mailin gönderileceği adresi yazın
+$to = 'yildiz.abdulhalim88@gmail.com'; // Buraya mailin gönderileceği adresi yazın
 $email_subject = "İletişim Formu: $subject";
 $email_body = "Web sitenizden yeni bir iletişim formu gönderildi.\n\n".
               "Detaylar:\n\nAd Soyad: $name\n\n".
-              "Email: $email\n\nKonu: $subject\n\nMesaj:\n$message";
+              "Email: $email\n\nMesaj:\n$message";
 $headers = "From: $email\n";
 $headers .= "Reply-To: $email\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\n";

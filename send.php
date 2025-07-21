@@ -38,7 +38,7 @@ try {
 
     // Gönderen ve alıcı
     $mail->setFrom('bilgi@hstotomotiv.com.tr', 'İletişim Formu');
-    $mail->addAddress("{$_POST['info@hstotomotiv.com.tr']}", 'HST Otomotiv'); // Alıcı adresi
+    $mail->addAddress("{$_POST['yildiz.abdulhalim88@gmail.com']}", 'HST Otomotiv'); // Alıcı adresi
 
     // Dosya ekle
     if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] == 0) {
