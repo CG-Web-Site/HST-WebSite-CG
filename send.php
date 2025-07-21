@@ -21,6 +21,7 @@ $mail = new PHPMailer(true);
 try {
     // Sunucu ayarları
     $mail->isSMTP();
+ 
     $mail->Host = 'mail.hstotomotiv.com.tr';
     $mail->SMTPAuth = true;
     $mail->Username = 'bilgi@hstotomotiv.com.tr';
@@ -35,11 +36,16 @@ try {
         'allow_self_signed' => true,
     ],
 ];
-
+    $mail->CharSet = 'UTF-8';
     // Gönderen ve alıcı
     $mail->setFrom('bilgi@hstotomotiv.com.tr', 'İletişim Formu');
+
     // $mail->addAddress("{$_POST['email']}", 'HST Otomotiv'); // Alıcı adresi
-    $mail->addAddress("bilgi@hstotomotiv.com.tr", 'HST Otomotiv');
+    // $mail->addAddress("info@hstotomotiv.com.tr", 'HST Otomotiv');
+    $mail->addAddress("hstotomotivas@gmail.com", 'HST Otomotiv');
+
+
+
 
     // Dosya ekle
     if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] == 0) {
@@ -50,7 +56,7 @@ try {
     $mail->isHTML(true);
     $mail->Subject = 'Yeni Form Mesaji';
     $mail->Body    = "
-        <h2>Yeni Iletisim Formu</h2>
+        <h2>Yeni İletisim Formu</h2>
         <p><b>Ad Soyad:</b> {$_POST['fullname']}</p>
         <p><b>Email:</b> {$_POST['email']}</p>
         <p><b>Telefon:</b> {$_POST['phone']}</p>
