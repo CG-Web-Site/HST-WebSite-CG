@@ -41,7 +41,7 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
   }
 
   if (!phone || !phoneRegex.test(phone)) {
-    alert('Phone number must be 11 digits and start with 0.');
+    alert('Phone number must be 11 digits.');
     return;
   }
 
