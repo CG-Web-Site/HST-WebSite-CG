@@ -37,7 +37,7 @@ $phone    = '0' . $rawPhone;
 
 // Telefon kontrolü: 10 rakam olmalı (0 hariç)
 if (!preg_match('/^\d{10}$/', $rawPhone)) {
-    echo 'Telefon numarası 0 hariç 10 rakam olmalıdır.';
+    echo 'Telefon numarası baştaki "0" hariç 10 rakam olmalıdır.';
     exit;
 }
 
