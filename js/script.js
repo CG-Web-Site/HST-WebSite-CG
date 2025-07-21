@@ -414,14 +414,21 @@ function searchInPages(sitePages, query, resultContainer) {
       .catch(err => {
         console.warn(err.message);
       })
+	  
       .finally(() => {
-        completed++;
-        if (completed === sitePages.length) {
-          resultContainer.style.display = 'block';
-          resultContainer.innerHTML = foundResults.length > 0
-            ? `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`
-            : `<p>🚫 Hiçbir sonuç bulunamadı.</p>`;
-        }
-      });
+  completed++;
+  if (completed === sitePages.length) {
+    resultContainer.style.display = 'block';
+
+    const lang = document.documentElement.lang || 'tr'; // varsayılan: tr
+    const noResultText = lang === 'en' 
+      ? '🚫 No results found.' 
+      : '🚫 Hiçbir sonuç bulunamadı.';
+
+    resultContainer.innerHTML = foundResults.length > 0
+      ? `<ul style="padding-left: 1rem;">${foundResults.join('')}</ul>`
+      : `<p>${noResultText}</p>`;
+  }
+});
   });
 }
