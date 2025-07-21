@@ -3,15 +3,15 @@ const phoneInput = document.getElementById('floatingnumber');
 phoneInput.addEventListener('input', function () {
   let val = this.value;
 
-  // Sadece rakamları al
+  // Only keep digits
   val = val.replace(/\D/g, '');
 
-  // Eğer başında 0 yoksa ekle
+  // Add leading 0 if missing
   if (!val.startsWith('0')) {
     val = '0' + val;
   }
 
-  // Sadece 11 haneye izin ver
+  // Limit to 11 digits
   val = val.slice(0, 11);
 
   this.value = val;
@@ -28,20 +28,20 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const allowedExtensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
-  const phoneRegex = /^0\d{10}$/; // Başında 0 ve toplam 11 hane
+  const phoneRegex = /^0\d{10}$/; // Starts with 0 and total 11 digits
 
   if (!fullname) {
-    alert('Adınız - Soyadınız boş bırakılamaz.');
+    alert('Full name cannot be empty.');
     return;
   }
 
   if (!email || !emailRegex.test(email)) {
-    alert('Geçerli bir E-Posta adresi giriniz.');
+    alert('Please enter a valid email address.');
     return;
   }
 
   if (!phone || !phoneRegex.test(phone)) {
-    alert('Telefon numaranız 11 haneli olmalı ve başında 0 bulunmalıdır.');
+    alert('Phone number must be 11 digits and start with 0.');
     return;
   }
 
@@ -49,17 +49,17 @@ document.getElementById('quote_form').addEventListener('submit', function (e) {
     const fileExt = fileUpload.name.split('.').pop().toLowerCase();
     if (!allowedExtensions.includes(fileExt)) {
       alert(
-        'Geçersiz dosya uzantısı. Sadece pdf, doc, docx, jpg, jpeg, png kabul edilir.'
+        'Invalid file extension. Only pdf, doc, docx, jpg, jpeg, and png are allowed.'
       );
       return;
     }
   }
 
   if (!message) {
-    alert('Mesaj alanı boş bırakılamaz.');
+    alert('Message field cannot be empty.');
     return;
   }
 
-  // Başarılıysa yönlendirme
-  window.location.href = 'index.html';
+  // If all validations pass, redirect to success page
+  window.location.href = 'index-en.html';
 });
