@@ -21,8 +21,6 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" href="css/searchresult.css">
 </head>
 
@@ -38,7 +36,7 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Header part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-   <header id="header" class="header-main">
+    <header id="header" class="header-main">
   <div class="site-navigation">
     <div class="container-fluid">
       <div class="row">
@@ -129,8 +127,8 @@
                   <a href="#" class="second-drop-btn">SERVICES <span class="fa-solid fa-caret-down second"></span></a>
                   <ul class="second-drop-show">
                     <li><a href="savunma-sanayi-en.html">- Defense Industry</a></li>
-                    <li><a href="otomotiv-en.html">- AUTOMOTIVE Industry</a></li>
-                    <li><a href="celik-dovme-en.html">- Steel FORGING FACILITY</a></li>
+                    <li><a href="otomotiv-en.html">- AutomotiveIndustry</a></li>
+                    <li><a href="celik-dovme-en.html">- Steel Forging Facility</a></li>
                     <li><a href="isil-islem-en.html">- Heat Treatment</a></li>
                   </ul>
                 </li>
@@ -190,12 +188,12 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="breadcrumb-heading">
-                <h1 class="breadcrumb-title">AUTOMOTIVE INDUSTRY PRODUCTS</h1>
+              <h1 class="breadcrumb-title">STEEL FORGING BLANKS</h1>
 <div class="breadcrumb">
   <a href="index-en.html" class="active"><i class="fa-solid fa-house-chimney"></i></a>
   <a>SERVICES</a>
-  <a href="otomotiv-en.html">AUTOMOTIVE INDUSTRY</a>
-  <a >AUTOMOTIVE INDUSTRY PRODUCTS</a>
+  <a href="celik-dovme-en.html">STEEL FORGING FACILITY</a>
+  <a >STEEL FORGING BLANKS</a>
                 </div>
               </div>
             </div><!-- Col end -->
@@ -209,80 +207,67 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Single Department part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-   
-   
-    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                    Single Department part end
-    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                    content part start
-    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     
-    <section id="departments" class="departments-area">
-      <div class="container">
-        <h3 style="text-align: center;">AUTOMOTIVE INDUSTRY PRODUCTS</h3>
-        <br>
-        <div class="row shuffle-wrapper-demiryolu"></div>
-      </div>
-    </section>
 
+<section id="departments" class="departments-area">
+  <div class="container">
+    <h3 style="text-align: center;">STEEL FORGING BLANKS</h3>
+    <br>
+    <div class="row shuffle-wrapper-taslaklar"></div>
+  </div>
+</section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Ortak isim düzenleme fonksiyonu
-        function formatProductName(fileName) {
-          const nameWithoutExt = fileName
-            .replace(/\.[^/.]+$/, '') // uzantıyı sil
-            .replace(/--/g, '###'); // çift tire geçici değişsin
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Ortak isim düzenleme fonksiyonu
+    function formatProductName(fileName) {
+      const nameWithoutExt = fileName
+        .replace(/\.[^/.]+$/, '') // uzantıyı sil
+        .replace(/--/g, '###'); // çift tire geçici değişsin
 
-          const nameParts = nameWithoutExt.split('-');
-          const raw = nameParts.join(' ').replace(/###/g, '-');
-          return raw.toUpperCase();
-        }
+      const nameParts = nameWithoutExt.split('-');
+      const raw = nameParts.join(' ').replace(/###/g, '-');
+      return raw.toUpperCase();
+    }
 
-        // ÜRÜN GÖRSELLERİ
-        const productImages = [
-                    'RING-AND-PINION-GEAR-SET.webp',
-                    'RING-GEAR-AND-BEVEL-PINION.webp',
-'LIMITED-SLIP-DIFFERANTIAL.webp',
-'DIFFERENTIAL-ASSEMBLY-BALANCING-UNIT.webp',      
-'COVER--HOUSING-CAP.webp',
-                    '1ST-&-2ND-GEAR-DRIVE-GEAR.webp',
-'2ND-&-3RD-GEAR.webp',
-'2ND-GEAR-COUNTER-SHAFT-GEAR.webp',
-'3RD-GEAR-COUNTERSHAFT-GEAR.webp',
-'4TH-GEAR-COUNTERSHAFT-GEAR.webp',
-'AXLE-GEAR.webp',
-'COUNTERSHAFT  CLUSTER-GEAR-SHAFT.webp',
-'DIFFERENTIAL-PINION.webp',
-'GEAR-SHAFT.webp',
-'HIGH--SPEED INTERMEDIATE-SHAFT-PINION-GEAR.webp',
-'HUB.webp',
-'LOW--SPEED-SPLINE-COUPLING.webp',
-'LOW-AND MEDIUM SPEED GEAR.webp',
-'LOWER-CLUTCH HUB-CLUTCH-SLEEVE.webp',
-'OUTPUT-SHAFT- MAIN-SHAFT.webp',
-'OUTPUT-SHAFT-ASSEMBLY.webp',
-'PTO-TRANSMISSION-GEAR.webp',
-'REDUCER-CLUTCH-SLIDING-SLEEVE.webp',
-'REVERSE-COUNTER-GEAR.webp',
-'REVERSE-IDLER-GEAR.webp',
+    // DEMİRYOLU GÖRSELLERİ
+    const demiryoluImages = [
+      '1.5-MN-TYPE-540-DRAW-GEAR-ASSEMBLY-WITH-ELASTOMER-SPRINGS.webp',
+'1500-kN-DRAW-SPINDLE-M60x6-ROUND-THREAD .webp',
+'AUTOMATIC-SCREW-COUPLING(1350-kN).webp',
+'AXLE-BOX-GUIDE(MENOT).webp',
+'BALL-END-DRAW-HOOK-(850-kN).webp',
+'SPROCKET.webp',
+'BRAKE-LEVER-BRIDGE.webp',
+'BUFFER-(620-mm-LENGTH)-WITH ELASTOMER-SPRINGS.webp',
+'DRAW-GEAR-ASSEMBLY-WITH-FRICTION-SPRINGS-TYPE-540.webp',        
+'DRAW-GEAR-ASSEMBLY-WITH-FRICTION-SPRINGS-TYPE-570.webp',        
+'DRAW-ROD-JOINT.webp',
+'ELASTOMER-TAMPON.webp',
+'ELOSTOMERLİ-DAYAMA-PARÇASI.webp',
+'EYED-DRAW-HOOK-(1350-kN).webp',
+'FIXED-POINT-HOUSING.webp',
+'FORGING-SUPPORT-PART.webp',
+'FRICTION-SPRING-RING-SPRING.webp',
+'FRICTION-SPRING-STACK-FOR-PASSENGER-VAGON-BUFFER.webp',
+'FRICTION-SPRING-STACK-FOR-SUPER-BUFFER.webp',
+'RAILWAY-BUFFER-SPRING.webp',
+'SEMI-AUTOMATIC-SCREW-COUPLING(850-kN).webp',
+'SPHERICAL-BUFFER FRONT-SUPPORT-PLATE-450--340mm.webp',
+'SUPER-BUFFER-SPRING.webp',
+'SUPER-BUFFER-SPRINGS.webp',
+'SUPPORT-PLATE-(BOTTOM).webp',
+'SUPPORT-PLATE-(FRONT).webp',
+'SUPPORT-PLATE-STOP-PLATE.webp'
+    ];
+    const basePathDemiryolu = './images/products/celik-dovme/urunler/en/demiryolu/';
+    const containerDemiryolu = $('.shuffle-wrapper-demiryolu');
 
-
-'RING-GEAR.webp',
-'SHAFT-DRIVE-GEAR.webp',
-'SHAFT.webp',
-'SPIRAL-BEVEL-GEAR.webp',
-'TRANSMISSION-DRIVE-GEAR.webp'
-        ];
-        const basePathProducts = './images/products/otomotiv/urunler/en/';
-        const containerProducts = $('.shuffle-wrapper-demiryolu');
-
-        productImages.forEach((img) => {
-          const name = formatProductName(img);
-          const fullPath = basePathProducts + img;
-          const html = `
+    demiryoluImages.forEach((img) => {
+      const name = formatProductName(img);
+      const fullPath = basePathDemiryolu + img;
+      const html = `
         <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
           <div class="department-img-container">
             <img class="img-fluid" src="${fullPath}" alt="${name}">
@@ -294,12 +279,47 @@
             </div>
           </div>
         </div>`;
-          containerProducts.append(html);
-        });
+      containerDemiryolu.append(html);
+    });
 
-        
-      });
-    </script>
+    // TASLAKLAR GÖRSELLERİ
+    const taslakImages = [
+'TRACK-SHOE-VEHICULAR.webp',
+      'AXLE-AND-PINION-GEAR-FORGING-BLANKS.webp',
+'BEVEL-RING-GEAR-FORGING-BLANK.webp',
+'CARRIER-OUTPUT-SYSTEM.webp',
+'COMBUSTION-CHAMBER-RING-COOLING.webp',
+'CONVERTER-GEAR-60T.webp',
+'COUPLING-FORGING-BLANK.webp',
+'CYLINDER-SEMI-FINISHED-PRODUCT.webp',
+'PLANETARY-GEAR-CARRIER-2ND-STAGE-(P2-CAGE).webp',    
+'PLANETARY-GEAR-OUTPUT-CARRIER-(CAGE).webp',
+'ROKETSAN-REAR-COVER.webp',
+'TAŞIYICI-ÇIKIŞ-SİSTEMİ.webp'
+    ];
+    const basePathTaslak = './images/products/celik-dovme/urunler/en/taslaklar/';
+    const containerTaslaklar = $('.shuffle-wrapper-taslaklar');
+
+    taslakImages.forEach((img) => {
+      const name = formatProductName(img);
+      const fullPath = basePathTaslak + img;
+      const html = `
+        <div class="col-lg-4 col-sm-6 col-md-6 shuffle-item">
+          <div class="department-img-container">
+            <img class="img-fluid" src="${fullPath}" alt="${name}">
+            <span class="gallery-icon"></span>
+            <div class="service-item-info">
+              <div class="department-item-info-content">
+                <h3 class="department-item-title"><a href="#!">${name}</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      containerTaslaklar.append(html);
+    });
+  });
+</script>
+    <!-- END PRODUCT  -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     content part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -391,11 +411,7 @@
     <script src="plugins/shuffle/shuffle.min.js" defer></script>
     <!-- Template custom -->
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="jquery.magnific-popup.min.js"></script>
-    <script src="script.js"></script>
-    <!-- Bunu koruyun -->
+    <script src="js/blog.js"></script>
   </div><!-- Body inner end -->
 </body>
 
