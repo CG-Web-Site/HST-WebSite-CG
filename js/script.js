@@ -376,21 +376,26 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   if (searchForm) {
-    searchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const query = searchInput.value.trim().toLowerCase();
-      if (!query) return;
+  searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) return;
 
-      resultContainer.innerHTML = '<p>🔍 Aranıyor...</p>';
-      searchOverlay.style.display = 'flex';
+    const lang = document.documentElement.lang || 'tr'; // varsayılan dil
+    const searchingText = lang === 'en' 
+      ? '🔍 Searching...' 
+      : '🔍 Aranıyor...';
 
-      fetch('list-html-files.php')
-        .then(res => res.json())
-        .then(sitePages => {
-          searchInPages(sitePages, query, resultContainer);
-        });
-    });
-  }
+    resultContainer.innerHTML = `<p>${searchingText}</p>`;
+    searchOverlay.style.display = 'flex';
+
+    fetch('list-html-files.php')
+      .then(res => res.json())
+      .then(sitePages => {
+        searchInPages(sitePages, query, resultContainer);
+      });
+  });
+}
 });
 
 function searchInPages(sitePages, query, resultContainer) {
@@ -414,7 +419,6 @@ function searchInPages(sitePages, query, resultContainer) {
       .catch(err => {
         console.warn(err.message);
       })
-	  
       .finally(() => {
   completed++;
   if (completed === sitePages.length) {
