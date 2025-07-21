@@ -991,6 +991,17 @@ Thanks to these processes, our products achieve the required hardness, durabilit
         }
       });
     </script>
+    <script>
+  const modal = document.getElementById('staticBackdrop');
+
+  modal.addEventListener('show.bs.modal', () => {
+    document.body.style.setProperty('padding-right', '0px', 'important');
+  });
+
+  modal.addEventListener('hidden.bs.modal', () => {
+    document.body.style.setProperty('padding-right', '0px', 'important');
+  });
+</script>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     footer part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->

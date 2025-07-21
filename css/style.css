@@ -2999,3 +2999,9 @@ section .blog-row .card-inner .box .imgBox img {
  position:relative;
  top:-2px;
 }
+html {
+  overflow-y: scroll; /* Scrollbar her zaman gösterilsin */
+}
+body.modal-open {
+  padding-right: 0 !important;
+}
