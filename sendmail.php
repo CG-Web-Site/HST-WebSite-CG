@@ -14,59 +14,90 @@
         .error { color: red; }
         .success { color: green; }
     </style>
-    <link rel="stylesheet" href="css/searchresult.css">
+<link rel="stylesheet" href="css/searchresult.css">
 </head>
 
 <body>
     <div class="contact-form">
         <h2>Bizimle İletişime Geçin</h2>
-        <?php if (isset($_GET['status'])): ?>
-            <?php if ($_GET['status'] == 'success'): ?>
+        <?php if(isset($_GET['status'])): ?>
+            <?php if($_GET['status'] == 'success'): ?>
                 <p class="success">Mesajınız başarıyla gönderildi. Teşekkür ederiz!</p>
             <?php else: ?>
                 <p class="error">Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.</p>
             <?php endif; ?>
         <?php endif; ?>
-        <form action="send.php" method="POST" enctype="multipart/form-data" onsubmit="return validatePhone();">
+        <form action="sendmail.php" method="POST">
             <div class="form-group">
-                <label for="fullname">Adınız Soyadınız:</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <label for="name">Adınız Soyadınız:</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">E-posta Adresiniz:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="phone">Telefon Numaranız:</label>
-                <div style="display:flex; align-items:center;">
-                    <span style="padding: 8px; background: #eee; border: 1px solid #ccc;">0</span>
-                    <input type="text" id="phone" name="phone" maxlength="10" pattern="\d{10}" required style="flex:1;">
-                </div>
-                <small>Telefon numaranız 0 hariç 10 hane olmalıdır.</small>
+                <label for="subject">Konu:</label>
+                <input type="text" id="subject" name="subject" required>
             </div>
             <div class="form-group">
                 <label for="message">Mesajınız:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
             <div class="form-group">
-                <label for="fileUpload">Dosya Ekle (isteğe bağlı):</label>
-                <input type="file" id="fileUpload" name="fileUpload">
-            </div>
-            <div class="form-group">
                 <button type="submit">Gönder</button>
             </div>
         </form>
     </div>
-
-    <script>
-        function validatePhone() {
-            const phone = document.getElementById('phone').value;
-            if (!/^\d{10}$/.test(phone)) {
-                alert('Telefon numarası 0 hariç 10 hane olmalıdır.');
-                return false;
-            }
-            return true;
-        }
-    </script>
 </body>
 </html>
+
+
+<?php
+// Hata raporlamayı aç
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+// Form verilerini al
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$email = isset($_POST['email']) ? trim($_POST['email']) : '';
+$subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
+$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+// Basit validasyon
+$errors = [];
+if (empty($name)) {
+    $errors[] = 'Ad soyad alanı boş bırakılamaz.';
+}
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Geçerli bir e-posta adresi giriniz.';
+}
+if (empty($subject)) {
+    $errors[] = 'Konu alanı boş bırakılamaz.';
+}
+if (empty($message)) {
+    $errors[] = 'Mesaj alanı boş bırakılamaz.';
+}
+// Eğer hata varsa kullanıcıyı forma geri yönlendir
+if (!empty($errors)) {
+    $errorQuery = http_build_query(['errors' => $errors]);
+    header("Location: contact.html?status=error&$errorQuery");
+    exit;
+}
+// E-posta ayarları
+$to = 'info@siteniz.com'; // Buraya mailin gönderileceği adresi yazın
+$email_subject = "İletişim Formu: $subject";
+$email_body = "Web sitenizden yeni bir iletişim formu gönderildi.\n\n".
+              "Detaylar:\n\nAd Soyad: $name\n\n".
+              "Email: $email\n\nKonu: $subject\n\nMesaj:\n$message";
+$headers = "From: $email\n";
+$headers .= "Reply-To: $email\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\n";
+// Mail gönderme işlemi
+$mailSent = mail($to, $email_subject, $email_body, $headers);
+// Sonucu kullanıcıya bildir
+if ($mailSent) {
+    header('Location: contact.html?status=success');
+} else {
+    header('Location: contact.html?status=error');
+}
+exit;
+?>
