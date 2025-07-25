@@ -1,11 +1,12 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
 
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
+use Symfony\Component\Mailer\Transport\Smtp\EsmtpTransport;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
+// Zorunlu alan kontrolü
 if (
     empty($_POST['fullname']) ||
     empty($_POST['email']) ||
@@ -16,55 +17,59 @@ if (
     exit;
 }
 
-$mail = new PHPMailer(true);
+// Form verilerini al
+$fullname = htmlspecialchars($_POST['fullname']);
+$email    = htmlspecialchars($_POST['email']);
+$phone    = htmlspecialchars($_POST['phone']);
+$message  = htmlspecialchars($_POST['message']);
 
-try {
-    // Sunucu ayarları
-    $mail->isSMTP();
- 
-    $mail->Host = 'mail.hstotomotiv.com.tr';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'bilgi@hstotomotiv.com.tr';
-    $mail->Password = 'KcOsFucI'; // Güvenli saklayın!
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+// TLS bağlantısı için manuel transport
+$transport = new EsmtpTransport('mail.hstotomotiv.com.tr', 587);
+// $transport = new EsmtpTransport('smtp.gmail.com', 587);
 
-    $mail->SMTPOptions = [
+$transport->setUsername('bilgi@hstotomotiv.com.tr');
+// $transport->setUsername('hstotomotivas@gmail.com');
+
+$transport->setPassword('KcOsFucI');
+// $transport->setPassword('A291453.261071b');
+
+// ⚠ Sertifika doğrulamasını devre dışı bırakıyoruz (geçici çözüm!)
+$stream = $transport->getStream();
+$streamOptions = [
     'ssl' => [
         'verify_peer' => false,
         'verify_peer_name' => false,
-        'allow_self_signed' => true,
-    ],
+        'allow_self_signed' => true
+    ]
 ];
-    $mail->CharSet = 'UTF-8';
-    // Gönderen ve alıcı
-    $mail->setFrom('bilgi@hstotomotiv.com.tr', 'İletişim Formu');
+$stream->setStreamOptions($streamOptions);
 
-    // $mail->addAddress("{$_POST['email']}", 'HST Otomotiv'); // Alıcı adresi
-    // $mail->addAddress("info@hstotomotiv.com.tr", 'HST Otomotiv');
-    $mail->addAddress("hstotomotivas@gmail.com", 'HST Otomotiv');
+$mailer = new Mailer($transport);
 
+// E-posta oluştur
+$emailMessage = (new Email())
+    ->from('bilgi@hstotomotiv.com.tr')
+    // ->from('hstotomotivas@gmail.com')
+    ->to('info@hstotomotiv.com.tr')
+    ->subject('Yeni Form Mesajı')
+    ->html("
+        <h2>Yeni İletişim Formu</h2>
+        <p><strong>Ad Soyad:</strong> {$fullname}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Telefon:</strong> {$phone}</p>
+        <p><strong>Mesaj:</strong><br>{$message}</p>
+    ")
+    ->text("Yeni form mesajı: \nAd: $fullname\nEmail: $email\nTelefon: $phone\nMesaj: $message");
 
+// Dosya eklenmişse iliştir
+if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] === 0) {
+    $emailMessage->attachFromPath($_FILES['fileUpload']['tmp_name'], $_FILES['fileUpload']['name']);
+}
 
-
-    // Dosya ekle
-    if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] == 0) {
-        $mail->addAttachment($_FILES['fileUpload']['tmp_name'], $_FILES['fileUpload']['name']);
-    }
-
-    // İçerik
-    $mail->isHTML(true);
-    $mail->Subject = 'Yeni Form Mesaji';
-    $mail->Body    = "
-        <h2>Yeni İletisim Formu</h2>
-        <p><b>Ad Soyad:</b> {$_POST['fullname']}</p>
-        <p><b>Email:</b> {$_POST['email']}</p>
-        <p><b>Telefon:</b> {$_POST['phone']}</p>
-        <p><b>Mesaj:</b> {$_POST['message']}</p>
-    ";
-
-    $mail->send();
+// Gönderim
+try {
+    $mailer->send($emailMessage);
     echo 'Mesaj gönderildi.';
-} catch (Exception $e) {
-    echo "Gönderme hatası: {$mail->ErrorInfo}";
+} catch (TransportExceptionInterface $e) {
+    echo 'Gönderme hatası: ' . $e->getMessage();
 }
