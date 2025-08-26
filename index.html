@@ -25,6 +25,12 @@
   <link rel="stylesheet" href="css/clients.css">
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="css/searchresult.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+
+
 
   <!-- youtube video section start-->
   <!-- <style>
@@ -54,7 +60,7 @@
             height: 350px; /* Mobil cihazlarda yükseklik %100 olacak */
         }
     } -->
-    
+
   </style>
   <!-- youtube video section end-->
 </head>
@@ -70,7 +76,7 @@
                     preloader part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-    
+
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Header part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -278,7 +284,7 @@
           <div class="banner-container">
             <div class="banner-carousel">
               <div class="slider_banner">
-                
+
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
                 </video>
@@ -309,42 +315,42 @@
         </div>
       </div>
       <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const videos = document.querySelectorAll("video.slider-video");
+        document.addEventListener("DOMContentLoaded", function () {
+          const videos = document.querySelectorAll("video.slider-video");
 
-  // İlk video hemen oynatılacak, diğerleri gecikmeli yüklenecek
-  videos.forEach((video, index) => {
-    const source = video.querySelector('source');
+          // İlk video hemen oynatılacak, diğerleri gecikmeli yüklenecek
+          videos.forEach((video, index) => {
+            const source = video.querySelector('source');
 
-    if (index === 0) {
-      // İlk video: hemen çalışsın (zaten src var)
-      video.load();
-    } else {
-      // Diğer videolar için src'yi geçici olarak boşalt
-      const originalSrc = source.getAttribute('src');
-      source.setAttribute('data-src', originalSrc);
-      source.removeAttribute('src');
-    }
-  });
+            if (index === 0) {
+              // İlk video: hemen çalışsın (zaten src var)
+              video.load();
+            } else {
+              // Diğer videolar için src'yi geçici olarak boşalt
+              const originalSrc = source.getAttribute('src');
+              source.setAttribute('data-src', originalSrc);
+              source.removeAttribute('src');
+            }
+          });
 
-  // Gecikmeli olarak diğer videoları yükle (örnek: 1 saniye sonra)
-  setTimeout(() => {
-    const videos = document.querySelectorAll("video.slider-video");
+          // Gecikmeli olarak diğer videoları yükle (örnek: 1 saniye sonra)
+          setTimeout(() => {
+            const videos = document.querySelectorAll("video.slider-video");
 
-    videos.forEach((video, index) => {
-      if (index === 0) return; // İlk video zaten yüklendi
+            videos.forEach((video, index) => {
+              if (index === 0) return; // İlk video zaten yüklendi
 
-      const source = video.querySelector('source');
-      const dataSrc = source.getAttribute('data-src');
+              const source = video.querySelector('source');
+              const dataSrc = source.getAttribute('data-src');
 
-      if (dataSrc) {
-        source.setAttribute('src', dataSrc);
-        video.load(); // yüklemeyi başlat
-      }
-    });
-  }, 1000); // 1000ms = 1 saniye sonra yükle
-});
-</script>
+              if (dataSrc) {
+                source.setAttribute('src', dataSrc);
+                video.load(); // yüklemeyi başlat
+              }
+            });
+          }, 1000); // 1000ms = 1 saniye sonra yükle
+        });
+      </script>
     </div>
     <!-- server video section end -->
 
@@ -410,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </section>
-  
+
 
     <section id="features" class="features">
       <div class="container">
@@ -637,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </section>
-    
+
     <section class="front-blog">
       <div class="content-container">
         <br>
@@ -733,82 +739,82 @@ document.addEventListener("DOMContentLoaded", function () {
         <section class="customer-logos slider">
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/allison.png">
+              <img src="images/ref_logo/allison.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/eaton-logo.png" alt="Allison Logo">
+              <img src="images/ref_logo/eaton-logo.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/dana-logo.png" alt="Allison Logo">
+              <img src="images/ref_logo/dana-logo.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/asfat.png">
+              <img src="images/ref_logo/asfat.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/bmc.png">
+              <img src="images/ref_logo/bmc.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/fnss.png">
+              <img src="images/ref_logo/fnss.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/ford.png">
+              <img src="images/ref_logo/ford.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/msb_1.png">
+              <img src="images/ref_logo/msb_1.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/jcb.png">
+              <img src="images/ref_logo/jcb.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/ssb_1.png">
+              <img src="images/ref_logo/ssb_1.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/otokar.png">
+              <img src="images/ref_logo/otokar.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/turasas.png">
+              <img src="images/ref_logo/turasas.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/regal-beloit.png">
+              <img src="images/ref_logo/regal-beloit.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/turk-traktor.png">
+              <img src="images/ref_logo/turk-traktor.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/massey-ferguson-seeklogo.png">
+              <img src="images/ref_logo/massey-ferguson-seeklogo.png" alt="missing-img-file">
             </a>
           </div>
           <div class="slide">
             <a href="referans.html">
-              <img src="images/ref_logo/CNH_Industrial.png">
+              <img src="images/ref_logo/CNH_Industrial.png" alt="missing-img-file">
             </a>
           </div>
 
@@ -911,7 +917,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1534.5350775932698!2d32.30550053896268!3d39.71560605611503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1716127064230!5m2!1str!2str"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerpolicy="no-referrer-when-downgrade" title="Şirketimizin konumu "></iframe>
           </div>
 
           <div class="col-lg-6 quote-text py-5">
@@ -953,8 +959,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                   <div class="col-12 col-sm-6">
                     <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload"
-                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                      style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;" />
+                      aria-label="Upload File" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      style="height: 58px; padding: 20px 20px; font-size: 1 rem; width: 100%;" />
                   </div>
 
                   <div class="col-12 text">
@@ -1071,28 +1077,30 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">IDEF 2025’te Yerimizi Aldık!</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">IDEF 2025’te Yerimizi Aldık!
+            </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p style="color: black;">İstanbul’da düzenlenen <b>17. IDEF
-                Uluslararası Savunma Sanayi Fuarı </b>'nda standımızı ziyaret eden değerli misafirlerimize teşekkür ederiz. Detaylar için tıklayın.
+                Uluslararası Savunma Sanayi Fuarı </b>'nda standımızı ziyaret eden değerli misafirlerimize teşekkür
+              ederiz. Detaylar için tıklayın.
             </p>
             <!-- <p style="color: black;"">ALLISON TRANSMISSION ile birlikte 4-A04A numaralı standımızda sizleri bekliyoruz!</p> -->
-      </div>
-      <div class=" modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-              <a class="btn btn-secondary"  href="fuar-IDEF-2025-Uluslararasi-Savunma-Sanayi-Fuari.html">Detaylar</a>
-                <!-- <button type="button" class="btn btn-primary modal-map-btn"
+          </div>
+          <div class=" modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <a class="btn btn-secondary" href="fuar-IDEF-2025-Uluslararasi-Savunma-Sanayi-Fuari.html">Detaylar</a>
+            <!-- <button type="button" class="btn btn-primary modal-map-btn"
                 onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')"
                 data-bs-dismiss="modal">Harita Gör</button> -->
-              <style>
-                .modal-map-btn:hover,
-                .modal-map-btn:focus {
-                  background-color: #0a56b9 !important;
-                  color: #fff !important;
-                }
-              </style>
+            <style>
+              .modal-map-btn:hover,
+              .modal-map-btn:focus {
+                background-color: #0a56b9 !important;
+                color: #fff !important;
+              }
+            </style>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ for file in glob.glob("*.html"):
         tag = match.group(0)
         if 'alt=' not in tag:
             # kapanış > karakterinden önce alt="img" ekle
-            return tag[:-1] + ' alt="img">'
+            return tag[:-1] + ' alt="missing-img-file">'
         return tag
 
     new_content = re.sub(r'<img[^>]*>', add_alt, content)
