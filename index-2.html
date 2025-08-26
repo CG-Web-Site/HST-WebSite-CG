@@ -26,38 +26,6 @@
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="css/searchresult.css">
 
-  <!-- youtube video section start-->
-  <!-- <style>
-    /* .video-container'a pozisyon referansı veriyoruz */
-    .video-container {
-      position: relative;
-      object-fit: cover;
-      width: 80%;
-    }
-
-    /* YouTube video iframe'i için */
-    #youtubeVideo {
-      width: 80%;
-      height: 1000px;
-    }
-  @media (max-width: 1200px) {
-        #youtubeVideo {
-          margin-top: 50px;
-          width: 80%;
-            height: 575px; /* Mobil cihazlarda yükseklik %100 olacak */
-        }
-    }
-    @media (max-width: 568px) {
-        #youtubeVideo {
-          margin-top: 50px;
-          width: 80%;
-            height: 350px; /* Mobil cihazlarda yükseklik %100 olacak */
-        }
-    } -->
-    <!-- /* Diğer stil kuralları... */ -->
-    
-  </style>
-  <!-- youtube video section end-->
 </head>
 
 <body>
@@ -233,120 +201,53 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Banner Carousel part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <!-- youtube vidoe section start -->
-    <!-- <section style="padding-top: 0px;">
-      <div id="banner">
-        <div class="container-fluid">
-          <div class="row ">
-            <div class="banner-container">
-              <div class="banner-carousel">
-                <div id="youtubeVideo" class="video-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="https://www.youtube.com/iframe_api"></script>
-      <script>
-        var player;
-        // Oynatıcının hazır olmasını bekleyen fonksiyon
-        function onYouTubeIframeAPIReady() {
-          var videoID = 'mB0wmGGxr10';
-
-          player = new YT.Player('youtubeVideo', {
-            videoId: videoID,
-            playerVars: {
-              'controls': 0,
-              'rel': 0,
-              'modestbranding': 1,
-              'showinfo': 0,
-              'autoplay': 1,
-              'mute': 1
-            }
-          });
-        }
-      </script>
-    </section> -->
-    <!-- youtube vidoe section end -->
-
-    <!-- server video section start -->
     <div id="banner">
       <div class="container-fluid">
+        <!-- <div class="row col-lg-10 col-sm-12 col-md-12 " style="justify-self: center;"> -->
         <div class="row ">
+          <!-- Swiper -->
           <div class="banner-container">
             <div class="banner-carousel">
+              <!-- <div> -->
               <div class="slider_banner">
-                
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                <div class="slider_overlay">
+                  <!-- <h2 class="slide-title">PARÇA ÜRETİMİ</h2> -->
+                  <!-- <h3 class="slide-sub-title">DİŞLİ <span>DÖVME</span><br> OTOMOTİV <span>SANAYİ</span></h3> -->
+                </div>
+                <!-- VIDEO -->
+                <video class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                  <!-- <source src="videos/stock-video-1.mp4" type="video/mp4"> -->
                   <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                <video class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                <video class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                <video class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k4.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
           </div>
         </div>
+        <!-- end .row -->
       </div>
-      <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const videos = document.querySelectorAll("video.slider-video");
-
-  // İlk video hemen oynatılacak, diğerleri gecikmeli yüklenecek
-  videos.forEach((video, index) => {
-    const source = video.querySelector('source');
-
-    if (index === 0) {
-      // İlk video: hemen çalışsın (zaten src var)
-      video.load();
-    } else {
-      // Diğer videolar için src'yi geçici olarak boşalt
-      const originalSrc = source.getAttribute('src');
-      source.setAttribute('data-src', originalSrc);
-      source.removeAttribute('src');
-    }
-  });
-
-  // Gecikmeli olarak diğer videoları yükle (örnek: 1 saniye sonra)
-  setTimeout(() => {
-    const videos = document.querySelectorAll("video.slider-video");
-
-    videos.forEach((video, index) => {
-      if (index === 0) return; // İlk video zaten yüklendi
-
-      const source = video.querySelector('source');
-      const dataSrc = source.getAttribute('data-src');
-
-      if (dataSrc) {
-        source.setAttribute('src', dataSrc);
-        video.load(); // yüklemeyi başlat
-      }
-    });
-  }, 1000); // 1000ms = 1 saniye sonra yükle
-});
-</script>
+      <!-- end .container-->
     </div>
-    <!-- server video section end -->
-
-
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Banner Carousel part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -894,29 +795,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="content-container">
         <br>
         <div class="front-blog-list">
-          <a class="front-blog-item article-blog" href="fuar-IDEF-2025-Uluslararasi-Savunma-Sanayi-Fuari.html">
-            <div class="front-blog-item-thumbnail article__thumbnail"
-              style="background-image: url('images/fuar/IMG_1226.webp')">
-            </div>
-            <div class="front-blog-item-content article__body">
-              <div>
-                <h3 class="article__title">IDEF 2025 Uluslararası Savunma Sanayi Fuarı</h3>
-              </div>
-              <div class="article__excerpt">
-                <p>22-27 Temmuz 2025 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen IDEF 2025
-                  17'inci Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
-              </div>
-              <footer class="article__footer">
-                <!-- <span class="article__date">Mart 23, 2025</span> -->
-                <div class="footer__readmore">
-                  <span class="footer__readmore-text">Haberi Oku</span>
-                  <span class="footer__readmore-arrow">
-                    <i class="bi bi-arrow-right"></i>
-                  </span>
-                </div>
-              </footer>
-            </div>
-          </a>
           <a class="front-blog-item article-blog" style="flex-wrap: wrap;" href="fuar-Railway-interchange-2025.html">
             <div class="front-blog-item-thumbnail article__thumbnail"
               style="background-image: url('images/fuar/railway2025-logo.jpg')">
@@ -964,7 +842,29 @@ document.addEventListener("DOMContentLoaded", function () {
               </footer>
             </div>
           </a>
-
+          <a class="front-blog-item article-blog" href="fuar-IDEF-2021-Uluslararasi-Savunma-Sanayi-Fuari.html">
+            <div class="front-blog-item-thumbnail article__thumbnail"
+              style="background-image: url('images/fuar/21.jpg')">
+            </div>
+            <div class="front-blog-item-content article__body">
+              <div>
+                <h3 class="article__title">IDEF 2021 Uluslararası Savunma Sanayi Fuarı</h3>
+              </div>
+              <div class="article__excerpt">
+                <p>17 Ağustos -20 Ağustus 2021 tarihleri arasında İstanbul Tüyap Fuar Merkezinde düzenlenen EDEF 2021
+                  15'inci Uluslararası Savunma Sanayi Fuarına katıldık. ...</p>
+              </div>
+              <footer class="article__footer">
+                <!-- <span class="article__date">Mart 23, 2025</span> -->
+                <div class="footer__readmore">
+                  <span class="footer__readmore-text">Haberi Oku</span>
+                  <span class="footer__readmore-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </footer>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -999,52 +899,51 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row g-3">
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingName" name="fullname" type="text" class="form-control" placeholder="Your Name"
-                        required />
+                      <input id="floatingName" name="fullname" type="text" class="form-control "
+                        placeholder="Your Name">
                       <label for="floatingName">Adınız - Soyadınız</label>
                     </div>
                   </div>
-
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
-                      <input id="floatingemail" name="email" type="email" class="form-control" placeholder="Your Email"
-                        required />
+                      <input id="floatingemail" name="email" type="email" data-validation="email"
+                        data-content="Email has a invalid format" class="form-control " placeholder="Your Email">
                       <label for="floatingemail">E-Posta Adresiniz</label>
                     </div>
                   </div>
-
                   <div class="col-12 col-sm-6">
                     <div class="form-floating">
                       <input id="floatingnumber" name="phone" type="text" class="form-control"
-                        placeholder="Your Phone Number" maxlength="11" inputmode="numeric" autocomplete="tel"
-                        pattern="[0-9]*" required />
+                        placeholder="Your Phone Number">
                       <label for="floatingnumber">Telefon Numaranız</label>
                     </div>
                   </div>
-
                   <div class="col-12 col-sm-6">
                     <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload"
                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                      style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;" />
-                  </div>
+                      style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;">
+                    <style>
+                      .file-upload-hover:hover {
 
+                        border-color: #EC640E;
+                        color: #EC640E;
+                        transition: background 0.2s, border 0.2s;
+                      }
+                    </style>
+                  </div>
                   <div class="col-12 text">
                     <div class="form-floating">
                       <textarea class="form-control" name="message" placeholder="Leave a comment here"
-                        id="floatingTextarea" style="border: 1px solid white" required></textarea>
+                        id="floatingTextarea" style="border: 1px solid white"></textarea>
                       <label for="floatingTextarea">Mesajınız</label>
                     </div>
                   </div>
 
                   <div class="col-12">
-                    <button class="btn btn-primary mt-3 w-100 py-3" type="submit">
-                      GÖNDER
-                    </button>
+                    <button class="btn btn-primary mt-3 w-100 py-3" type="submit">GÖNDER</button>
                   </div>
                 </div>
               </form>
-
-              <script src="js/form-validation.js"></script>
             </div>
           </div>
         </div>
@@ -1139,24 +1038,25 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog modal-dialog-centered"><!-- modal-dialog-centered eklendi -->
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">IDEF 2025’te Yerimizi Aldık!</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;"><strong> <strong>HST
+                  OTOMOTİV</strong>
+              </strong>IDEF’25’te!</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p style="color: black;">İstanbul’da düzenlenen <b>17. IDEF
-                Uluslararası Savunma Sanayi Fuarı </b>'nda standımızı ziyaret eden değerli misafirlerimize teşekkür ederiz. Detaylar için tıklayın.
+            <p style="color: black;">22–27 Temmuz 2025 tarihleri arasında İstanbul’da düzenlenecek olan <b>17. IDEF
+                Uluslararası Savunma Sanayi Fuarı'ndayız.</b>
             </p>
-            <!-- <p style="color: black;"">ALLISON TRANSMISSION ile birlikte 4-A04A numaralı standımızda sizleri bekliyoruz!</p> -->
+            <p style="color: black;"">ALLISON TRANSMISSION ile birlikte 4-A04A numaralı standımızda sizleri bekliyoruz!</p>
       </div>
       <div class=" modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-              <a class="btn btn-secondary"  href="fuar-IDEF-2025-Uluslararasi-Savunma-Sanayi-Fuari.html">Detaylar</a>
-                <!-- <button type="button" class="btn btn-primary modal-map-btn"
+              <button type="button" class="btn btn-primary modal-map-btn"
                 onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')"
-                data-bs-dismiss="modal">Harita Gör</button> -->
+                data-bs-dismiss="modal">Harita Gör</button>
               <style>
                 .modal-map-btn:hover,
                 .modal-map-btn:focus {
@@ -1241,7 +1141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Template custom -->
     <script src="js/script.js"></script>
     <script src="js/blog.js"></script>
-    <script src="js/playRandomTime.js"></script>
+    <script src="js/form-validation.js"></script>
   </div><!-- Body inner end -->
 </body>
 
