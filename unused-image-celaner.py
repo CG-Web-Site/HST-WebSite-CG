@@ -8,6 +8,9 @@ import ast
 root_folder = "./"  # scriptin çalıştığı klasör
 skip_folder = os.path.abspath(os.path.join(root_folder, "images/products"))
 
+# Hariç tutulacak dosya isimleri (uzantısız yaz, içinde geçen adı arayacak)
+skip_files = ["bg-pattern_blue", "bg-pattern", "ajax-loader"]
+
 # ------------------------
 # 2️⃣ HTML, CSS, JS dosyalarını bul
 # ------------------------
@@ -89,15 +92,18 @@ for subdir, dirs, files in os.walk(root_folder):
         continue
     for file in files:
         if file.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".gif")):
+            # hariç tutulacak dosya isimleri kontrolü
+            if any(skip in file for skip in skip_files):
+                continue
             all_images.append(os.path.abspath(os.path.join(subdir, file)))
 
 # ------------------------
 # 6️⃣ Kullanılmayan resimler listesi
 # ------------------------
-print("💡 Kullanılmayan resimler (products hariç):")
+print("💡 Kullanılmayan resimler (products klasörü ve özel dosyalar hariç):")
 for image in all_images:
     if image not in used_images:
         print(image)
-        os.remove(image)  # Silmek için aç
+        # os.remove(image)  # Silmek için yorum satırını kaldır
 
 print("✅ İşlem tamamlandı.")
