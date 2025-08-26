@@ -26,6 +26,38 @@
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="css/searchresult.css">
 
+  <!-- youtube video section start-->
+  <style>
+    /* .video-container'a pozisyon referansı veriyoruz */
+    .video-container {
+      position: relative;
+      object-fit: cover;
+      width: 80%;
+    }
+
+    /* YouTube video iframe'i için */
+    #youtubeVideo {
+      width: 80%;
+      height: 1000px;
+    }
+  @media (max-width: 1200px) {
+        #youtubeVideo {
+          margin-top: 50px;
+          width: 80%;
+            height: 575px; /* Mobil cihazlarda yükseklik %100 olacak */
+        }
+    }
+    @media (max-width: 568px) {
+        #youtubeVideo {
+          margin-top: 50px;
+          width: 80%;
+            height: 350px; /* Mobil cihazlarda yükseklik %100 olacak */
+        }
+    }
+    /* Diğer stil kuralları... */
+    
+  </style>
+  <!-- youtube video section end-->
 </head>
 
 <body>
@@ -202,52 +234,84 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Banner Carousel part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-       <div id="banner">
+    <!-- youtube vidoe section start -->
+    <section style="padding-top: 0px;">
+      <div id="banner">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="banner-container">
+              <div class="banner-carousel">
+                <div id="youtubeVideo" class="video-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://www.youtube.com/iframe_api"></script>
+      <script>
+        var player;
+        // Oynatıcının hazır olmasını bekleyen fonksiyon
+        function onYouTubeIframeAPIReady() {
+          var videoID = 'mB0wmGGxr10';
+
+          player = new YT.Player('youtubeVideo', {
+            videoId: videoID,
+            playerVars: {
+              'controls': 0,
+              'rel': 0,
+              'modestbranding': 1,
+              'showinfo': 0,
+              'autoplay': 1,
+              'mute': 1
+            }
+          });
+        }
+      </script>
+    </section>
+    <!-- youtube vidoe section end -->
+
+
+
+    <!-- server video section start -->
+    <!-- <div id="banner">
       <div class="container-fluid">
-        <!-- <div class="row col-lg-10 col-sm-12 col-md-12 " style="justify-self: center;"> -->
         <div class="row ">
-          <!-- Swiper -->
           <div class="banner-container">
             <div class="banner-carousel">
-              <!-- <div> -->
               <div class="slider_banner">
-                <div class="slider_overlay">
-                  <!-- <h2 class="slide-title">PARÇA ÜRETİMİ</h2> -->
-                  <!-- <h3 class="slide-sub-title">DİŞLİ <span>DÖVME</span><br> OTOMOTİV <span>SANAYİ</span></h3> -->
-                </div>
-                <!-- VIDEO -->
-               <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-  <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
-</video>
-              </div>
-              <div class="slider_banner">
-                <div class="slider_overlay">
-                </div>
-                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-  <source src="videos/tanitim-parcali-k2.mp4" type="video/mp4">
-</video>
-              </div>
-              <div class="slider_banner">
-                <div class="slider_overlay">
-                </div>
-                  <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-  <source src="videos/tanitim-parcali-k3.mp4" type="video/mp4">
-</video>
+                
+                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                  <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
+                </video>
               </div>
               <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-  <source src="videos/tanitim-parcali-k4.mp4" type="video/mp4">
-</video>
+                  <source src="videos/tanitim-parcali-k2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="slider_banner">
+                <div class="slider_overlay">
+                </div>
+                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                  <source src="videos/tanitim-parcali-k3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="slider_banner">
+                <div class="slider_overlay">
+                </div>
+                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                  <source src="videos/tanitim-parcali-k4.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
           </div>
         </div>
-        <!-- end .row -->
       </div>
-      <!-- end .container-->
-    </div>
+    </div> -->
+    <!-- server video section end -->
+
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     Banner Carousel part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -803,7 +867,7 @@
               </footer>
             </div>
           </a>
-          
+
         </div>
       </div>
     </section>
@@ -835,94 +899,56 @@
                 opportunities will be reviewed through the designated application form. Responses to inquiries and
                 applications will be provided promptly.
               </p>
-              <form
-      id="quote_form"
-      class="icon_add"
-      method="POST"
-      action="send.php"
-      enctype="multipart/form-data"
-    >
-      <div class="row g-3">
-        <div class="col-12 col-sm-6">
-          <div class="form-floating">
-            <input
-              id="floatingName"
-              name="fullname"
-              type="text"
-              class="form-control"
-              placeholder="Your Name"
-              required
-            />
-            <label for="floatingName">Full Name</label>
-          </div>
-        </div>
+              <form id="quote_form" class="icon_add" method="POST" action="send.php" enctype="multipart/form-data">
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating">
+                      <input id="floatingName" name="fullname" type="text" class="form-control" placeholder="Your Name"
+                        required />
+                      <label for="floatingName">Full Name</label>
+                    </div>
+                  </div>
 
-        <div class="col-12 col-sm-6">
-          <div class="form-floating">
-            <input
-              id="floatingemail"
-              name="email"
-              type="email"
-              class="form-control"
-              placeholder="Your Email"
-              required
-            />
-            <label for="floatingemail">Email Address</label>
-          </div>
-        </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating">
+                      <input id="floatingemail" name="email" type="email" class="form-control" placeholder="Your Email"
+                        required />
+                      <label for="floatingemail">Email Address</label>
+                    </div>
+                  </div>
 
-        <div class="col-12 col-sm-6">
-          <div class="form-floating">
-            <input
-              id="floatingnumber"
-              name="phone"
-              type="text"
-              class="form-control"
-              placeholder="Your Phone Number"
-              maxlength="11"
-              inputmode="numeric"
-              autocomplete="tel"
-              pattern="[0-9]*"
-              required
-            />
-            <label for="floatingnumber">Phone Number</label>
-          </div>
-        </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating">
+                      <input id="floatingnumber" name="phone" type="text" class="form-control"
+                        placeholder="Your Phone Number" maxlength="11" inputmode="numeric" autocomplete="tel"
+                        pattern="[0-9]*" required />
+                      <label for="floatingnumber">Phone Number</label>
+                    </div>
+                  </div>
 
-        <div class="col-12 col-sm-6">
-          <input
-            class="form-control file-upload-hover"
-            type="file"
-            id="fileUpload"
-            name="fileUpload"
-            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-            style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;"
-          />
-        </div>
+                  <div class="col-12 col-sm-6">
+                    <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload"
+                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      style="height: 58px; padding: 20px 20px; font-size: rem; width: 100%;" />
+                  </div>
 
-        <div class="col-12 text">
-          <div class="form-floating">
-            <textarea
-              class="form-control"
-              name="message"
-              placeholder="Leave a comment here"
-              id="floatingTextarea"
-              style="border: 1px solid white"
-              required
-            ></textarea>
-            <label for="floatingTextarea">Your Message</label>
-          </div>
-        </div>
+                  <div class="col-12 text">
+                    <div class="form-floating">
+                      <textarea class="form-control" name="message" placeholder="Leave a comment here"
+                        id="floatingTextarea" style="border: 1px solid white" required></textarea>
+                      <label for="floatingTextarea">Your Message</label>
+                    </div>
+                  </div>
 
-        <div class="col-12">
-          <button class="btn btn-primary mt-3 w-100 py-3" type="submit">
-            SEND
-          </button>
-        </div>
-      </div>
-    </form>
+                  <div class="col-12">
+                    <button class="btn btn-primary mt-3 w-100 py-3" type="submit">
+                      SEND
+                    </button>
+                  </div>
+                </div>
+              </form>
 
-  <script src="js/form-validation-en.js"></script>
+              <script src="js/form-validation-en.js"></script>
             </div>
           </div>
         </div>
