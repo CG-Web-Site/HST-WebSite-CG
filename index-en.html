@@ -10,6 +10,9 @@
 ================================================== -->
   <link rel="icon" type="image/png" href="images/logo/HST_logo_tr.png">
   <link rel="apple-touch-icon" href="images/logo/HST_logo_tr.png">
+  <!-- BUNU KULLANMA -->
+<!-- <link rel="preload" as="video" href="videos/tanitim-parcali-k1.mp4"> -->
+
   <!-- CSS
 ================================================== -->
   <!-- Bootstrap -->
@@ -25,8 +28,10 @@
   <link rel="stylesheet" href="css/clients.css">
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="css/searchresult.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
 
 
 
@@ -69,7 +74,7 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     preloader part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <div id="preloader"></div>
+    <!-- <!-- <div id="preloader"></div> --> -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     preloader part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -283,12 +288,12 @@
           <div class="banner-container">
             <div class="banner-carousel">
               <div class="slider_banner">
-                
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-                  <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
+
+                <video id="myVideo" class="slider-video" autoplay muted loop preload="metadata" style="visibility: visible; width: 100%;">
+                  <source src="videos/video.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="slider_banner">
+              <!-- <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
@@ -308,48 +313,48 @@
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k4.mp4" type="video/mp4">
                 </video>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
-      <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const videos = document.querySelectorAll("video.slider-video");
+      <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const videos = document.querySelectorAll("video.slider-video");
 
-  // İlk video hemen oynatılacak, diğerleri gecikmeli yüklenecek
-  videos.forEach((video, index) => {
-    const source = video.querySelector('source');
+          // İlk video hemen oynatılacak, diğerleri gecikmeli yüklenecek
+          videos.forEach((video, index) => {
+            const source = video.querySelector('source');
 
-    if (index === 0) {
-      // İlk video: hemen çalışsın (zaten src var)
-      video.load();
-    } else {
-      // Diğer videolar için src'yi geçici olarak boşalt
-      const originalSrc = source.getAttribute('src');
-      source.setAttribute('data-src', originalSrc);
-      source.removeAttribute('src');
-    }
-  });
+            if (index === 0) {
+              // İlk video: hemen çalışsın (zaten src var)
+              video.load();
+            } else {
+              // Diğer videolar için src'yi geçici olarak boşalt
+              const originalSrc = source.getAttribute('src');
+              source.setAttribute('data-src', originalSrc);
+              source.removeAttribute('src');
+            }
+          });
 
-  // Gecikmeli olarak diğer videoları yükle (örnek: 1 saniye sonra)
-  setTimeout(() => {
-    const videos = document.querySelectorAll("video.slider-video");
+          // Gecikmeli olarak diğer videoları yükle (örnek: 1 saniye sonra)
+          setTimeout(() => {
+            const videos = document.querySelectorAll("video.slider-video");
 
-    videos.forEach((video, index) => {
-      if (index === 0) return; // İlk video zaten yüklendi
+            videos.forEach((video, index) => {
+              if (index === 0) return; // İlk video zaten yüklendi
 
-      const source = video.querySelector('source');
-      const dataSrc = source.getAttribute('data-src');
+              const source = video.querySelector('source');
+              const dataSrc = source.getAttribute('data-src');
 
-      if (dataSrc) {
-        source.setAttribute('src', dataSrc);
-        video.load(); // yüklemeyi başlat
-      }
-    });
-  }, 1000); // 1000ms = 1 saniye sonra yükle
-});
-</script>
+              if (dataSrc) {
+                source.setAttribute('src', dataSrc);
+                video.load(); // yüklemeyi başlat
+              }
+            });
+          }, 1000); // 1000ms = 1 saniye sonra yükle
+        });
+      </script> -->
     </div>
     <!-- server video section end -->
 
@@ -968,8 +973,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
 
                   <div class="col-12 col-sm-6">
-                    <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload" aria-label="Upload File"
-                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                    <input class="form-control file-upload-hover" type="file" id="fileUpload" name="fileUpload"
+                      aria-label="Upload File" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                       style="height: 58px; padding: 20px 20px; font-size: 1 rem; width: 100%;" />
                   </div>
 
@@ -1021,7 +1026,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="col-lg-2 col-sm-6 col-md-4 footer-widget mt-5 mt-md-0">
               <ul class="list-arrow">
                 <li><a href="tarihcemiz-en.html">History</a></li>
-                
+
                 <li><a href="ar-ge-en.html">R&D</a></li>
                 <li><a href="referans-en.html">References</a></li>
               </ul>
@@ -1075,24 +1080,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Button trigger modal -->
     <!-- Modal -->
+    <!-- POP-UP START-->
     <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">We Took Our Place at IDEF 2025!</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">Our ISO/IEC 27001:2022 Certification Has Been Updated!</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p style="color: black;">We would like to thank our esteemed guests who visited our booth at the <b>17th International Defense Industry Fair (IDEF) </b> held in Istanbul. Click here for details.
+            <p style="color: black;">We have successfully transitioned our information security standards to the latest version.<br>
+  We continue to provide a secure infrastructure for all our customers and partners in the defense industry.
             </p>
       </div>
       <div class=" modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
-              <a class="btn btn-secondary"  href="fuar-IDEF-2025-fair.html">Details</a>
-                <button type="button" class="btn btn-primary modal-map-btn"
-                onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')"
-                data-bs-dismiss="modal">Harita Gör</button>
+              <a class="btn btn-secondary"  href="https://hstotomotiv.com.tr/belgelerimiz-en.html">Details</a>
+                
               <style>
                 .modal-map-btn:hover,
                 .modal-map-btn:focus {
@@ -1104,7 +1109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </div> -->
-
+    <!-- POP-UP END-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));

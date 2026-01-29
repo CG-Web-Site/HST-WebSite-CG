@@ -10,6 +10,16 @@
 ================================================== -->
   <link rel="icon" type="image/png" href="images/logo/HST_logo_tr.png">
   <link rel="apple-touch-icon" href="images/logo/HST_logo_tr.png">
+ <!-- HERO POSTER (LCP) -->
+<!-- BUNU KULLANMA -->
+<!-- <link rel="preload" as="video" href="videos/tanitim-parcali-k1.mp4"> -->
+
+
+<!-- Font optimizasyonu (opsiyonel ama önerilir) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
   <!-- CSS
 ================================================== -->
   <!-- Bootstrap -->
@@ -71,7 +81,7 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     preloader part start
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     preloader part end
     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
@@ -285,11 +295,16 @@
             <div class="banner-carousel">
               <div class="slider_banner">
 
-                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
-                  <source src="videos/tanitim-parcali-k1.mp4" type="video/mp4">
+                <video id="myVideo" class="slider-video" autoplay muted loop preload="metadata" style="visibility: visible; width: 100%;">
+                  <source src="videos/video.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="slider_banner">
+              <!-- <div class="slider_banner">
+                <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
+                  <source src="videos/video-devam.mp4" type="video/mp4">
+                </video>
+              </div> -->
+              <!-- <div class="slider_banner">
                 <div class="slider_overlay">
                 </div>
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
@@ -309,12 +324,12 @@
                 <video id="myVideo" class="slider-video" autoplay muted loop style="visibility: visible; width: 100%;">
                   <source src="videos/tanitim-parcali-k4.mp4" type="video/mp4">
                 </video>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
-      <script>
+      <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
           const videos = document.querySelectorAll("video.slider-video");
 
@@ -350,7 +365,7 @@
             });
           }, 1000); // 1000ms = 1 saniye sonra yükle
         });
-      </script>
+      </script> -->
     </div>
     <!-- server video section end -->
 
@@ -1071,28 +1086,28 @@
     </footer>
     <!-- Button trigger modal -->
     <!-- Modal -->
+    <!-- POP-UP START-->
+
     <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">IDEF 2025’te Yerimizi Aldık!
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: black;">ISO/IEC 27001:2022 Sertifikamız Güncellendi!
             </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p style="color: black;">İstanbul’da düzenlenen <b>17. IDEF
-                Uluslararası Savunma Sanayi Fuarı </b>'nda standımızı ziyaret eden değerli misafirlerimize teşekkür
-              ederiz. Detaylar için tıklayın.
-            </p>
+            <p style="color: black;">
+            Bilgi güvenliği standartlarımızı en güncel sürüme başarıyla geçirdik.<br>
+            Savunma sanayii alanındaki tüm müşterilerimiz ve iş ortaklarımız için güvenli altyapı sağlamaya devam ediyoruz.
+          </p>
            
           </div>
           <div class=" modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-            <a class="btn btn-secondary" href="fuar-IDEF-2025-Uluslararasi-Savunma-Sanayi-Fuari.html">Detaylar</a>
-            <button type="button" class="btn btn-primary modal-map-btn"
-                onclick="window.open('https://www.google.com/maps?ll=40.989002,28.826165&z=15&t=m&hl=tr&gl=TR&mapclient=embed&cid=17173306991479519645', '_blank')"
-                data-bs-dismiss="modal">Harita Gör</button>
+            <a class="btn btn-secondary" href="https://hstotomotiv.com.tr/belgelerimiz.html">Detaylar</a>
+            
             <style>
               .modal-map-btn:hover,
               .modal-map-btn:focus {
@@ -1104,6 +1119,8 @@
         </div>
       </div>
     </div> -->
+    <!-- POP-UP END-->
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));

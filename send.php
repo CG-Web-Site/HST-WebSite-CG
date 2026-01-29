@@ -51,6 +51,7 @@ $emailMessage = (new Email())
     ->from('bilgi@hstotomotiv.com.tr')
     // ->from('hstotomotivas@gmail.com')
     ->to('info@hstotomotiv.com.tr')
+    // ->to('vektorelyazilimmustafa@gmail.com')
     ->subject('Yeni Form Mesajı')
     ->html("
         <h2>Yeni İletişim Formu</h2>
